@@ -4,6 +4,10 @@
 
 ## Integrantes del equipo
 
+Diego Rodríguez González
+Juan Muñoz del Bastillo
+Daniel Frenzel
+Mario Luna López
 
 ## Objetivos del trabajo
 
