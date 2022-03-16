@@ -4,7 +4,6 @@
 
 ## Integrantes del equipo
 
-Diego Rodríguez González (DiegoRodriguezGonzalez); Juan Muñoz de Bustillo (juan.mdemiguel); Daniel Frenzel Zarza (d.frenzel); Mario Luna López (Mariuser24)
 
 ## Objetivos del trabajo
 
