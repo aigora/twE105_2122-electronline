@@ -19,6 +19,7 @@ ser elegida al comenzar la partida.
 ####Objetivos del trabajo
 
 - Aprender a generar parte de un código aleatoriamente.
+
 - Dar al jugador varias opciones a elegir (dificultad, objetos, etc.).
 
 - Interactuar con el entorno del laberinto para dar mayor libertad al jugador. 
