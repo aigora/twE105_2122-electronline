@@ -7,7 +7,7 @@ int main()
     setlocale(LC_ALL,"spanish");
 
     int op,dificultad,fondo, colum, fila;
-    int musica = 0; //música en 0 indica que esta apagada, mientras que uno que está encendida.
+    int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
 
     printf("************************************************************************\n");
     printf("************************************************************************\n");
@@ -47,7 +47,7 @@ do{
             printf("Introduzca la altura del laberinto.\n");
             scanf("%i", &colum);
             printf("Introduzca la anchura del laberinto.\n");
-           scanf("%i", &fila);
+            scanf("%i", &fila);
 
             system("cls");
             goto inicio;
@@ -99,12 +99,12 @@ do{
         case 5:
            if (musica == 0) // si la musica está apagada la enciende
             musica = 1;
-           else if (musica == 1) // si esta encendida la apaga
+           else if (musica == 1) // si está encendida la apaga
             musica = 0;
              system("cls");
             goto inicio;
-
         break;
+
          case 6:
              exit(-1);
              break;
