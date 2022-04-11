@@ -32,7 +32,7 @@ do{
         printf("-Presiona 6 para salir del menú.\n");
         printf("\n");
         scanf("%d",&op);
-        system("cls"); //borra toda la información de la ventana
+        system("cls"); //borra toda la información de la ventana.
 
      }while((op < 1) || (op > 6));
 
@@ -40,7 +40,7 @@ do{
         switch (op)
         {
         case 1:
-            //empieza el juego
+            //empieza el juego.
             break;
 
         case 2:
@@ -97,9 +97,9 @@ do{
 
             break;
         case 5:
-           if (musica == 0) // si la musica está apagada la enciende
+           if (musica == 0) // si la musica está apagada, la enciende.
             musica = 1;
-           else if (musica == 1) // si está encendida la apaga
+           else if (musica == 1) // si está encendida, la apaga.
             musica = 0;
              system("cls");
             goto inicio;
