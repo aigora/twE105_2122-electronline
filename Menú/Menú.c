@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
-
+#include "explicacion.h"
 int main()
 {
 	system("color f1");
@@ -8,6 +8,7 @@ int main()
 
     int op,dificultad,fondo, colum, fila;
     int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
+    int objetos=0;
 
     printf("************************************************************************\n");
     printf("************************************************************************\n");
@@ -29,7 +30,11 @@ do{
         printf("\n");
         printf("-Presiona 5 para activar/desactivar música.\n");
         printf("\n");
-        printf("-Presiona 6 para salir del menú.\n");
+        printf("-Presiona 6 para activar/desactivar los objetos.\n");
+        printf("\n");
+        printf("-Presiona 7 para acceder a la expliación y los controles.\n");
+        printf("\n");
+        printf("-Presiona 8 para salir del menú.\n");
         printf("\n");
         scanf("%d",&op);
         system("cls"); //borra toda la información de la ventana.
@@ -94,7 +99,6 @@ do{
             }
              system("cls");
             goto inicio;
-
             break;
         case 5:
            if (musica == 0) // si la musica está apagada, la enciende.
@@ -105,7 +109,22 @@ do{
             goto inicio;
         break;
 
-         case 6:
+        case 6:
+            if (objetos==0)
+                objetos=1;
+            else if (objetos==1)
+                objetos=0;
+            system("cls");
+            goto inicio;
+            break;
+
+        case 7:
+           controles;
+           explicacion;
+           system("cls");
+           break;
+
+         case 8:
              exit(-1);
              break;
 
