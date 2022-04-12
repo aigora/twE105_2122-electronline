@@ -29,3 +29,5 @@ ser elegida al comenzar la partida.
 
 - Introducir un **temporizador** que indique el tiempo empleado por el jugador para completar cada laberinto,
   así como una tabla que muestre la puntuación dependiendo del tiempo empleado para salir del laberinto.
+
+-Implementar un sistema de puntos a expensas del tiempo empleado en salir del laberinto.
