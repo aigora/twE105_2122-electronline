@@ -34,6 +34,10 @@
 		<Unit filename="Menú.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="expliC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="expliC.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
