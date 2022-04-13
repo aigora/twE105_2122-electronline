@@ -1,28 +1,54 @@
 #include<stdio.h>
 #include<windows.h>
-
 void gotoxy(int x, int y);
 int main()
 {
-    int recintox=50,recintoy=20;
-    int x=recintox/2, y=recintoy/2,i;
+    srand(time(NULL));
+    int recintox=100,recintoy=40;
+    int x=recintox/2, y=recintoy/2,i,j,n;
+    int iniciox=2,inicioy=1;
     gotoxy(x,y);
     printf("+");
-    for(i=0; i<recintox; i++)
+    for(i=0; i<recintox-1; i++)
     {
-        gotoxy(i,0); printf("O");
+    for(j=0; j<recintoy; j++)
+    {
+     n = rand() % 2 + 0;
+     if(n==0)
+     {
+         gotoxy(i,j);
+         printf("O");
+     }
+     if((i>=x-iniciox)  && (i<=x+iniciox))
+     {
+         if((j>=y-inicioy)  && (j<=y+inicioy))
+         {
+         gotoxy(i,j);
+         printf(" ");
+         }
+     }
+     if(i==x && j==y)
+     {
+         gotoxy(i,j);
+         printf("+");
+     }
+    }
     }
     for(i=0; i<recintox; i++)
     {
-        gotoxy(i,recintoy); printf("O");
+        gotoxy(i,0); printf("L");
+    }
+    for(i=0; i<recintox; i++)
+    {
+        gotoxy(i,recintoy); printf("L");
     }
     for(i=0; i<recintoy; i++)
     {
-        gotoxy(0,i); printf("O");
+        gotoxy(0,i); printf("L");
     }
     for(i=0; i<recintoy+1; i++)
     {
-        gotoxy(recintox,i); printf("O");
+        gotoxy(recintox,i); printf("L");
     }
     while(1)
     {
@@ -68,7 +94,7 @@ int main()
         }
         if((x<=0 || y<=0)||(x>=recintox || y>=recintoy))
         {
-            gotoxy(x,y); printf("O");
+            gotoxy(x,y); printf("L");
             x=recintox/2; y=recintoy/2;
         }
     }
