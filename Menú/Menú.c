@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
-#include "explicacion.h"
+#include "expliC.h"
 int main()
 {
 	system("color f1");
@@ -32,14 +32,14 @@ do{
         printf("\n");
         printf("-Presiona 6 para activar/desactivar los objetos.\n");
         printf("\n");
-        printf("-Presiona 7 para acceder a la expliación y los controles.\n");
+        printf("-Presiona 7 para acceder a la explicación y los controles.\n");
         printf("\n");
         printf("-Presiona 8 para salir del menú.\n");
         printf("\n");
         scanf("%d",&op);
         system("cls"); //borra toda la información de la ventana.
 
-     }while((op < 1) || (op > 6));
+     }while((op < 1) || (op > 8));
 
 
         switch (op)
@@ -82,15 +82,12 @@ do{
         case 1:
             system("color 0f");
             break;
-
         case 2:
             system("color f0");
             break;
-
         case 3:
             system("color 40");
             break;
-
         case 4:
             system("color b0");
             break;
@@ -119,10 +116,11 @@ do{
             break;
 
         case 7:
-           controles;
-           explicacion;
-           system("cls");
-           break;
+            system("cls");
+            controles();
+            explicacion();
+            goto inicio;
+            break;
 
          case 8:
              exit(-1);

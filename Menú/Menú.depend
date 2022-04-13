@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1649849308 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\menú.c
+	<stdio.h>
+	<locale.h>
+	"expliC.h"
+
+1649785241 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explicacion.h
+
+1649849363 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.c
+	"expliC.h"
+
+1649848475 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.h
+

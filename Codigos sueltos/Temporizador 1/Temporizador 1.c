@@ -2,7 +2,7 @@
 //Temporizador de tipo 0. Se puede mejorar mucho.
 int main()
 {
-    int minutos=2,segundos=20;
+    int minutos=0,segundos=20;
     int lapso=1000,i;
     while(1)
     {
