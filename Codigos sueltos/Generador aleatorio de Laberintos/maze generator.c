@@ -1,10 +1,12 @@
 #include<stdio.h>
+#include <time.h>
+#include <stdlib.h>
 #define N 100
 
 int maze[N][N];
 
 void recursion(int r, int c, int anch, int alt);
-void direccion (int x[]); // Genera un vector con numeros aleatorios del 1 al 4 sin repetición
+void direccion (int x[]); // Genera un vector con números aleatorios del 1 al 4 sin repetición
 
 
 
