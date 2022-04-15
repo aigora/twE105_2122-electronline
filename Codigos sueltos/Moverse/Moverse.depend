@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1650026736 source:c:\users\mario\desktop\complementarios estructuras\moverse\moverse.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1650031554 source:c:\users\mario\desktop\moverse\moverse.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
