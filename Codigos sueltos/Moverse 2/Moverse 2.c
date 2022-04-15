@@ -62,7 +62,9 @@ printf("\n");
 }
 while(1)
 {
- if(GetAsyncKeyState(0x27))
+    if(lab[1+f2][2+f1]==m)
+    {
+         if(GetAsyncKeyState(0x27))
 {
     Sleep(100);
     f1++;
@@ -87,6 +89,9 @@ printf(" %c", lab[i][j]);
 printf("\n");
 }
 }
+    }
+if(lab[1+f2][f1]==m)
+{
  if(GetAsyncKeyState(0x25))
 {
     Sleep(100);
@@ -112,6 +117,9 @@ printf(" %c", lab[i][j]);
 printf("\n");
 }
 }
+}
+if((lab[f2][1+f1]==m))
+{
  if(GetAsyncKeyState(0x26))
 {
     Sleep(10);
@@ -137,6 +145,9 @@ printf(" %c", lab[i][j]);
 printf("\n");
 }
 }
+}
+if((lab[2+f2][1+f1]==m))
+{
  if(GetAsyncKeyState(0x28))
 {
     Sleep(100);
@@ -163,6 +174,115 @@ printf("\n");
 }
 }
 }
+if(lab[1+f2][2+f1]==n)
+{
+     if(GetAsyncKeyState(0x27))
+{
+    Sleep(100);
+    system("cls");
+    for(i = 0; i < alt; i++) {
+for(j = 0; j < anch; j++)
+{
+    if(maze[i][j]==0)
+    {
+        lab[i][j]=m;
+    }
+    if(maze[i][j]==1)
+    {
+        lab[i][j]=n;
+    }
+    if(maze[N/2][N/2]==0)
+{
+    lab[1+f2][1+f1]=p;
+}
+printf(" %c", lab[i][j]);
+}
+printf("\n");
+}
+}
+}
+if((lab[1+f2][f1]==n))
+{
+ if(GetAsyncKeyState(0x25))
+{
+    Sleep(100);
+    system("cls");
+    for(i = 0; i < alt; i++) {
+for(j = 0; j < anch; j++)
+{
+    if(maze[i][j]==0)
+    {
+        lab[i][j]=m;
+    }
+    if(maze[i][j]==1)
+    {
+        lab[i][j]=n;
+    }
+    if(maze[N/2][N/2]==0)
+{
+    lab[1+f2][1+f1]=p;
+}
+printf(" %c", lab[i][j]);
+}
+printf("\n");
+}
+}
+}
+if((lab[f2][1+f1]==n))
+{
+ if(GetAsyncKeyState(0x26))
+{
+    Sleep(10);
+    system("cls");
+    for(i = 0; i < alt; i++) {
+for(j = 0; j < anch; j++)
+{
+    if(maze[i][j]==0)
+    {
+        lab[i][j]=m;
+    }
+    if(maze[i][j]==1)
+    {
+        lab[i][j]=n;
+    }
+    if(maze[N/2][N/2]==0)
+{
+    lab[1+f2][1+f1]=p;
+}
+printf(" %c", lab[i][j]);
+}
+printf("\n");
+}
+}
+}
+if((lab[2+f2][1+f1]==n))
+{
+ if(GetAsyncKeyState(0x28))
+{
+    Sleep(100);
+    system("cls");
+    for(i = 0; i < alt; i++) {
+for(j = 0; j < anch; j++)
+{
+    if(maze[i][j]==0)
+    {
+        lab[i][j]=m;
+    }
+    if(maze[i][j]==1)
+    {
+        lab[i][j]=n;
+    }
+    if(maze[N/2][N/2]==0)
+{
+    lab[1+f2][1+f1]=p;
+}
+printf(" %c", lab[i][j]);
+}
+printf("\n");
+}
+}
+}
+    }
 return 0;
 }
 
@@ -249,4 +369,5 @@ for (i = 1; i < 4; i++){
         goto inicio;
 }
 }
+
 
