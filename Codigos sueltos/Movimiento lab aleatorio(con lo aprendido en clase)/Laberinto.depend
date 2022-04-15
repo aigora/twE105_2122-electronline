@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1649695710 source:c:\users\diego\onedrive\escritorio\laberinto\prueba laberinto.c
+	<stdio.h>
+
+1650048837 source:c:\users\diego\onedrive\escritorio\laberinto\movimiento laberinto.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
