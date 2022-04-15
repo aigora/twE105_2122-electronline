@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include "expliC.h"
+#include <string.h>
 int main()
 {
 	system("color f1");
@@ -9,6 +10,7 @@ int main()
     int op,dificultad,fondo, colum, fila;
     int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
     int objetos=0;
+    char opcion[11],exp[]="explicacion",cont[]="controles";
 
     printf("************************************************************************\n");
     printf("************************************************************************\n");
@@ -116,9 +118,12 @@ do{
             break;
 
         case 7:
-            system("cls");
-            controles();
-            explicacion();
+            printf("Escriba 'controles' para ver los controles del juego o 'explicacion' para la explicación del juego:\n");
+            scanf("%20s",opcion);
+            if (strcmp(opcion,cont)==0)
+                controles();
+            else if (strcmp(opcion,exp)==0)
+                explicacion();
             goto inicio;
             break;
 
