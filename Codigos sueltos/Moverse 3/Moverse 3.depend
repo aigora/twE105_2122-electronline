@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1650054334 source:c:\users\mario\desktop\complementarios estructuras\moverse 3\moverse 3.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
