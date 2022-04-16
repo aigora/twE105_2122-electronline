@@ -54,6 +54,8 @@ for(j = 0; j < anch; j++)
     {
         lab[i][j]=n;
     }
+    
+    lab[rad1][rad2] = '#'; 
 printf(" %c", lab[i][j]); // Se representa el laberinto
 }
 printf("\n");
@@ -76,17 +78,13 @@ void recursion(int r, int c, int anch, int alt)
 for(k=0;k<4;k++)
 {
     int num = 1 + rand()%4; //genera un numero aleatorio para el vector dirección
-
-   if(k>0)
-   {
-     
       for(p=0; p < k; p++)  // Verifica si no se ha generado antes
           if(num==direc[p])
           {
-             num = 1 + rand()%5;
+             num = 1 + rand()%4;
              p=-1;
           }
-    }
+    
 
    direc[k] =num;
 }
