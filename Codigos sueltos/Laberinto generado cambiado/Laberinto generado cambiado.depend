@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1650133172 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\laberinto generado cambiado\laberinto 2.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
