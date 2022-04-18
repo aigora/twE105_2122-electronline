@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1649855531 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\menú.c
+1650277751 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\menú.c
 	<stdio.h>
 	<locale.h>
 	"expliC.h"
@@ -7,7 +7,7 @@
 
 1649785241 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explicacion.h
 
-1649855659 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.c
+1650277749 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.c
 	"expliC.h"
 
 1649848475 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.h
