@@ -56,7 +56,7 @@ for(j = 0; j < anch; j++)
 }
 do
 {
-    printf("Indique la posición del avatar. Si se vuelve a pedir es porque se ha introducido la coordenada de un bloque");//Ponemos el avatar donde indique el usuario(se comprueba que no es una pared).
+    printf("Indique la posición del avatar. Si se vuelve a pedir es porque se ha introducido la coordenada de un bloque:\n");//Ponemos el avatar donde indique el usuario(se comprueba que no es una pared).
     scanf("%d %d",&x,&y);
 }while (lab[x-1][y-1]==n);                       //Si es una pared, se vuelve a repetir.
 i=x-1;
