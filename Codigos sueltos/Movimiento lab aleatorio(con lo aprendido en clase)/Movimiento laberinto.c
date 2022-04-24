@@ -120,14 +120,29 @@ return 0;
 }
 
 void recursion(int r, int c, int anch, int alt)
+
 {
-    int i;
+    int i, num, k, p;
  int direc[4] = {0,0,0,0};
- direccion(direc);
 
- for (i = 0; i < 4; i++){
+ for (i = 0; i < 4; i++){ //Elige una dirección aleatoria
+// el bucle terminará cuando haya buscado entre las 4 direcciones y aún así no pueda continuar el laberinto
 
-    switch(direc[i]){
+for(k=0;k<4;k++)
+{
+    int num = 1 + rand()%4; //genera un numero aleatorio para el vector dirección
+      for(p=0; p < k; p++)  // Verifica si no se ha generado antes
+          if(num==direc[p])
+          {
+             num = 1 + rand()%4;
+             p=-1;
+          }
+    
+
+   direc[k] =num;
+}
+
+    switch(direc[i]){ // crea caminos en el laberinto
    case 1: //Arriba
        if (r - 2 <= 0) // si dos celdas más arriba está ocupado o no
         continue;
@@ -171,36 +186,6 @@ void recursion(int r, int c, int anch, int alt)
     }
  }
 
-}
-void direccion(int x[])
-{
-srand(time(NULL));
-int i, cont, j, rad;
-
-    do{
- rad = rand() % 5;
-    } while (rad == 0);
-
-    x[0] = rad;
-
-    inicio:
-for (i = 1; i < 4; i++){
-    cont = 0;
-       do{
- rad = rand() % 5;
-    } while (rad == 0);
-
-
-    for (j = 0; j <= i; j++){
-        if (rad == x[j])
-            cont = 1;
-    }
-
-    if (cont == 0)
-        x[i] = rad;
-        else
-        goto inicio;
-}
 }
 
 void laberinto(int base, int altura, char lab[N][N])
