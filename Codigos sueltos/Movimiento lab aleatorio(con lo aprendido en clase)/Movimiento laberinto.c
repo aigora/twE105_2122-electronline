@@ -8,9 +8,8 @@ char lab[N][N];
 char m=' ';
 char n=254;
 char avatar='$',avance;
-int i,j;
+int i,j,x,y;
 void recursion(int r, int c, int anch, int alt);
-void direccion (int x[]); // Genera un vector con números aleatorios del 1 al 4 sin repetición
 void laberinto(int base, int altura, char lab[N][N]);  //Muestra el laberinto
 
 
@@ -55,9 +54,15 @@ for(j = 0; j < anch; j++)
     }
 }
 }
-lab[1][1]=avatar;    //Ponemos el avatar al principio del laberinto(esquina superior izquierda).
+do
+{
+    printf("Indique la posición del avatar. Si se vuelve a pedir es porque se ha introducido la coordenada de un bloque:\n");//Ponemos el avatar donde indique el usuario(se comprueba que no es una pared).
+    scanf("%d %d",&x,&y);
+}while (lab[x-1][y-1]==n);                       //Si es una pared, se vuelve a repetir.
+i=x-1;
+j=y-1;
+lab[i][j]=avatar;
 laberinto(anch,alt,lab);
-i=1,j=1;
 do
     {
     scanf("%c",&avance);
@@ -137,7 +142,11 @@ for(k=0;k<4;k++)
              num = 1 + rand()%4;
              p=-1;
           }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 38092e2531de349277be1f4570ec49ee1d3c550f
 
    direc[k] =num;
 }
@@ -185,7 +194,10 @@ for(k=0;k<4;k++)
 
     }
  }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38092e2531de349277be1f4570ec49ee1d3c550f
 }
 
 void laberinto(int base, int altura, char lab[N][N])

@@ -2,12 +2,13 @@
 #include <locale.h>
 #include "expliC.h"
 #include <string.h>
+void expobj(void);
 int main()
 {
 	system("color f1");
     setlocale(LC_ALL,"spanish");
 
-    int op,dificultad,fondo, colum, fila;
+    int op,dificultad,fondo, colum, fila,obj;
     int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
     int objetos=0;
     char opcion[11],exp[]="explicacion",cont[]="controles";
@@ -124,7 +125,22 @@ do{
                 controles();
             else if (strcmp(opcion,exp)==0)
                 explicacion();
-            goto inicio;
+            scanf("%d",&obj);
+            switch (obj)
+            {
+            case 1:
+                expobj();
+                sleep(20);
+                system("cls");
+                goto inicio;
+                break;
+            case 2:
+                system("cls");
+                goto inicio;
+                break;
+            default:
+                break;
+            }
             break;
 
          case 8:
@@ -135,4 +151,14 @@ do{
             break;
         }
     return 0;
+}
+void expobj(void)
+{
+    printf("Actualmente, el juego tiene 3 objetos disponibles:\n");
+    printf("\n");
+    printf("Teletransportador. Al coger este objeto, el personaje es transportado a cualquier parte del laberinto.\n");
+    printf("\n");
+    printf("Bloqueos. Al coger este objeto, cuando se pasan ciertas zonas del laberinto, el jugador no podrá volver hacia atrás.\n");
+    printf("\n");
+    printf("Acelerador de tiempo. Al coger este objeto, el tiempo puede ir más rápido o más lento.\n");
 }
