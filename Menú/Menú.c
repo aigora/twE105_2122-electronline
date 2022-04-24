@@ -40,7 +40,7 @@ do{
         printf("-Presiona 8 para salir del menú.\n");
         printf("\n");
         scanf("%d",&op);
-        system("cls"); //borra toda la información de la ventana.
+        printf("\x1b[2J"); //borra toda la información de la ventana.
 
      }while((op < 1) || (op > 8));
 
@@ -57,7 +57,7 @@ do{
             printf("Introduzca la anchura del laberinto.\n");
             scanf("%i", &fila);
 
-            system("cls");
+            printf("\x1b[2J");
             goto inicio;
             break;
 
@@ -68,7 +68,7 @@ do{
             printf("Presione 3 para dificultad difícil.\n");
             scanf("%d",&dificultad);
             } while(dificultad < 1 || dificultad > 3);
-            system("cls");
+            printf("\x1b[2J");
             goto inicio;
             break;
 
@@ -97,7 +97,7 @@ do{
         default:
             break;
             }
-             system("cls");
+             printf("\x1b[2J");
             goto inicio;
             break;
         case 5:
@@ -105,7 +105,7 @@ do{
             musica = 1;
            else if (musica == 1) // si está encendida, la apaga.
             musica = 0;
-             system("cls");
+             printf("\x1b[2J");
             goto inicio;
         break;
 
@@ -114,7 +114,7 @@ do{
                 objetos=1;
             else if (objetos==1)
                 objetos=0;
-            system("cls");
+            printf("\x1b[2J");
             goto inicio;
             break;
 
@@ -131,11 +131,11 @@ do{
             case 1:
                 expobj();
                 sleep(20);
-                system("cls");
+                printf("\x1b[2J");
                 goto inicio;
                 break;
             case 2:
-                system("cls");
+                printf("\x1b[2J");
                 goto inicio;
                 break;
             default:
