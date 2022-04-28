@@ -1,6 +1,7 @@
-#include <SDL2/SDL.h>
+/**
+#include <SDL.h>
 #include <stdio.h>
-#include <SDL2/SDL_timer.h>
+#include <SDL_timer.h>
 #define SPEED (300)  //Definimos la velocidad(píxeles por segundo)
 
 int main( int argc, char* args[] )
@@ -14,6 +15,8 @@ SDL_Rect offset;
 offset.x= 320;
 offset.y=240;
 
+
+
 //El movimiento en t=0 no se produce, al igual que la velocidad
 _Bool izq=0;
 _Bool dcha=0;
@@ -25,9 +28,14 @@ float y_vel=0;
 SDL_Event event;
 //Se define la ventana
 SDL_Window* ventana;
-
-
 SDL_Surface* screenSurface = NULL;
+
+//Cargamos la imagen que vamos a mover
+SDL_Surface *Derecha = SDL_LoadBMP("MovRight.bmp"); //esto carga la imagen.
+
+//Anim
+
+//
 
 //Inicio de SDL
 if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
@@ -57,15 +65,14 @@ if (!rend)
 //Carga la ventana
 screenSurface = SDL_GetWindowSurface( ventana );
 
-//Cargamos la imagen que vamos a mover
-SDL_Surface *camino = SDL_LoadBMP("CaminoGenerico.bmp"); //esto carga la imagen.
+
 
 //SDL_BlitSurface(camino,0,screenSurface,&offset);//El 0,0 es esquina superior izquierda
 //SDL_BlitSurface(imagen,&SDL_Rect,PANTALLA,&SDL_Rect);  //Hay que poner & y la variable SDL_Rect para la posición
 
 //Se guardan los datos de la imagen en la memoria del software de los gráficos
-SDL_Texture*tex = SDL_CreateTextureFromSurface(rend, camino);
-SDL_FreeSurface(camino);
+SDL_Texture*tex = SDL_CreateTextureFromSurface(rend, Derecha);
+SDL_FreeSurface(Derecha);
 
 if (!tex)
 {
@@ -166,3 +173,4 @@ SDL_Quit();
 }
 return 0;
 }
+*/

@@ -7,7 +7,6 @@ int maze[N][N];
 char lab[N][N];
 char m=' ';
 char n=254;
-char avatar='$',avance;
 int i,j,x,y;
 void recursion(int r, int c, int anch, int alt);
 void laberinto(int base, int altura, char lab[N][N]);  //Muestra el laberinto
@@ -54,73 +53,19 @@ for(j = 0; j < anch; j++)
     }
 }
 }
-do
+
 {
-    printf("Indique la posición del avatar. Si se vuelve a pedir es porque se ha introducido la coordenada de un bloque:\n");//Ponemos el avatar donde indique el usuario(se comprueba que no es una pared).
-    scanf("%d %d",&x,&y);
-}while (lab[x-1][y-1]==n);                       //Si es una pared, se vuelve a repetir.
-i=x-1;
-j=y-1;
-lab[i][j]=avatar;
-laberinto(anch,alt,lab);
-do
-    {
-    scanf("%c",&avance);
-    switch (avance)
-    {
-        case 'w':        //Avance superior.
-            system("cls");
-            if (lab[i-1][j]!=n)          //Si el bloque de arriba no es un límite, avanza, y el bloque anterior vuelve a ser un espacio.
-            {
-                lab[i-1][j]=avatar;
-                lab[i][j]=' ';
-                i--;
-            }
-            else
-                lab[i-1][j]=n;            //Si el bloque de arriba es un límite, permanece siendo un límite.
-            laberinto(anch,alt,lab);
-            break;
-        case 'a':       //Avance izquierda.
-            system("cls");
-            if (lab[i][j-1]!=n)
-            {
-                lab[i][j-1]=avatar;
-                lab[i][j]=' ';
-                j--;
-            }
-            else
-                lab[i][j-1]=n;
-            laberinto(anch,alt,lab);
-            break;
-        case 's':           //Avance inferior.
-            system("cls");
-            if (lab[i+1][j]!=n)
-            {
-                lab[i+1][j]=avatar;
-                lab[i][j]=' ';
-                i++;
-            }
-            else
-                lab[i+1][j]=n;
-            laberinto(anch,alt,lab);
-            break;
-        case 'd':            //Avance derecha.
-            system("cls");
-            if (lab[i][j+1]!=n)
-            {
-                lab[i][j+1]=avatar;
-                lab[i][j]=' ';
-                j++;
-            }
-            else
-                lab[i][j+1]=n;
-            laberinto(anch,alt,lab);
-            break;
-        default:
-            break;
-    }
-}while(lab[i][j]!=400);  //Bucle "infinito", que permite mover el avatar indefinidamente.(Próximamente se puede incluir algún objeto
-                         //que perjudique al jugador poniendo movimientos limitados).
+    int i,j;                       //Se imprime el laberinto primero por filas y después por columnas.
+    for(i = 0; i < alt; i++)
+{
+    for(j = 0; j < anch; j++)
+{
+    printf(" %c", lab[i][j]);
+}
+printf("\n");
+}
+}
+
 return 0;
 }
 
@@ -142,12 +87,6 @@ for(k=0;k<4;k++)
              num = 1 + rand()%4;
              p=-1;
           }
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 38092e2531de349277be1f4570ec49ee1d3c550f
-
    direc[k] =num;
 }
 
@@ -194,22 +133,8 @@ for(k=0;k<4;k++)
 
     }
  }
-<<<<<<< HEAD
 
-=======
->>>>>>> 38092e2531de349277be1f4570ec49ee1d3c550f
 }
 
-void laberinto(int base, int altura, char lab[N][N])
-{
-    int i,j;                       //Se imprime el laberinto primero por filas y después por columnas.
-    for(i = 0; i < altura; i++)
-{
-    for(j = 0; j < base; j++)
-{
-    printf(" %c", lab[i][j]);
-}
-printf("\n");
-}
-}
+
 

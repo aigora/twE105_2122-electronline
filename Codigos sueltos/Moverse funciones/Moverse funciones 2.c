@@ -5,8 +5,7 @@
 int maze[N][N];
 char lab[N][N];
 void recursion(int r, int c, int anch, int alt);
-void construir(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y);
-//Funcion para replicar el laberinto unja vez movida la cruceta.
+
 //Primero crea un patr�n de direcciones aleatorio, luego con esa direcci�n comprueba si se puede.
 //Si no puede, pasa a otra direcci�n hasta que una se pueda, y marca esas casillas como camino.
 //Una vez creado el camino vuelve a repetirse todo el proceso.
@@ -241,29 +240,4 @@ for(k=0;k<4;k++)
  }
 
 }
-void construir(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y)
-{
-    int i,j;
-        for(i = 0; i < alt; i++) {
-for(j = 0; j < anch; j++)
-{
-    if(maze[i][j]==0)
-    {
-        lab[i][j]=m;
-    }
-    if(maze[i][j]==1)
-    {
-        lab[i][j]=n;
-    }
-    if(maze[N/2][N/2]==0)
-{
-    lab[b+f2][a+f1]=p;
-}
-printf(" %c", lab[i][j]);
-}
-printf("\n");
-}
-printf("x:%d y:%d",x,y);//replicamos el laberinto y cambiamos la posicion de la cruceta y las coordenadas
-}
-
 
