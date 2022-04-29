@@ -386,3 +386,7 @@
 	<stdio.h>
 	<SDL2/SDL_timer.h>
 
+1651009351 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl prueba 2(mov2.c)\movimiento.c
+	<SDL2/SDL.h>
+	<stdio.h>
+

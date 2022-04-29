@@ -95,7 +95,7 @@ while (!quit)
     {
         if (event.type == SDL_QUIT)
             quit=1;
-        if (event.type == SDL_KEYDOWN)
+        if (event.type == SDL_KEYDOWN)                  //Cuando se aprieta la tecla
         {
             switch (event.key.keysym.scancode)
             {
