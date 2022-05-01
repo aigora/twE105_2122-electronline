@@ -1,4 +1,4 @@
-
+/**
 #include <SDL.h>
 #include <stdio.h>
 #include <SDL_timer.h>
@@ -179,3 +179,4 @@ SDL_Quit();
 return 0;
 }
 
+*/
