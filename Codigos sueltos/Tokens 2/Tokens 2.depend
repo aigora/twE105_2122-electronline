@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1651517309 source:c:\users\mario\desktop\informática mario luna\punteros\tokens 2\tokens 2.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
