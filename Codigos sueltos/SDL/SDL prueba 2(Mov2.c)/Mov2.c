@@ -149,7 +149,7 @@ while (!quit)
         }
     }
 
-    x_vel = y_vel = 0;
+    x_vel = y_vel = 0;  //Veolicdades iniciales
 
     //Después veremos el valor de las variables que se modifican con el teclado
     //Cabe destacar que al tratarse de una variable de tipo _Bool, el true se define como 1 y false como 0
@@ -215,6 +215,7 @@ SDL_Quit();
 }
 return 0;
 }
+
 
 
 void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend)
