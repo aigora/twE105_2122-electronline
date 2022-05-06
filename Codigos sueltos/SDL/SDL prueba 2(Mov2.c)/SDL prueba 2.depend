@@ -1160,10 +1160,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1651430680 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\mov2.c
+1651835811 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\mov2.c
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
+	"assets.h"
 
 1651163264 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\movimiento.c
 	<SDL2/SDL.h>
@@ -1560,4 +1561,9 @@
 1651231293 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\movimiento.c
 	<SDL2/SDL.h>
 	<stdio.h>
+
+1651835811 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\generator.c
+	"assets.h"
+
+1651835811 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\codigos sueltos\sdl\sdl prueba 2(mov2.c)\assets.h
 

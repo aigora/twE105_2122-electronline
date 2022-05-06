@@ -40,12 +40,16 @@
 		<Unit filename="Anim.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Generator.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Mov2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Movimiento.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="assets.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
