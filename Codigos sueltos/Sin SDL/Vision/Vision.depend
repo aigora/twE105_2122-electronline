@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1651838692 source:c:\users\mario\desktop\informática mario luna\punteros\vision\vision.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
