@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 #include <locale.h>
-#include "expliC.h"
 #include <string.h>
+#include "expliC.h"
+#include "juego.h"
+
 void expobj(void);
 int main()
 {
@@ -48,7 +52,7 @@ do{
         switch (op)
         {
         case 1:
-            //empieza el juego.
+            juego_lab();
             break;
 
         case 2:
@@ -154,11 +158,8 @@ do{
 }
 void expobj(void)
 {
-    printf("Actualmente, el juego tiene 3 objetos disponibles:\n");
-    printf("\n");
-    printf("Teletransportador. Al coger este objeto, el personaje es transportado a cualquier parte del laberinto.\n");
-    printf("\n");
-    printf("Bloqueos. Al coger este objeto, cuando se pasan ciertas zonas del laberinto, el jugador no podrá volver hacia atrás.\n");
-    printf("\n");
-    printf("Acelerador de tiempo. Al coger este objeto, el tiempo puede ir más rápido o más lento.\n");
+    printf("Actualmente, el juego dispone de dos tipos de objetos y una salida:\n");
+    printf("#: Salida.\n");
+    printf("B: Bloqueador. Al pasar sobre este objeto, el bloque en cuestión se convertirá en un muro, no pudiendo volver hacia atrás.\n");
+    printf("T: Teletransportador. Al pasar sobre este objeto, el jugador será teletransportado a otro teletransporte repartido por el mapa.\n");
 }

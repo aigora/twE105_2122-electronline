@@ -1,4 +1,5 @@
-#include "expliC.h"
+#include "expliC.h"       //Código fuente de las explicaciones
+
 void controles(void){
 printf("\n");
 printf("Presione W para avanzar hacia arriba.\n");

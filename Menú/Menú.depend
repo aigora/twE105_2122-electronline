@@ -1,14 +1,19 @@
 # depslib dependency file v1.0
-1650824553 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\menú.c
+1651963744 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\menú.c
 	<stdio.h>
+	<time.h>
+	<stdlib.h>
 	<locale.h>
-	"expliC.h"
 	<string.h>
+	"expliC.h"
+	"juego.h"
 
 1649785241 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explicacion.h
 
-1650277749 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.c
+1651962483 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.c
 	"expliC.h"
 
-1649848475 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.h
+1651962376 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\explic.h
+
+1651964410 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú\juego.h
 

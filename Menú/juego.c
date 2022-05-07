@@ -1,32 +1,15 @@
-#include<stdio.h>
-#include <time.h>
+#include "juego.h"     //Código fuente del laberinto
+#include <stdio.h>
 #include <stdlib.h>
-#define N 500
-#define bloc 4
-typedef struct //Declraramios una estructura con los componentes de la base de un teletransportador;
-{
-    int x,y;//Posiciones del teletransportador;
-    char identificador;//Caracter identificador del teletransportador;
-}teleporter;
-typedef struct //Declraramios una estructura con los componentes de la base de un teletransportador;
-{
-    int x,y;//Posiciones del bloqueo;
-    char identificador;//Caracter identificador del bloqueo;
-}bloqueo;
-int maze[N][N];
-char lab[N][N];
-void recursion(int r, int c, int anch, int alt);
-void reiniciar(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int T1,int T2,int B1[],int si,int sj);
-//Rehacemos el laberinto completamente con la cruceta en el inicio de la semilla.
-void construir(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int si,int sj);
-//Funcion para replicar el laberinto unja vez movida la cruceta.
-//Creación de bloqueos mediante un vector de estructuras y creación del teleportador.
-//Primero crea un patr�n de direcciones aleatorio, luego con esa direcci�n comprueba si se puede.
-//Si no puede, pasa a otra direcci�n hasta que una se pueda, y marca esas casillas como camino.
-//Una vez creado el camino vuelve a repetirse todo el proceso.
+#include <time.h>
 
-int main()
-{
+void juego_lab(void){
+
+
+     int maze[N][N];
+     char lab[N][N];
+
+
 
      srand(time(NULL));//Se milla aleatoria para el teleportador y los bloqueos
      teleporter t1,t2;//declaramos el teletransportador;
@@ -323,7 +306,6 @@ return 0;
 }
 
 void recursion(int r, int c, int anch, int alt)
-
 {
     int i, num, k, p;
  int direc[4] = {0,0,0,0};
@@ -432,6 +414,7 @@ printf("x:%d y:%d\n",x,y);//replicamos el laberinto y cambiamos la posicion de l
 printf("Presione el tabulador para reiniciar");
 printf("%d,%d",si,sj);
 }
+
 void reiniciar(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int T1,int T2,int B1[],int si,int sj)
 {
     int i,j,esp=0;
@@ -505,8 +488,6 @@ printf("\n");//Regeneramos el laberinto
 }
 printf("x:%d y:%d\n",x,y);//Coordenadas
 printf("Presione el tabulador para reiniciar");//Mensaje de reinicio
+
 }
-
-
-
 
