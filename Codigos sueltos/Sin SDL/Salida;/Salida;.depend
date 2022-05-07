@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1651698336 source:c:\users\mario\desktop\informática mario luna\punteros\salida;\salida.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1651698336 source:c:\users\mario\desktop\laberinto\salida;\salida.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
