@@ -56,7 +56,7 @@ for(i=0; i<bloc; i++)
 //Posici�n inicial
       maze[rad1][rad2] = 0;
 //Modifica la matriz laberinto llena de muros a una con caminos aleatorios
-      recursion(rad1, rad2, anch, alt);
+      recursion(rad1, rad2, anch, alt, maze, n);
 for(i = 0; i < alt; i++) {
 for(j = 0; j < anch; j++)
 {
@@ -161,7 +161,7 @@ while(laberinto==1)
     f1++;
     x++;    //Aumentamos el valor de la coordenada x y de la posicion hacia la derecha
     system("cls");
-    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[b+f2][f1+a-1]==m)||(lab[b+f2][f1+a-1]==t1.identificador)||(lab[b+f2][f1+a-1]==t2.identificador)||(lab[b+f2][f1+a-1]=='B')||(lab[b+f2][f1+a-1]=='#')) //Si el espacio a la izquierda es un espacio
@@ -172,7 +172,7 @@ if((lab[b+f2][f1+a-1]==m)||(lab[b+f2][f1+a-1]==t1.identificador)||(lab[b+f2][f1+
     f1--;
     x--;    //Disminuimos el valor de la coordenada x y desplazamos la cruceta hacia la izquierda
     system("cls");
-    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[f2][a+f1]==m)||(lab[f2][a+f1]==t1.identificador)||(lab[f2][a+f1]==t2.identificador)||(lab[f2][a+f1]=='B')||(lab[f2][a+f1]=='#')) //Si el elemento de abajo es un espacio
@@ -183,7 +183,7 @@ if((lab[f2][a+f1]==m)||(lab[f2][a+f1]==t1.identificador)||(lab[f2][a+f1]==t2.ide
     f2--;
     y--;
     system("cls");
-construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[b+1+f2][a+f1]==m)||(lab[b+1+f2][a+f1]==t1.identificador)||(lab[b+1+f2][a+f1]==t2.identificador)||(lab[b+1+f2][a+f1]=='B')||(lab[b+1+f2][a+f1]=='#'))//Si el espacio superior es un espacio
@@ -194,7 +194,7 @@ if((lab[b+1+f2][a+f1]==m)||(lab[b+1+f2][a+f1]==t1.identificador)||(lab[b+1+f2][a
     f2++;
     y++;    //Aumentamos el valor de la coordenada x y subimos un espacio
     system("cls");
-construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 
@@ -206,7 +206,7 @@ if(lab[b+f2][a+1+f1]==n)//Si la casilla derecha es un bloque
 {//No se modifica nada
     Sleep(lapso);
     system("cls");
-construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[b+f2][f1+a-1]==n))//Si el elemento de la izquierda es un bloque
@@ -215,7 +215,7 @@ if((lab[b+f2][f1+a-1]==n))//Si el elemento de la izquierda es un bloque
 {
     Sleep(lapso);
     system("cls");//No se cambia nada
-    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[f2][a+f1]==n))//Si el espacio de abajo es un bloque
@@ -226,7 +226,7 @@ if((lab[f2][a+f1]==n))//Si el espacio de abajo es un bloque
     //No se cambia nada
     Sleep(lapso);
     system("cls");
-construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if((lab[b+1+f2][a+f1]==n))//Si el espacio de arriba es un bloque
@@ -235,7 +235,7 @@ if((lab[b+1+f2][a+f1]==n))//Si el espacio de arriba es un bloque
 {
     Sleep(lapso);
     system("cls");//No se actualiza nada
-construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 }
 if(GetAsyncKeyState(0x09))//Si se presiona el tabulador;
@@ -248,7 +248,7 @@ if(GetAsyncKeyState(0x09))//Si se presiona el tabulador;
     b1[1].identificador='B';
     b1[2].identificador='B';
     b1[3].identificador='B';
-reiniciar(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,T1,T2,B1,si,sj);//Iniciar reinicio;
+reiniciar(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,T1,T2,B1,si,sj,maze,lab);//Iniciar reinicio;
 }
 if((x==t1.x) && (y==t1.y) && (paso==1))
 {
@@ -259,7 +259,7 @@ if((x==t1.x) && (y==t1.y) && (paso==1))
     f2=t2.y-b;
     Sleep(1000);
     system("cls");//Cambiamos al punto T;
-    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 if((x==t2.x) && (y==t2.y) && (paso==1))
 {
@@ -270,7 +270,7 @@ if((x==t2.x) && (y==t2.y) && (paso==1))
     f2=t1.y-b;
     Sleep(1000);
     system("cls");//Cambiamos al punto T;
-    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj);
+    construir(a,b,f1,f2,anch,alt,m,n,p,x,y,t1,t2,b1,si,sj,maze,lab);
 }
 if(((x!=t1.x) && (y!=t1.y)) || ((x!=t2.x) && (y!=t2.y)))
 {
@@ -305,7 +305,7 @@ if(si==x && sj==y)
 return 0;
 }
 
-void recursion(int r, int c, int anch, int alt)
+void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
 {
     int i, num, k, p;
  int direc[4] = {0,0,0,0};
@@ -338,7 +338,7 @@ for(k=0;k<4;k++)
        else if (maze[r - 2][c] != 0){ //ocupa las dos de arriba
         maze[r - 2][c] = 0;
         maze[r - 1][c] = 0;
-        recursion(r - 2, c, anch, alt);
+        recursion(r - 2, c, anch, alt, maze, n);
        }
        break;
 
@@ -348,7 +348,7 @@ for(k=0;k<4;k++)
        else if (maze[r][c + 2] != 0){ //ocupa las dos de la derecha
         maze[r][c + 2] = 0;
         maze[r][c + 1] = 0;
-        recursion(r, c + 2, anch, alt);
+        recursion(r, c + 2, anch, alt, maze, n);
        }
        break;
 
@@ -358,7 +358,7 @@ for(k=0;k<4;k++)
        else if (maze[r + 2][c] != 0){ //ocupa las dos de abajo
         maze[r + 2][c] = 0;
         maze[r + 1][c] = 0;
-        recursion(r + 2, c, anch, alt);
+        recursion(r + 2, c, anch, alt, maze, n);
        }
        break;
 
@@ -368,7 +368,7 @@ for(k=0;k<4;k++)
        else if (maze[r][c - 2] != 0){ //ocupa las dos de la izquierda
         maze[r][c - 2] = 0;
         maze[r][c - 1] = 0;
-        recursion(r, c - 2, anch, alt);
+        recursion(r, c - 2, anch, alt, maze, n);
        }
        break;
 
@@ -376,7 +376,7 @@ for(k=0;k<4;k++)
  }
 
 }
-void construir(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int si,int sj)
+void construir(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int si,int sj, int maze[N][N], char lab[N][N])
 {
     int i,j;
         for(i = 0; i < alt; i++) {
@@ -411,11 +411,11 @@ printf(" %c", lab[i][j]);
 printf("\n");
 }
 printf("x:%d y:%d\n",x,y);//replicamos el laberinto y cambiamos la posicion de la cruceta y las coordenadas
-printf("Presione el tabulador para reiniciar");
+printf("Presione el tabulador para reiniciar.\n");
 printf("%d,%d",si,sj);
 }
 
-void reiniciar(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int T1,int T2,int B1[],int si,int sj)
+void reiniciar(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int T1,int T2,int B1[],int si,int sj, int maze[N][N], char lab[N][N])
 {
     int i,j,esp=0;
 system("cls");

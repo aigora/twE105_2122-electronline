@@ -53,6 +53,7 @@ do{
         {
         case 1:
             juego_lab();
+            goto inicio;
             break;
 
         case 2:
@@ -159,6 +160,7 @@ do{
 void expobj(void)
 {
     printf("Actualmente, el juego dispone de dos tipos de objetos y una salida:\n");
+    printf("+: Avatar.\n");
     printf("#: Salida.\n");
     printf("B: Bloqueador. Al pasar sobre este objeto, el bloque en cuestión se convertirá en un muro, no pudiendo volver hacia atrás.\n");
     printf("T: Teletransportador. Al pasar sobre este objeto, el jugador será teletransportado a otro teletransporte repartido por el mapa.\n");
