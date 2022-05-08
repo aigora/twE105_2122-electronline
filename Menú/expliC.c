@@ -14,8 +14,13 @@ void explicacion(void){
 printf("\n");
 printf("Bienvenido al laberinto eléctrico. En este juego se pondrá a prueba tu velocidad para completar varios laberintos, de\n");
 printf("distinta dificultad, para llegar a tener el mayor récord. Este juego incluye varias opciones, como poder utilizar \n");
-printf("objetos(que te pueden beneficiar o perjudicar) repartidos por el mapa, y la posibilidad de elegir entre una amplia\n");
+printf("objetos (que te pueden beneficiar o perjudicar) repartidos por el mapa, y la posibilidad de elegir entre una amplia\n");
 printf("variedad de laberintos. Además, se incluye la posibilidad de incluir música.\n");
+printf("\n");
+printf("Al iniciar el juego, se podrá visualizar el laberinto completo durante 2 segundos. Una vez finalizado el tiempo,\n");
+printf("comenzará una cuenta atrás de 7 segundos y el laberinto se podrá ver a trozos.\n");
+printf("\n");
 printf("Si desea conocer los objetos disponibles, pulse 1.\n");
+printf("\n");
 printf("Si desea volver al menú, pulse 2.\n");
 }

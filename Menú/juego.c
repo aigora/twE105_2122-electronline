@@ -3,43 +3,52 @@
 #include <stdlib.h>
 #include <time.h>
 
-void juego_lab(void){
+void juego_lab(int alt, int anch){
 
+
+//Declaración de variables
 
      int maze[N][N];
      char lab[N][N];
+     int minutos=0,segundos=7;
+     int lapso2=1000;
 
 
-
-     srand(time(NULL));//Se milla aleatoria para el teleportador y los bloqueos
-     teleporter t1,t2;//declaramos el teletransportador;
-     bloqueo b1[4]; // declaramos el vector de bloqueos;
-       int i, j, anch, alt, rad1, rad2,f1=0,f2=0,esp=0,x,y,a,b,lapso=200,T1,T2,B1[bloc],espacios=0;
+     srand(time(NULL));//Semilla aleatoria para el teleportador y los bloqueos
+     teleporter t1,t2;//Declaramos el teletransportador;
+     bloqueo b1[4]; //Declaramos el vector de bloqueos;
+       int i, j, k, rad1, rad2,f1=0,f2=0,esp=0,x,y,a,b,lapso=200,T1,T2,B1[bloc],espacios=0;
        int activ=0,laberinto=1;
        int si,sj;
-       t1.identificador='T';//Simbolo del inicio del teletransportador;
+       t1.identificador='T';//Símbolo del inicio del teletransportador;
        t2.identificador='T';
-       b1[0].identificador='B';//Simbolo del bloqueo;
+       b1[0].identificador='B';//Símbolo del bloqueo;
        b1[1].identificador='B';
        b1[2].identificador='B';
        b1[3].identificador='B';
        int paso=1;
-char m=' '; //caminos
-char n=254; //muros
-char p='+'; //Personaje
-    printf("introduce la altura\n");
-    scanf("%i", &alt);
-    system("cls");
-    printf("introduce la anchura\n");
-    scanf("%i", &anch);
-    system("cls");
+       char m=' '; //caminos
+       char n=254; //muros
+       char p='+'; //Personaje
+
+
+
+//Cuerpo del código
+
+    //printf("introduce la altura\n");
+    //scanf("%i", &alt);
+    //system("cls");
+    //printf("introduce la anchura\n");
+    //scanf("%i", &anch);
+    //system("cls");
+
 T1=rand() % (3*(alt+anch)); //Espacio aleatorio para T1
 T2=rand() % (3*(anch+anch)); //Espacio aleatorio para T2
 for(i=0; i<bloc; i++)
 {
  B1[i]=rand() % (3*(alt+anch));
 }
-//En la versi�n final el tama�o del laberinto se elegir� a trav�s del men� principal
+
 
     for (i = 0; i < alt; i++){ //rellena la matriz laberinto de muros
         for (j = 0; j < anch; j++)
@@ -150,6 +159,56 @@ printf("\n");//Se construye el laberinto inicial
 printf("x:%d y:%d\n",x,y);//Coordenadas iniciale
 printf("Presione el tabulador para reiniciar");
 printf("%d,%d",si,sj);
+
+
+
+//Provisional
+while(1)
+    {
+        for(k=1; k<10; k++)
+        {
+        printf("\n");
+        }
+        for(k=1; k<7; k++)
+        {
+        printf("\t");
+        }
+    printf("  El juego empieza en:\n");
+            for(k=1; k<8; k++)
+        {
+        printf("\t");
+        }
+    printf("%d:%d",minutos,segundos);
+            Sleep(lapso2);
+        system("cls");
+        if(segundos==0)
+        {
+        segundos=60;
+        minutos--;
+        }
+        segundos--;
+        if(segundos==0 && minutos==0)
+        {
+            system("cls");
+                    for(k=1; k<10; k++)
+        {
+        printf("\n");
+        }
+        for(k=1; k<7; k++)
+        {
+        printf("\t");
+        }
+            printf("Empieza a moverte.\n");
+            break;
+        }
+    }
+    getch();
+//Provisional
+
+
+
+
+
 while(laberinto==1)
 {
     //Deteccion de espacios

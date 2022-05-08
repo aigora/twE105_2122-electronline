@@ -12,7 +12,7 @@ int main()
 	system("color f1");
     setlocale(LC_ALL,"spanish");
 
-    int op,dificultad,fondo, colum, fila,obj;
+    int op,dificultad,fondo, colum=17, fila=17,obj;   //Laberinto 13 x 13 predeterminado
     int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
     int objetos=0;
     char opcion[11],exp[]="explicacion",cont[]="controles";
@@ -52,14 +52,14 @@ do{
         switch (op)
         {
         case 1:
-            juego_lab();
+            juego_lab(colum,fila);
             goto inicio;
             break;
 
         case 2:
-            printf("Introduzca la altura del laberinto.\n");
+            printf("Introduzca la altura del laberinto. Predeterminado: 17.\n");
             scanf("%i", &colum);
-            printf("Introduzca la anchura del laberinto.\n");
+            printf("Introduzca la anchura del laberinto. Predeterminado: 17.\n");
             scanf("%i", &fila);
 
             printf("\x1b[2J");

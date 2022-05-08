@@ -39,7 +39,7 @@ int main()
         {
         printf("\t");
         }
-            printf("      Se acabo");
+            printf("      Se acabó");
             break;
         }
     }
