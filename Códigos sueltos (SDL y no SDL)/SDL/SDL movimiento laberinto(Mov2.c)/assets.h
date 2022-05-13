@@ -1,6 +1,4 @@
 
 #define N 100
 
-int maze[N][N];
-
-void recursion(int r, int c, int anch, int alt);
+void recursion(int r, int c, int anch, int alt, int maze[N][N]);
