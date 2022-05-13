@@ -2,7 +2,7 @@
 #include "assets.h"
 
 
-void recursion(int r, int c, int anch, int alt)
+void recursion(int r, int c, int anch, int alt, int maze[N][N])
 {
     int i, num, k, p;
  int direc[4] = {0,0,0,0};
@@ -29,7 +29,7 @@ for(k=0;k<4;k++)
        else if (maze[r - 2][c] != 0){ //ocupa las dos de arriba
         maze[r - 2][c] = 0;
         maze[r - 1][c] = 0;
-        recursion(r - 2, c, anch, alt);
+        recursion(r - 2, c, anch, alt, maze);
        }
        break;
 
@@ -39,7 +39,7 @@ for(k=0;k<4;k++)
        else if (maze[r][c + 2] != 0){ //ocupa las dos de la derecha
         maze[r][c + 2] = 0;
         maze[r][c + 1] = 0;
-        recursion(r, c + 2, anch, alt);
+        recursion(r, c + 2, anch, alt, maze);
        }
        break;
 
@@ -49,7 +49,7 @@ for(k=0;k<4;k++)
        else if (maze[r + 2][c] != 0){ //ocupa las dos de abajo
         maze[r + 2][c] = 0;
         maze[r + 1][c] = 0;
-        recursion(r + 2, c, anch, alt);
+        recursion(r + 2, c, anch, alt, maze);
        }
        break;
 
@@ -59,7 +59,7 @@ for(k=0;k<4;k++)
        else if (maze[r][c - 2] != 0){ //ocupa las dos de la izquierda
         maze[r][c - 2] = 0;
         maze[r][c - 1] = 0;
-        recursion(r, c - 2, anch, alt);
+        recursion(r, c - 2, anch, alt, maze);
        }
        break;
 

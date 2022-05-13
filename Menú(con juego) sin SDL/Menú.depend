@@ -23,20 +23,20 @@
 	<stdlib.h>
 	<time.h>
 
-1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\explic.c
+1652048085 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú(con juego) sin sdl\explic.c
 	"expliC.h"
 
-1652082032 c:\users\mario\documents\github\twe105_2122-electronline\menú\explic.h
+1651962376 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú(con juego) sin sdl\explic.h
 
-1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\juego.c
+1652047863 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú(con juego) sin sdl\juego.c
 	"juego.h"
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 
-1652082032 c:\users\mario\documents\github\twe105_2122-electronline\menú\juego.h
+1652047304 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú(con juego) sin sdl\juego.h
 
-1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\menú.c
+1652048159 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\menú(con juego) sin sdl\menú.c
 	<stdio.h>
 	<time.h>
 	<stdlib.h>
