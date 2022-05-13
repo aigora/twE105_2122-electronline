@@ -23,3 +23,25 @@
 	<stdlib.h>
 	<time.h>
 
+1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\explic.c
+	"expliC.h"
+
+1652082032 c:\users\mario\documents\github\twe105_2122-electronline\menú\explic.h
+
+1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\juego.c
+	"juego.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1652082032 c:\users\mario\documents\github\twe105_2122-electronline\menú\juego.h
+
+1652082032 source:c:\users\mario\documents\github\twe105_2122-electronline\menú\menú.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"expliC.h"
+	"juego.h"
+
