@@ -6,78 +6,57 @@
 #include"assets.h"
 
 void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,int *sal_i,int *sal_j,int *Tk1_i,int *Tk1_j,int *Tk2_i,int *Tk2_j,int *Tk3_i,int *Tk3_j,int *Tk4_i,int *Tk4_j,int *TP1_i,int *TP1_j,int *TP2_i,int *TP2_j);
-int salir(int coordx,int coordy,int sal_i,int sal_j);
+
 int main( int argc, char* args[] )
 {
-int inversion=0;
-int squit=0;
-int *sal_i,*sal_j,*Tk1_i,*Tk1_j,*Tk2_i,*Tk2_j,*Tk3_i,*Tk3_j,*Tk4_i,*Tk4_j,*TP1_i,*TP1_j,*TP2_i,*TP2_j;
-int t1_i,t1_j,t2_i,t2_j,t3_i,t3_j,t4_i,t4_j,tp1_i,tp1_j,tp2_i,tp2_j;
-    int alt = 85;
-    int anch = 85;
-int coordx=1,coordy=1;
-    int i, j, k=0;
-    int teletransportar=1;
-    const int SCREEN_WIDTH = 1080;
-    const int SCREEN_HEIGHT = 640;
-    _Bool resultado;   //Para las colisiones
-    int maze[N][N];
 
-    //Declaramos un rectángulo para mantener la posición y el tamaño del sprite
-    SDL_Rect dest = {0, 0, 32*80, 32*60};
+const int SCREEN_WIDTH = 1080;
+const int SCREEN_HEIGHT = 640;
+int maze[N][N];
+    float x_pos= 1;
+    float y_pos = 1;
 
-    //Declaramos un rectángulo para mantener la posción y el tamaño del sprite
-    SDL_Rect personaje = {32+46, 32+80, 70, 70};
-
-
-//Creamos la ventana, definimos el fondo y declaramos el renderer
     SDL_Window* ventana = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     SDL_Surface* screenSurface = NULL;
     Uint32 render_flags = SDL_RENDERER_ACCELERATED;
-
-
     SDL_Renderer* rend = SDL_CreateRenderer(ventana, -1, render_flags);
+    SDL_Surface *Pers;
 
+Pers = SDL_LoadBMP("MovRight.bmp");
+SDL_Texture*texd = SDL_CreateTextureFromSurface(rend, Pers);
+SDL_FreeSurface(Pers);
 
-//Cargamos todas las imaganes correspondientes a las animaciones
-    SDL_Surface *Derecha = SDL_LoadBMP("MovRight.bmp");
-    SDL_Surface *izquierda = SDL_LoadBMP("MovLeft.bmp");
-    SDL_Surface *arrib = SDL_LoadBMP("MovUp.bmp");
-    SDL_Surface *abaj = SDL_LoadBMP("MovDown.bmp");
-    SDL_Surface *idle = SDL_LoadBMP("Idle.bmp");
+Pers = SDL_LoadBMP("MovLeft.bmp");
+SDL_Texture*texi = SDL_CreateTextureFromSurface(rend, Pers);
+SDL_FreeSurface(Pers);
 
-//Creamos una textura propia de cada animación (Una textura almacena la información de cada pixel)
-    SDL_Texture*texd = SDL_CreateTextureFromSurface(rend, Derecha);
-    SDL_Texture*texi = SDL_CreateTextureFromSurface(rend, izquierda);
-    SDL_Texture*texar = SDL_CreateTextureFromSurface(rend, arrib);
-    SDL_Texture*texab = SDL_CreateTextureFromSurface(rend, abaj);
-    SDL_Texture*texid = SDL_CreateTextureFromSurface(rend, idle);
+Pers = SDL_LoadBMP("MovUp.bmp");
+SDL_Texture*texar = SDL_CreateTextureFromSurface(rend, Pers);
+SDL_FreeSurface(Pers);
 
-    SDL_FreeSurface(Derecha);
-    SDL_FreeSurface(izquierda);
-    SDL_FreeSurface(arrib);
-    SDL_FreeSurface(abaj);
-    SDL_FreeSurface(idle);
+Pers = SDL_LoadBMP("MovDown.bmp");
+SDL_Texture*texab = SDL_CreateTextureFromSurface(rend, Pers);
+SDL_FreeSurface(Pers);
 
-//Se define la salida del programa
+Pers = SDL_LoadBMP("Idle.bmp");
+SDL_Texture*texid = SDL_CreateTextureFromSurface(rend, Pers);
+SDL_FreeSurface(Pers);
+
+    SDL_Rect dest = {0, 0, 32*80, 32*60}; //Laberinto
+    SDL_Rect personaje = {32+46, 32+80, 70, 70}; //Explorador
+
     _Bool quit = 0;
-    _Bool collision = 0;
-
-//Se definen las teclas
-    SDL_Rect offset;
-    offset.x= 320;
-    offset.y=240;
-
-//El movimiento en t=0 no se produce, al igual que la velocidad
     _Bool izq=0;
     _Bool dcha=0;
     _Bool arriba=0;
     _Bool abajo=0;
-    _Bool init = 1;
 
-    float x_vel=0;
-    float y_vel=0;
 
+int inversion=0;
+int *sal_i,*sal_j,*Tk1_i,*Tk1_j,*Tk2_i,*Tk2_j,*Tk3_i,*Tk3_j,*Tk4_i,*Tk4_j,*TP1_i,*TP1_j,*TP2_i,*TP2_j;
+int t1_i,t1_j,t2_i,t2_j,t3_i,t3_j,t4_i,t4_j,tp1_i,tp1_j,tp2_i,tp2_j;
+int coordx=1,coordy=1;
+int teletransportar=1;
 
 
 //Inicio de SDL
@@ -111,12 +90,13 @@ int coordx=1,coordy=1;
                 SDL_Quit();
                 return 1;
             }
-//Empieza el programa verificando la ventana
-            screenSurface = SDL_GetWindowSurface( ventana );
 
-//Se imprime el laberinto en un Surface
-            InitMaze(ventana, screenSurface, rend, maze,coordx,coordy,&sal_i,&sal_j,&Tk1_i,&Tk1_j,&Tk2_i,&Tk2_j,&Tk3_i,&Tk3_j,&Tk4_i,&Tk4_j,&TP1_i,&TP1_j,&TP2_i,&TP2_j);
-//Se crea una textura de ese surface
+        screenSurface = SDL_GetWindowSurface( ventana );
+
+
+    InitMaze(ventana, screenSurface, rend, maze,coordx,coordy,&sal_i,&sal_j,&Tk1_i,&Tk1_j,&Tk2_i,&Tk2_j,&Tk3_i,&Tk3_j,&Tk4_i,&Tk4_j,&TP1_i,&TP1_j,&TP2_i,&TP2_j);
+    SDL_Texture* texmaze = SDL_CreateTextureFromSurface(rend, screenSurface);
+
 t1_i=Tk1_i;
 t1_j=Tk1_j;
 t2_i=Tk2_i;
@@ -130,15 +110,13 @@ tp1_i=TP1_i;
 tp1_j=TP1_j;
 tp2_i=TP2_i;
 tp2_j=TP2_j;
-            SDL_Texture* texmaze = SDL_CreateTextureFromSurface(rend, screenSurface);
 
 
-//Definimos el sprite en el centro de la pantalla
-            float x_pos= 1;
-            float y_pos = 1;
 
             while (!quit)
             {
+            SDL_Event event;
+
                 if(((t1_i==coordx)&&(t1_j==coordy))||((t2_i==coordx)&&(t2_j==coordy))||((t3_i==coordx)&&(t3_j==coordy)))
                 {
                     inversion=1;
@@ -147,7 +125,10 @@ tp2_j=TP2_j;
                 {
                     inversion=0;
                 }
-                SDL_Event event;
+
+
+
+
                 while (SDL_PollEvent(&event))
                 {
                     if(coordy==20)
@@ -191,6 +172,7 @@ tp2_j=TP2_j;
                             {
                         x_pos=x_pos+76;
                         coordx--;
+                        dcha = 0, izq = 1, arriba = 0, abajo = 0;
                             }
                             if(maze[coordx-1][coordy]==1)
                             {
@@ -203,6 +185,7 @@ tp2_j=TP2_j;
                             {
                         x_pos=x_pos-76;
                         coordx++;
+                        dcha = 1, izq = 0, arriba = 0, abajo = 0;
                             }
                         if(maze[coordx+1][coordy]==1)
                             {
@@ -215,6 +198,7 @@ tp2_j=TP2_j;
                             {
                         y_pos=y_pos+96;
                         coordy--;
+                        dcha = 0, izq = 0, arriba = 1, abajo = 0;
                             }
                         if(maze[coordx][coordy-1]==1 )
                             {
@@ -227,6 +211,7 @@ tp2_j=TP2_j;
                             {
                         y_pos=y_pos-96;
                         coordy++;
+                         dcha = 0, izq = 0, arriba = 0, abajo = 1;
                             }
                         if(maze[coordx][coordy+1]==1 || coordy+1 ==20)
                             {
@@ -243,6 +228,7 @@ tp2_j=TP2_j;
                             {
                         x_pos=x_pos+76;
                         coordx--;
+                        dcha = 0, izq = 1, arriba = 0, abajo = 0;
                             }
                             if(maze[coordx-1][coordy]==1)
                             {
@@ -255,6 +241,7 @@ tp2_j=TP2_j;
                             {
                         x_pos=x_pos-76;
                         coordx++;
+                         dcha = 1, izq = 0, arriba = 0, abajo = 0;
                             }
                         if(maze[coordx+1][coordy]==1)
                             {
@@ -267,6 +254,7 @@ tp2_j=TP2_j;
                             {
                         y_pos=y_pos+96;
                         coordy--;
+                         dcha = 0, izq = 0, arriba = 1, abajo = 0;
                             }
                         if(maze[coordx][coordy-1]==1 && coordy+1!=20 )
                             {
@@ -279,6 +267,7 @@ tp2_j=TP2_j;
                             {
                         y_pos=y_pos-96;
                         coordy++;
+                         dcha = 0, izq = 0, arriba = 0, abajo = 1;
                             }
                         if(maze[coordx][coordy+1]==1 && coordy+1!=20)
                             {
@@ -288,33 +277,8 @@ tp2_j=TP2_j;
                         }
                     }
                 }
-
-                x_vel = y_vel = 0;
-
-                //Después veremos el valor de las variables que se modifican con el teclado
-                //Cabe destacar que al tratarse de una variable de tipo _Bool, el true se define como 1 y false como 0
-                if (arriba && !abajo)
-                {
-                        y_vel = SPEED;
-                }
-                if (abajo && !arriba)
-                {
-                        y_vel = -SPEED;
-                }
-                if (izq && !dcha)
-                {
-                        x_vel = SPEED;
-                }
-                if (dcha && !izq)
-                {
-                        x_vel= -SPEED;
-                }
-
-//Se actualiza la posición y se define cómo de rápido queremos que vaya la imagen
-                x_pos+=x_vel/110;
-                y_pos+=y_vel/110;
-                dest.y= (int) y_pos;
-                dest.x = (int) x_pos;
+                dest.y = y_pos;
+                dest.x = x_pos;
 
 
                 Uint32 ticks = SDL_GetTicks(); //GetTicks nos da el numero de milisegundos desde que el programa ha empezado
@@ -322,7 +286,7 @@ tp2_j=TP2_j;
                 SDL_Rect srcrect = {sprite*32, 0, 32, 32};
 
 
-                if(init)
+                if(!quit)
                 {
                     SDL_RenderClear(rend);
                     SDL_RenderCopy(rend,texmaze, NULL, &dest);
@@ -382,6 +346,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     int i,j,x,y, xo, yo, k = 0;
     int T1,T2,T3,T4,TP1,TP2,T1_i,T1_j,T2_i,T2_j,T3_i,T3_j,T4_i,T4_j,tp1_i,tp1_j,tp2_i,tp2_j;
     int esp=0,salida_i,salida_j;
+
     srand(time(NULL));
 
     T1=rand() % 80;
@@ -405,7 +370,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     recursion(xo, yo, anch, alt, maze);
 
 //SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0xFF, 0xFF, 0xFF ) ); //Ponemos el fondo blanco
-    SDL_Surface *camino = SDL_LoadBMP("GenPath.bmp"); //Cargamos tanto el sprite del camino como el del muro.
+    SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
     SDL_Surface *muro = SDL_LoadBMP("GenWall.bmp");
     SDL_Surface *Inicio = SDL_LoadBMP("Inicio.bmp");
     SDL_Surface *Salida = SDL_LoadBMP("Salida.bmp");
@@ -545,15 +510,5 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                 *sal_j=salida_j;
 
 }
-int salir(int coordx,int coordy,int sal_i,int sal_j)
-{
-if((coordx==sal_i)&&(coordy==sal_j))
-{
-    return 1;
-}
-else
-{
-    return 0;
-}
-}
+
 

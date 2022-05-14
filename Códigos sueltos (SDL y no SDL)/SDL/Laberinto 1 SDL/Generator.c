@@ -67,3 +67,15 @@ for(k=0;k<4;k++)
  }
 
 }
+
+int salir(int coordx,int coordy,int sal_i,int sal_j)
+{
+if((coordx==sal_i)&&(coordy==sal_j))
+{
+    return 1;
+}
+else
+{
+    return 0;
+}
+}
