@@ -9,10 +9,10 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
 
 int main( int argc, char* args[] )
 {
-
-const int SCREEN_WIDTH = 1080;
-const int SCREEN_HEIGHT = 640;
-int maze[N][N];
+    //Declaración de variables
+    const int SCREEN_WIDTH = 1080;
+    const int SCREEN_HEIGHT = 640;
+    int maze[N][N];
     float x_pos= 1;
     float y_pos = 1;
 
@@ -22,25 +22,25 @@ int maze[N][N];
     SDL_Renderer* rend = SDL_CreateRenderer(ventana, -1, render_flags);
     SDL_Surface *Pers;
 
-Pers = SDL_LoadBMP("MovRight.bmp");
-SDL_Texture*texd = SDL_CreateTextureFromSurface(rend, Pers);
-SDL_FreeSurface(Pers);
+    Pers = SDL_LoadBMP("MovRight.bmp");
+    SDL_Texture*texd = SDL_CreateTextureFromSurface(rend, Pers);
+    SDL_FreeSurface(Pers);
 
-Pers = SDL_LoadBMP("MovLeft.bmp");
-SDL_Texture*texi = SDL_CreateTextureFromSurface(rend, Pers);
-SDL_FreeSurface(Pers);
+    Pers = SDL_LoadBMP("MovLeft.bmp");
+    SDL_Texture*texi = SDL_CreateTextureFromSurface(rend, Pers);
+    SDL_FreeSurface(Pers);
 
-Pers = SDL_LoadBMP("MovUp.bmp");
-SDL_Texture*texar = SDL_CreateTextureFromSurface(rend, Pers);
-SDL_FreeSurface(Pers);
+    Pers = SDL_LoadBMP("MovUp.bmp");
+    SDL_Texture*texar = SDL_CreateTextureFromSurface(rend, Pers);
+    SDL_FreeSurface(Pers);
 
-Pers = SDL_LoadBMP("MovDown.bmp");
-SDL_Texture*texab = SDL_CreateTextureFromSurface(rend, Pers);
-SDL_FreeSurface(Pers);
+    Pers = SDL_LoadBMP("MovDown.bmp");
+    SDL_Texture*texab = SDL_CreateTextureFromSurface(rend, Pers);
+    SDL_FreeSurface(Pers);
 
-Pers = SDL_LoadBMP("Idle.bmp");
-SDL_Texture*texid = SDL_CreateTextureFromSurface(rend, Pers);
-SDL_FreeSurface(Pers);
+    Pers = SDL_LoadBMP("Idle.bmp");
+    SDL_Texture*texid = SDL_CreateTextureFromSurface(rend, Pers);
+    SDL_FreeSurface(Pers);
 
     SDL_Rect dest = {0, 0, 32*80, 32*60}; //Laberinto
     SDL_Rect personaje = {32+46, 32+80, 70, 70}; //Explorador
@@ -52,14 +52,14 @@ SDL_FreeSurface(Pers);
     _Bool abajo=0;
 
 
-int inversion=0;
-int *sal_i,*sal_j,*Tk1_i,*Tk1_j,*Tk2_i,*Tk2_j,*Tk3_i,*Tk3_j,*Tk4_i,*Tk4_j,*TP1_i,*TP1_j,*TP2_i,*TP2_j;
-int t1_i,t1_j,t2_i,t2_j,t3_i,t3_j,t4_i,t4_j,tp1_i,tp1_j,tp2_i,tp2_j;
-int coordx=1,coordy=1;
-int teletransportar=1;
+    int inversion=0;
+    int *sal_i,*sal_j,*Tk1_i,*Tk1_j,*Tk2_i,*Tk2_j,*Tk3_i,*Tk3_j,*Tk4_i,*Tk4_j,*TP1_i,*TP1_j,*TP2_i,*TP2_j;
+    int t1_i,t1_j,t2_i,t2_j,t3_i,t3_j,t4_i,t4_j,tp1_i,tp1_j,tp2_i,tp2_j;
+    int coordx=1,coordy=1;
+    int teletransportar=1;
 
 
-//Inicio de SDL
+    //Inicio de SDL
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
 
@@ -72,7 +72,6 @@ int teletransportar=1;
         {
             printf( "No se pudo crear la ventana emergente SDL_Error: %s\n", SDL_GetError() );
         }
-
         else
         {
             if (!rend)
@@ -91,26 +90,26 @@ int teletransportar=1;
                 return 1;
             }
 
-        screenSurface = SDL_GetWindowSurface( ventana );
+
+    screenSurface = SDL_GetWindowSurface( ventana );
 
 
     InitMaze(ventana, screenSurface, rend, maze,coordx,coordy,&sal_i,&sal_j,&Tk1_i,&Tk1_j,&Tk2_i,&Tk2_j,&Tk3_i,&Tk3_j,&Tk4_i,&Tk4_j,&TP1_i,&TP1_j,&TP2_i,&TP2_j);
     SDL_Texture* texmaze = SDL_CreateTextureFromSurface(rend, screenSurface);
 
-t1_i=Tk1_i;
-t1_j=Tk1_j;
-t2_i=Tk2_i;
-t2_j=Tk2_j;
-t3_i=Tk3_i;
-t3_j=Tk3_j;
-t4_i=Tk4_i;
-t4_j=Tk4_j;
+    t1_i=Tk1_i;
+    t1_j=Tk1_j;
+    t2_i=Tk2_i;
+    t2_j=Tk2_j;
+    t3_i=Tk3_i;
+    t3_j=Tk3_j;
+    t4_i=Tk4_i;
+    t4_j=Tk4_j;
 
-tp1_i=TP1_i;
-tp1_j=TP1_j;
-tp2_i=TP2_i;
-tp2_j=TP2_j;
-
+    tp1_i=TP1_i;
+    tp1_j=TP1_j;
+    tp2_i=TP2_i;
+    tp2_j=TP2_j;
 
 
             while (!quit)
@@ -128,152 +127,161 @@ tp2_j=TP2_j;
 
 
 
-
                 while (SDL_PollEvent(&event))
                 {
                     if(coordy==20)
                     {
-                        printf("El poder de la luna nos ha hecho libres, podemos vagar por el vacio\n");
+                        printf("El poder de la luna nos ha hecho libres, podemos vagar por el vacío\n");
                     }
                     if (event.type == SDL_QUIT ||salir(coordx,coordy,sal_i,sal_j)==1)
                         quit=1;
-                if(tp1_i==coordx && tp1_j==coordy && teletransportar==1)
-                {
-                    coordx=tp2_i;
-                    coordy=tp2_j;
-                    x_pos=x_pos+76*(tp1_i-tp2_i);
-                    y_pos=y_pos+96*(tp1_j-tp2_j);
-                    teletransportar=0;
-                }
-                if((coordx!=tp1_i && coordy!=tp1_j)&&(coordx!=tp2_i && coordy!=tp2_j))
-                {
-                    teletransportar=1;
-                }
-                if(tp2_i==coordx && tp2_j==coordy && teletransportar==1)
-                {
-                    coordx=tp1_i;
-                    coordy=tp1_j;
-                    x_pos=x_pos+76*(tp2_i-tp1_i);
-                    y_pos=y_pos+96*(tp2_j-tp1_j);
-                    teletransportar=0;
-                }
-                if((coordx!=tp1_i && coordy!=tp1_j)&&(coordx!=tp2_i && coordy!=tp2_j))
-                {
-                    teletransportar=1;
-                }
+                    if(tp1_i==coordx && tp1_j==coordy && teletransportar==1)
+                    {
+                        coordx=tp2_i;
+                        coordy=tp2_j;
+                        x_pos=x_pos+76*(tp1_i-tp2_i);
+                        y_pos=y_pos+96*(tp1_j-tp2_j);
+                        teletransportar=0;
+                    }
+                    if((coordx!=tp1_i && coordy!=tp1_j)&&(coordx!=tp2_i && coordy!=tp2_j))
+                    {
+                        teletransportar=1;
+                    }
+                    if(tp2_i==coordx && tp2_j==coordy && teletransportar==1)
+                    {
+                        coordx=tp1_i;
+                        coordy=tp1_j;
+                        x_pos=x_pos+76*(tp2_i-tp1_i);
+                        y_pos=y_pos+96*(tp2_j-tp1_j);
+                        teletransportar=0;
+                    }
+                    if((coordx!=tp1_i && coordy!=tp1_j)&&(coordx!=tp2_i && coordy!=tp2_j))
+                    {
+                        teletransportar=1;
+                    }
                     if (event.type == SDL_KEYDOWN) //Cuando estemos pulsando la tecla
                     {
+
                         if(inversion==0)
                         {
-                         salir(coordx,coordy,sal_i,sal_j);
-                        if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
-                        {
-                            if(maze[coordx-1][coordy]==0)
+                            salir(coordx,coordy,sal_i,sal_j);
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
-                        x_pos=x_pos+76;
-                        coordx--;
-                        dcha = 0, izq = 1, arriba = 0, abajo = 0;
+                                if(maze[coordx-1][coordy]==0)
+                                {
+                                    x_pos=x_pos+76;
+                                    coordx--;
+                                    dcha = 0, izq = 1, arriba = 0, abajo = 0;
+                                }
+                                if(maze[coordx-1][coordy]==1)
+                                {
+                                    x_pos=x_pos;
+                                }
                             }
-                            if(maze[coordx-1][coordy]==1)
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {
-                        x_pos=x_pos;
+                                if(maze[coordx+1][coordy]==0)
+                                {
+                                    x_pos=x_pos-76;
+                                    coordx++;
+                                    dcha = 1, izq = 0, arriba = 0, abajo = 0;
+                                }
+                                if(maze[coordx+1][coordy]==1)
+                                {
+                                    x_pos=x_pos;
+                                }
+                            }
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_UP)
+                            {
+                                if(maze[coordx][coordy-1]==0 )
+                                {
+                                    y_pos=y_pos+96;
+                                    coordy--;
+                                    dcha = 0, izq = 0, arriba = 1, abajo = 0;
+                                }
+                                if(maze[coordx][coordy-1]==1 )
+                                {
+                                    y_pos=y_pos;
+                                }
+                            }
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
+                            {
+                                if(maze[coordx][coordy+1]==0 && coordy+1 !=20)
+                                {
+                                    y_pos=y_pos-96;
+                                    coordy++;
+                                    dcha = 0, izq = 0, arriba = 0, abajo = 1;
+                                }
+                                if(maze[coordx][coordy+1]==1 || coordy+1 ==20)
+                                {
+                                    y_pos=y_pos;
+                                }
                             }
                         }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
-                        {
-                        if(maze[coordx+1][coordy]==0)
-                            {
-                        x_pos=x_pos-76;
-                        coordx++;
-                        dcha = 1, izq = 0, arriba = 0, abajo = 0;
-                            }
-                        if(maze[coordx+1][coordy]==1)
-                            {
-                        x_pos=x_pos;
-                            }
-                        }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_UP)
-                        {
-                        if(maze[coordx][coordy-1]==0 )
-                            {
-                        y_pos=y_pos+96;
-                        coordy--;
-                        dcha = 0, izq = 0, arriba = 1, abajo = 0;
-                            }
-                        if(maze[coordx][coordy-1]==1 )
-                            {
-                        y_pos=y_pos;
-                            }
-                        }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
-                        {
-                        if(maze[coordx][coordy+1]==0 && coordy+1 !=20)
-                            {
-                        y_pos=y_pos-96;
-                        coordy++;
-                         dcha = 0, izq = 0, arriba = 0, abajo = 1;
-                            }
-                        if(maze[coordx][coordy+1]==1 || coordy+1 ==20)
-                            {
-                        y_pos=y_pos;
-                            }
-                        }
-                        }
+
                         if(inversion==1)
                         {
-                         salir(coordx,coordy,sal_i,sal_j);
-                        if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
-                        {
-                            if(maze[coordx-1][coordy]==0)
+                            salir(coordx,coordy,sal_i,sal_j);
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {
-                        x_pos=x_pos+76;
-                        coordx--;
-                        dcha = 0, izq = 1, arriba = 0, abajo = 0;
+                                if(maze[coordx-1][coordy]==0)
+                                {
+                                    x_pos=x_pos+76;
+                                    coordx--;
+                                    dcha = 0, izq = 1, arriba = 0, abajo = 0;
+                                }
+                                if(maze[coordx-1][coordy]==1)
+                                {
+                                    x_pos=x_pos;
+                                }
                             }
-                            if(maze[coordx-1][coordy]==1)
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
-                        x_pos=x_pos;
+                                if(maze[coordx+1][coordy]==0)
+                                {
+                                    x_pos=x_pos-76;
+                                    coordx++;
+                                    dcha = 1, izq = 0, arriba = 0, abajo = 0;
+                                }
+                                if(maze[coordx+1][coordy]==1)
+                                {
+                                    x_pos=x_pos;
+                                }
                             }
-                        }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
-                        {
-                        if(maze[coordx+1][coordy]==0)
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
                             {
-                        x_pos=x_pos-76;
-                        coordx++;
-                         dcha = 1, izq = 0, arriba = 0, abajo = 0;
+                                if(maze[coordx][coordy-1]==0 || coordy+1==20)
+                                {
+                                    y_pos=y_pos+96;
+                                    coordy--;
+                                    dcha = 0, izq = 0, arriba = 1, abajo = 0;
+                                }
+                                if(maze[coordx][coordy-1]==1 && coordy+1!=20 )
+                                {
+                                    y_pos=y_pos;
+                                }
                             }
-                        if(maze[coordx+1][coordy]==1)
+
+                            if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                             {
-                        x_pos=x_pos;
+                                if(maze[coordx][coordy+1]==0 || coordy+1==20)
+                                {
+                                    y_pos=y_pos-96;
+                                    coordy++;
+                                    dcha = 0, izq = 0, arriba = 0, abajo = 1;
+                                }
+                                if(maze[coordx][coordy+1]==1 && coordy+1!=20)
+                                {
+                                    y_pos=y_pos;
+                                }
                             }
-                        }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
-                        {
-                        if(maze[coordx][coordy-1]==0 || coordy+1==20)
-                            {
-                        y_pos=y_pos+96;
-                        coordy--;
-                         dcha = 0, izq = 0, arriba = 1, abajo = 0;
-                            }
-                        if(maze[coordx][coordy-1]==1 && coordy+1!=20 )
-                            {
-                        y_pos=y_pos;
-                            }
-                        }
-                        if(event.key.keysym.scancode==SDL_SCANCODE_UP)
-                        {
-                        if(maze[coordx][coordy+1]==0 || coordy+1==20)
-                            {
-                        y_pos=y_pos-96;
-                        coordy++;
-                         dcha = 0, izq = 0, arriba = 0, abajo = 1;
-                            }
-                        if(maze[coordx][coordy+1]==1 && coordy+1!=20)
-                            {
-                        y_pos=y_pos;
-                            }
-                        }
                         }
                     }
                 }
@@ -380,17 +388,18 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     SDL_Surface *Token4 = SDL_LoadBMP("TK1.bmp");
     SDL_Surface *Teleportador1 = SDL_LoadBMP("TP.bmp");
     SDL_Surface *Teleportador2 = SDL_LoadBMP("TP.bmp");
+
 //SDL_Texture *texca = SDL_CreateTextureFromSurface(rend, camino);
 //SDL_Texture *texmu = SDL_CreateTextureFromSurface(rend, muro);
 
     SDL_Rect pos;
-        for(i = 1; i < 3; i++)
+    for(i = 1; i < 3; i++)
     {
         for(j = 1; j < 3; j++)
         {
             maze[i][j]=0;
         }
-        }
+    }
     for(i = 1; i < alt; i++)
     {
         for(j = 1; j < anch; j++)
@@ -438,7 +447,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                 maze[i][j]=0;
             }
         }
-        }
+    }
         T1_i=*Tk1_i;
         T1_j=*Tk1_j;
 
