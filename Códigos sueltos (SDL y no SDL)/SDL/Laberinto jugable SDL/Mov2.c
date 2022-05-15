@@ -15,6 +15,11 @@ int main( int argc, char* args[] )
     int maze[N][N];
     float x_pos= 1;
     float y_pos = 1;
+    int intento=1;       //Número de veces que se repite el juego (después lo haremos un contador cuando lo enlazemos al menú)
+    int minutos=0,segundos=0;
+    unsigned int tiempo;
+    FILE *tiempoempleado;   //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
+
 
     SDL_Window* ventana = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     SDL_Surface* screenSurface = NULL;
@@ -332,10 +337,38 @@ int main( int argc, char* args[] )
                     SDL_RenderPresent(rend);
                 }
 
+
+                 tiempo = SDL_GetTicks();   //Cuenta el tiempo desde que se inicia el juego (devuelve el valor en milisegundos)
+
+
                 SDL_Delay(1000/60);
             }
+            //Se acaba el juego, resultados:
+            //En el menú pondremos una sección con todos los resultados donde abrimos el fichero y lo mostramos en forma de lectura.
 
-//Se destruye todo y se sale de SDL
+
+            tiempo/=1000;         //Pasamos el tiempo a segundos y a minutos
+            minutos=tiempo/60;
+            segundos=abs(minutos*60-tiempo);
+
+            tiempoempleado = fopen("Puntuación.txt", "w");
+
+                if (tiempoempleado == NULL)     // Si el resultado es NULL se muestra un mensaje de error
+                    {
+                    printf("Error al abrir el fichero.\n");
+                    return -1;
+                    }
+
+                else    // Si ha funcionado, comienza la escritura
+                    {
+                        fprintf(tiempoempleado,"*****Resultados del intento número %i*****\n",intento);
+                        fprintf(tiempoempleado,"%d minuto(s) y %d segundos\n",minutos,segundos);
+                    }
+                fclose(tiempoempleado); // Cerramos fichero
+
+
+
+            //Se destruye todo y se sale de SDL
             SDL_DestroyTexture(texd);
             SDL_DestroyRenderer(rend);
             SDL_DestroyWindow(ventana);
@@ -344,6 +377,8 @@ int main( int argc, char* args[] )
     }
     return 0;
 }
+
+
 
 
 
