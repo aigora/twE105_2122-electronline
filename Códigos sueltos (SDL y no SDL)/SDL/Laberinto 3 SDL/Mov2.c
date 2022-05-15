@@ -131,10 +131,6 @@ tp2_j=TP2_j;
 
                 while (SDL_PollEvent(&event))
                 {
-                    if(coordy==20)
-                    {
-                        printf("El poder de la luna nos ha hecho libres, podemos vagar por el vacio\n");
-                    }
                     if (event.type == SDL_QUIT ||salir(coordx,coordy,sal_i,sal_j)==1)
                         quit=1;
                 if(tp1_i==coordx && tp1_j==coordy && teletransportar==1)
@@ -194,13 +190,13 @@ tp2_j=TP2_j;
                         }
                         if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                         {
-                        if(maze[coordx][coordy-1]==0 )
+                        if(maze[coordx][coordy-1]==0)
                             {
                         y_pos=y_pos+96;
                         coordy--;
                         dcha = 0, izq = 0, arriba = 1, abajo = 0;
                             }
-                        if(maze[coordx][coordy-1]==1 )
+                        if(maze[coordx][coordy-1]==1)
                             {
                         y_pos=y_pos;
                             }
@@ -250,26 +246,26 @@ tp2_j=TP2_j;
                         }
                         if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
                         {
-                        if(maze[coordx][coordy-1]==0 || coordy+1==20)
+                        if(maze[coordx][coordy-1]==0)
                             {
                         y_pos=y_pos+96;
                         coordy--;
                          dcha = 0, izq = 0, arriba = 1, abajo = 0;
                             }
-                        if(maze[coordx][coordy-1]==1 && coordy+1!=20 )
+                        if(maze[coordx][coordy-1]==1)
                             {
                         y_pos=y_pos;
                             }
                         }
                         if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                         {
-                        if(maze[coordx][coordy+1]==0 || coordy+1==20)
+                        if(maze[coordx][coordy+1]==0 && coordy+1!=20)
                             {
                         y_pos=y_pos-96;
                         coordy++;
                          dcha = 0, izq = 0, arriba = 0, abajo = 1;
                             }
-                        if(maze[coordx][coordy+1]==1 && coordy+1!=20)
+                        if(maze[coordx][coordy+1]==1 || coordy+1==20 )
                             {
                         y_pos=y_pos;
                             }
@@ -362,8 +358,8 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
         for(j = 0; j < anch; j++)
             maze[i][j] = 1;
     }
-    xo = 1;
-    yo = 1;
+    xo = 3;
+    yo = 3;
 //Posición inicial
     maze[xo][yo] = 0;
 //Hacemos el laberinto
