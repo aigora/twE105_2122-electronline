@@ -16,7 +16,7 @@ int main( int argc, char* args[] )
     float x_pos= 1;
     float y_pos = 1;
     int intento=1;       //Número de veces que se repite el juego (después lo haremos un contador cuando lo enlazemos al menú)
-    int minutos=0,segundos=0;
+    int minutos=0,segundos=0,puntuacion;
     unsigned int tiempo;
     FILE *tiempoempleado;   //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
 
@@ -351,6 +351,25 @@ int main( int argc, char* args[] )
             minutos=tiempo/60;
             segundos=abs(minutos*60-tiempo);
 
+
+            //Hacemos las puntuaciones
+            if (minutos==0 && segundos>0 && segundos<20)
+                puntuacion=30;
+            else if (minutos==0 && segundos>=20 && segundos<40)
+                puntuacion=25;
+            else if (minutos==0 && segundos>=40 && segundos<60)
+                puntuacion=20;
+            else if (minutos==1 && segundos>=0 && segundos<20)
+                puntuacion=15;
+            else if (minutos==1 && segundos>=20 && segundos<40)
+                puntuacion=10;
+            else if (minutos==1 && segundos>=40 && segundos<60)
+                puntuacion=5;
+            else
+                puntuacion=0;
+
+
+            //Gestionamos el fichero
             tiempoempleado = fopen("Puntuación.txt", "w");
 
                 if (tiempoempleado == NULL)     // Si el resultado es NULL se muestra un mensaje de error
@@ -362,7 +381,7 @@ int main( int argc, char* args[] )
                 else    // Si ha funcionado, comienza la escritura
                     {
                         fprintf(tiempoempleado,"*****Resultados del intento número %i*****\n",intento);
-                        fprintf(tiempoempleado,"%d minuto(s) y %d segundos\n",minutos,segundos);
+                        fprintf(tiempoempleado,"%d minuto(s) y %d segundos --------> %d puntos\n",minutos,segundos,puntuacion);
                     }
                 fclose(tiempoempleado); // Cerramos fichero
 
