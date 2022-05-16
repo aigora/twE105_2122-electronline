@@ -12,6 +12,10 @@ void juego_lab(int alt, int anch){
      char lab[N][N];
      int minutos=0,segundos=7;
      int lapso2=1000;
+     FILE *tiempoempleado;
+     int segundo=0,seg,min;
+     int puntuacion,intento=1;
+
 
 
      srand(time(NULL));//Semilla aleatoria para el teleportador y los bloqueos
@@ -351,18 +355,66 @@ if((x==b1[3].x) && (y==b1[3].y))
 {
     b1[3].identificador=n;
 }//B4
+
+Sleep(1000);        //Tiempo empleado
+segundo++;
+
 if(si==x && sj==y)
 {
-    printf("\x1b[2J");
-    printf("Felicidades, has ganado!");
-    Sleep(500);
-    system("cls");
-    printf(" ");
-    Sleep(500);
+            printf("\x1b[2J");
+            printf("Felicidades, has ganado!");
+            Sleep(500);
+            //system("cls");
+            //printf(" ");
+            //Sleep(500);
+
+
+            //Pasamos el tiempo a segundos y a minutos
+            min=segundo/60;
+            seg=abs(minutos*60-segundo);
+
+
+            //Hacemos las puntuaciones
+            if (min==0 && seg>0 && seg<20)
+                puntuacion=30;
+            else if (min==0 && seg>=20 && seg<40)
+                puntuacion=25;
+            else if (min==0 && seg>=40 && seg<60)
+                puntuacion=20;
+            else if (min==1 && seg>=0 && seg<20)
+                puntuacion=15;
+            else if (min==1 && seg>=20 && seg<40)
+                puntuacion=10;
+            else if (min==1 && seg>=40 && seg<60)
+                puntuacion=5;
+            else
+                puntuacion=0;
+
+
+            //Gestionamos el fichero
+            tiempoempleado = fopen("Puntuacion.txt", "w");
+
+                if (tiempoempleado == NULL)     // Si el resultado es NULL se muestra un mensaje de error
+                    {
+                    printf("Error al abrir el fichero.\n");
+                    return -1;
+                    }
+
+                else    // Si ha funcionado, comienza la escritura
+                    {
+                        fprintf(tiempoempleado,"*****Resultados del intento número %i*****\n",intento);
+                        fprintf(tiempoempleado,"%d minuto(s) y %d segundos --------> %d puntos\n",min,seg,puntuacion);
+                    }
+                fclose(tiempoempleado); // Cerramos fichero
+
+
+
 }
     }
 return 0;
 }
+
+
 
 void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
 {
@@ -473,6 +525,8 @@ printf("x:%d y:%d\n",x,y);//replicamos el laberinto y cambiamos la posicion de l
 printf("Presione el tabulador para reiniciar.\n");
 printf("%d,%d",si,sj);
 }
+
+
 
 void reiniciar(int a,int b, int f1, int f2, int anch, int alt, char m, char n, char p,int x,int y,teleporter t1,teleporter t2,bloqueo b1[],int T1,int T2,int B1[],int si,int sj, int maze[N][N], char lab[N][N])
 {

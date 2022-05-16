@@ -13,9 +13,10 @@ int main()
     setlocale(LC_ALL,"spanish");
 
     int op,dificultad,fondo, colum=17, fila=17,obj;   //Laberinto 13 x 13 predeterminado
-    int musica = 0; //música en 0 indica que esta apagada, mientras que uno indica que está encendida.
-    int objetos=0;
+    int objetos=0,n;
     char opcion[11],exp[]="explicacion",cont[]="controles";
+    FILE *pf;
+    int puntuacion,mins,seg;
 
     printf("************************************************************************\n");
     printf("************************************************************************\n");
@@ -35,7 +36,7 @@ do{
         printf("\n");
         printf("-Presiona 4 para elegir un fondo para el laberinto y el menú.\n");
         printf("\n");
-        printf("-Presiona 5 para activar/desactivar música.\n");
+        printf("-Presiona 5 para ver las puntuaciones.\n");
         printf("\n");
         printf("-Presiona 6 para activar/desactivar los objetos.\n");
         printf("\n");
@@ -106,13 +107,26 @@ do{
             goto inicio;
             break;
         case 5:
-           if (musica == 0) // si la musica está apagada, la enciende.
-            musica = 1;
-           else if (musica == 1) // si está encendida, la apaga.
-            musica = 0;
-             printf("\x1b[2J");
+
+            // Abrimos fichero para lectura
+        /**
+            pf = fopen("Puntuacion.txt", "r");
+            if (pf == NULL) {// Si el resultado es NULL mensaje de error
+                printf("Error al abrir el fichero.\n");
+                    return -1;
+                }
+            else
+            {
+            // Leemos datos separados por comas
+            n = fscanf(pf,"[^*****Resultados del intento número 1*****\n] %i [^minuto(s) y ] %i [^segundos -------->] %i",mins,seg,puntuacion);
+            fclose(pf);
+            // Mostramos en pantalla lo leído
+            printf(" %i\n",puntuacion);
+            Sleep(5000);
+            }
             goto inicio;
-        break;
+            break;
+        */
 
         case 6:
             if (objetos==0)
