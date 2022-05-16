@@ -15,7 +15,10 @@ const int SCREEN_HEIGHT = 640;
 int maze[N][N];
     float x_pos= 1;
     float y_pos = 1;
-
+    int intento=1;       //Número de veces que se repite el juego (después lo haremos un contador cuando lo enlazemos al menú)
+    int minutos=0,segundos=0,puntuacion;
+    unsigned int tiempo;
+    FILE *tiempoempleado;   //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
     SDL_Window* ventana = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     SDL_Surface* screenSurface = NULL;
     Uint32 render_flags = SDL_RENDERER_ACCELERATED;
@@ -322,6 +325,47 @@ tp2_j=TP2_j;
 
                 SDL_Delay(1000/60);
             }
+           //Se acaba el juego, resultados:
+            //En el menú pondremos una sección con todos los resultados donde abrimos el fichero y lo mostramos en forma de lectura.
+
+
+            tiempo/=1000;         //Pasamos el tiempo a segundos y a minutos
+            minutos=tiempo/60;
+            segundos=abs(minutos*60-tiempo);
+
+
+            //Hacemos las puntuaciones
+            if (minutos==0 && segundos>0 && segundos<20)
+                puntuacion=30;
+            else if (minutos==0 && segundos>=20 && segundos<40)
+                puntuacion=25;
+            else if (minutos==0 && segundos>=40 && segundos<60)
+                puntuacion=20;
+            else if (minutos==1 && segundos>=0 && segundos<20)
+                puntuacion=15;
+            else if (minutos==1 && segundos>=20 && segundos<40)
+                puntuacion=10;
+            else if (minutos==1 && segundos>=40 && segundos<60)
+                puntuacion=5;
+            else
+                puntuacion=0;
+
+
+            //Gestionamos el fichero
+            tiempoempleado = fopen("Puntuación.txt", "w");
+
+                if (tiempoempleado == NULL)     // Si el resultado es NULL se muestra un mensaje de error
+                    {
+                    printf("Error al abrir el fichero.\n");
+                    return -1;
+                    }
+
+                else    // Si ha funcionado, comienza la escritura
+                    {
+                        fprintf(tiempoempleado,"*****Resultados del intento número %i*****\n",intento);
+                        fprintf(tiempoempleado,"%d minuto(s) y %d segundos --------> %d puntos\n",minutos,segundos,puntuacion);
+                    }
+                fclose(tiempoempleado); // Cerramos fichero
 
 //Se destruye todo y se sale de SDL
             SDL_DestroyTexture(texd);
