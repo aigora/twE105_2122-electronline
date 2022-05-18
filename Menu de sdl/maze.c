@@ -1,8 +1,12 @@
-
+#include <SDL.h>
+#include <stdio.h>
+#include <SDL_timer.h>
+#define SPEED (300) //Definimos la velocidad(píxeles por segundo)
 #include"assets.h"
-#include "Game.h"
 
-void InitGame(int *stage)
+void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,int *sal_i,int *sal_j,int *Tk1_i,int *Tk1_j,int *Tk2_i,int *Tk2_j,int *Tk3_i,int *Tk3_j,int *Tk4_i,int *Tk4_j,int *TP1_i,int *TP1_j,int *TP2_i,int *TP2_j);
+
+int main( int argc, char* args[] )
 {
     //Declaración de variables
     const int SCREEN_WIDTH = 1080;
@@ -133,14 +137,8 @@ void InitGame(int *stage)
                     {
                         printf("El poder de la luna nos ha hecho libres, podemos vagar por el vacío\n");
                     }
-                    if (event.type == SDL_QUIT)
+                    if (event.type == SDL_QUIT ||salir(coordx,coordy,sal_i,sal_j)==1)
                         quit=1;
-
-                    if(salir(coordx,coordy,sal_i,sal_j)==1){
-                        *stage = 1;
-                        SDL_DestroyWindow(ventana);
-                    }
-
                     if(tp1_i==coordx && tp1_j==coordy && teletransportar==1)
                     {
                         coordx=tp2_i;
@@ -401,6 +399,7 @@ void InitGame(int *stage)
 
 
 
+
 void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,int *sal_i,int *sal_j,int *Tk1_i,int *Tk1_j,int *Tk2_i,int *Tk2_j,int *Tk3_i,int *Tk3_j,int *Tk4_i,int *Tk4_j,int *TP1_i,int *TP1_j,int *TP2_i,int *TP2_j)
 {
     int alt = 20;
@@ -411,15 +410,13 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
 
     srand(time(NULL));
 
-    T1= 1 + rand() % 31;
-    T2= 30 + rand() % 31;
+    T1=rand() % 80;
+    T2=rand() % 80;
+    T3=rand() % 80;
+    T4=rand() % 80;
 
-    T3= 60 + rand() % 31;
-    T4= 90 + rand() % 31;
-
-    TP1= 1 + rand() % 61;
-    TP2= 60 + rand() % 61;
-
+    TP1=rand() % 80;
+    TP2=rand() % 80;
     //Llenamos una matriz de 1. Esta matriz se utilizará posteriormente para hacer el laberinto
     for (i = 0; i < alt; i++)
     {
@@ -433,6 +430,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
 //Hacemos el laberinto
     recursion(xo, yo, anch, alt, maze);
 
+//SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0xFF, 0xFF, 0xFF ) ); //Ponemos el fondo blanco
     SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
     SDL_Surface *muro = SDL_LoadBMP("GenWall.bmp");
     SDL_Surface *Inicio = SDL_LoadBMP("Inicio.bmp");
@@ -444,16 +442,17 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     SDL_Surface *Teleportador1 = SDL_LoadBMP("TP.bmp");
     SDL_Surface *Teleportador2 = SDL_LoadBMP("TP.bmp");
 
-    SDL_Rect pos;
+//SDL_Texture *texca = SDL_CreateTextureFromSurface(rend, camino);
+//SDL_Texture *texmu = SDL_CreateTextureFromSurface(rend, muro);
 
-    for(i = 1; i < 4; i++)
+    SDL_Rect pos;
+    for(i = 1; i < 3; i++)
     {
-        for(j = 1; j < 4; j++)
+        for(j = 1; j < 3; j++)
         {
             maze[i][j]=0;
         }
     }
-
     for(i = 1; i < alt; i++)
     {
         for(j = 1; j < anch; j++)
@@ -520,9 +519,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
         tp2_i=*TP2_i;
         tp2_j=*TP2_j;
         maze[2][2]=1;
-
     //Recorremos la matriz. Cada vez que encuentra un 1 pomdrá un sprite muro, y en un 0 un sprite camino
-
     for(i = 0; i < alt; i++)
     {
         for(j = 0; j < anch; j++)
@@ -576,82 +573,4 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
 
 }
 
-
-void recursion(int r, int c, int anch, int alt, int maze[N][N])
-{
-    int i, num, k, p;
- int direc[4] = {0,0,0,0};
-
- for (i = 0; i < 4; i++){ //Elige una dirección aleatoria
-// el bucle terminará cuando haya buscado entre las 4 direcciones y aún así no pueda continuar el laberinto
-
-for(k=0;k<4;k++)
-{
-    int num = 1 + rand()%4; //genera un numero aleatorio para el vector dirección
-      for(p=0; p < k; p++)  // Verifica si no se ha generado antes
-          if(num==direc[p])
-          {
-             num = 1 + rand()%4;
-             p=-1;
-          }
-   direc[k] =num;
-}
-
-    switch(direc[i]){ // crea caminos en el laberinto
-   case 1: //Arriba
-       if (r - 2 <= 0) // si dos celdas más arriba está ocupado o no
-        continue;
-       else if (maze[r - 2][c] != 0){ //ocupa las dos de arriba
-        maze[r - 2][c] = 0;
-        maze[r - 1][c] = 0;
-        recursion(r - 2, c, anch, alt, maze);
-       }
-       break;
-
-    case 2: //Derecha
-       if (c + 2 >= anch - 1)  // si dos celdas a la derecha está ocupado o no
-        continue;
-       else if (maze[r][c + 2] != 0){ //ocupa las dos de la derecha
-        maze[r][c + 2] = 0;
-        maze[r][c + 1] = 0;
-        recursion(r, c + 2, anch, alt, maze);
-       }
-       break;
-
-    case 3: //Abajo
-       if (r + 2 >= alt - 1)  // si dos celdas más abajo está ocupado o no
-        continue;
-       else if (maze[r + 2][c] != 0){ //ocupa las dos de abajo
-        maze[r + 2][c] = 0;
-        maze[r + 1][c] = 0;
-        recursion(r + 2, c, anch, alt, maze);
-       }
-       break;
-
-    case 4: //Izquierda
-       if (c - 2 <= 0)  // si dos celdas a la izquierda está ocupado o no
-        continue;
-       else if (maze[r][c - 2] != 0){ //ocupa las dos de la izquierda
-        maze[r][c - 2] = 0;
-        maze[r][c - 1] = 0;
-        recursion(r, c - 2, anch, alt, maze);
-       }
-       break;
-
-    }
- }
-
-}
-
-int salir(int coordx,int coordy,int sal_i,int sal_j)
-{
-if((coordx==sal_i)&&(coordy==sal_j))
-{
-    return 1;
-}
-else
-{
-    return 0;
-}
-}
 
