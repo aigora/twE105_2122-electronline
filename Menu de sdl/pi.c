@@ -64,8 +64,9 @@ SDL_Event e;
         break;
 }
 }
-
-switch(stage)
+while(1)
+{
+ switch(stage)
 {
 case 1:
     {
@@ -133,14 +134,6 @@ case 2:
                {
                 return 0;
                }
-               else if(ev.type==SDL_MOUSEBUTTONDOWN)
-              {
-               if(ev.button.button=SDL_BUTTON_LEFT)
-               {
-                  stage=1;
-
-               }
-              }
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
         SDL_UpdateWindowSurface( window );
         }
@@ -264,6 +257,8 @@ case 5:
         }
     }
 }
+}
+
 
 
 return 0;

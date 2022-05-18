@@ -384,3 +384,10 @@
 	"begin_code.h"
 	"close_code.h"
 
+1652861857 source:c:\users\mario\desktop\menu de sdl\pi.c
+	<SDL2/SDL.h>
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+
