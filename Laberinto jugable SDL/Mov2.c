@@ -232,35 +232,21 @@ void InitGame(int *stage)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {
-                                if(maze[coordx-1][coordy]==0)
+                                if(maze[coordx][coordy+1]==0 || coordy+1==20)
                                 {
-                                    x_pos=x_pos+76;
-                                    coordx--;
-                                    dcha = 0, izq = 1, arriba = 0, abajo = 0;
+                                    y_pos=y_pos-96;
+                                    coordy++;
+                                    dcha = 0, izq = 0, arriba = 0, abajo = 1;
                                 }
-                                if(maze[coordx-1][coordy]==1)
+                                if(maze[coordx][coordy+1]==1 && coordy+1!=20)
                                 {
-                                    x_pos=x_pos;
+                                    y_pos=y_pos;
                                 }
                             }
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
-                                if(maze[coordx+1][coordy]==0)
-                                {
-                                    x_pos=x_pos-76;
-                                    coordx++;
-                                    dcha = 1, izq = 0, arriba = 0, abajo = 0;
-                                }
-                                if(maze[coordx+1][coordy]==1)
-                                {
-                                    x_pos=x_pos;
-                                }
-                            }
-
-                            if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
-                            {
-                                if(maze[coordx][coordy-1]==0 || coordy+1==20)
+                                 if(maze[coordx][coordy-1]==0 || coordy+1==20)
                                 {
                                     y_pos=y_pos+96;
                                     coordy--;
@@ -272,17 +258,31 @@ void InitGame(int *stage)
                                 }
                             }
 
+                            if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
+                            {
+                                 if(maze[coordx+1][coordy]==0)
+                                {
+                                    x_pos=x_pos-76;
+                                    coordx++;
+                                    dcha = 1, izq = 0, arriba = 0, abajo = 0;
+                                }
+                                if(maze[coordx+1][coordy]==1)
+                                {
+                                    x_pos=x_pos;
+                                }
+                            }
+
                             if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                             {
-                                if(maze[coordx][coordy+1]==0 || coordy+1==20)
+                               if(maze[coordx-1][coordy]==0)
                                 {
-                                    y_pos=y_pos-96;
-                                    coordy++;
-                                    dcha = 0, izq = 0, arriba = 0, abajo = 1;
+                                    x_pos=x_pos+76;
+                                    coordx--;
+                                    dcha = 0, izq = 1, arriba = 0, abajo = 0;
                                 }
-                                if(maze[coordx][coordy+1]==1 && coordy+1!=20)
+                                if(maze[coordx-1][coordy]==1)
                                 {
-                                    y_pos=y_pos;
+                                    x_pos=x_pos;
                                 }
                             }
                         }
@@ -405,6 +405,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     int i,j,x,y, xo, yo, k = 0;
     int T1,T2,T3,T4,TP1,TP2,T1_i,T1_j,T2_i,T2_j,T3_i,T3_j,T4_i,T4_j,tp1_i,tp1_j,tp2_i,tp2_j;
     int esp=0,salida_i,salida_j;
+    int randw;
 
     srand(time(NULL));
 
@@ -431,9 +432,13 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     recursion(xo, yo, anch, alt, maze);
 
     SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
-    SDL_Surface *muro = SDL_LoadBMP("GenWall.bmp");
+
+    SDL_Surface *muroG = SDL_LoadBMP("GenWall.bmp");
+    SDL_Surface *muroB = SDL_LoadBMP("BasicWall.bmp");
+
     SDL_Surface *Inicio = SDL_LoadBMP("Inicio.bmp");
-    SDL_Surface *Salida = SDL_LoadBMP("Salida.bmp");
+    SDL_Surface *Salida = SDL_LoadBMP("End.bmp");
+
     SDL_Surface *Token1 = SDL_LoadBMP("TK3.bmp");
     SDL_Surface *Token2 = SDL_LoadBMP("TK3.bmp");
     SDL_Surface *Token3 = SDL_LoadBMP("TK1.bmp");
@@ -534,12 +539,26 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
             }
             if(maze[i][j]==1)
             {
-                pos.x = 32*i;
-                pos.y = 32*j;
-                SDL_BlitSurface(muro,0,screenSurface,&pos);
-                // SDL_RenderCopy(rend, texmu, NULL, &pos);
-                // SDL_RenderPresent(rend);
+              pos.x = 32*i;
+              pos.y = 32*j;
 
+                  randw= 1 + rand()%10;
+             switch(randw){
+         case 1:
+         case 2:
+         case 3:
+         case 4:
+         case 5:
+         case 6:
+            SDL_BlitSurface(muroB,0,screenSurface,&pos);
+            break;
+         case 7:
+         case 8:
+         case 9:
+         case 10:
+                SDL_BlitSurface(muroG,0,screenSurface,&pos);
+            break;
+             }
 
             }
         }

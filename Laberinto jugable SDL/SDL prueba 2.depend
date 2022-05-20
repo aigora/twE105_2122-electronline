@@ -8063,7 +8063,7 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653042432 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
+1653070443 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -8453,6 +8453,6 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653042648 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
+1653085570 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
 	"Game.h"
 
