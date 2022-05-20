@@ -6,8 +6,7 @@
 void juego_lab(int alt, int anch)
 {
 
-
-//Declaración de variables
+    //Declaración de variables
 
     int maze[N][N];
     char lab[N][N];
@@ -372,14 +371,19 @@ void juego_lab(int alt, int anch)
         Sleep(1000);        //Tiempo empleado
         segundo++;
 
-        if(si==x && sj==y)
+        if(si==x && sj==y)    //Si el jugador llega a la meta
         {
             printf("\x1b[2J");
-            printf("Felicidades, has ganado!");
-            Sleep(500);
-            //system("cls");
-            //printf(" ");
-            //Sleep(500);
+            for (i=0;i<10;i++)
+            {
+            printf("¡Felicidades, has ganado!");
+            Sleep(600);
+            printf("\x1b[2J");
+            printf("¡Felicidades, has ganado!");
+            Sleep(600);
+            printf("\x1b[2J");
+            printf(" ");
+            }
 
 
             //Pasamos el tiempo a segundos y a minutos
@@ -413,14 +417,12 @@ void juego_lab(int alt, int anch)
                 return -1;
             }
 
-            else    // Si ha funcionado, comienza la escritura
+            else    // Si ha funcionado, comienza la escritura (minutos, segundos y puntuación equivalente).
             {
-                fprintf(tiempoempleado,"%d,%d,%d",min,seg,puntuacion);
+                fprintf(tiempoempleado,"%d,%d,%d\n",min,seg,puntuacion);
             }
             fclose(tiempoempleado); // Cerramos fichero
-
-
-
+            laberinto=0;   //Si el jugador llega a la meta, se termina el programa del juego y se vuelve al menú.
         }
     }
     return 0;
@@ -433,13 +435,13 @@ void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
     int i, num, k, p;
     int direc[4] = {0,0,0,0};
 
-    for (i = 0; i < 4; i++)  //Elige una direcci�n aleatoria
+    for (i = 0; i < 4; i++)  //Elige una dirección aleatoria
     {
-// el bucle terminar� cuando haya buscado entre las 4 direcciones y a�n as� no pueda continuar el laberinto
+// El bucle terminará cuando haya buscado entre las 4 direcciones y aún así no pueda continuar el laberinto
 
         for(k=0; k<4; k++)
         {
-            int num = 1 + rand()%4; //genera un numero aleatorio para el vector direcci�n
+            int num = 1 + rand()%4; //Genera un numero aleatorio para el vector dirección
 
             if(k>0)
             {
@@ -458,7 +460,7 @@ void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
         switch(direc[i])  // crea caminos en el laberinto
         {
         case 1: //Arriba
-            if (r - 2 <= 0) // si dos celdas m�s arriba est� ocupado o no
+            if (r - 2 <= 0) // si dos celdas más arriba está ocupado o no
                 continue;
             else if (maze[r - 2][c] != 0)  //ocupa las dos de arriba
             {
@@ -469,7 +471,7 @@ void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
             break;
 
         case 2: //Derecha
-            if (c + 2 >= anch - 1)  // si dos celdas a la derecha est� ocupado o no
+            if (c + 2 >= anch - 1)  // si dos celdas a la derecha está ocupado o no
                 continue;
             else if (maze[r][c + 2] != 0)  //ocupa las dos de la derecha
             {
@@ -480,7 +482,7 @@ void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
             break;
 
         case 3: //Abajo
-            if (r + 2 >= alt - 1)  // si dos celdas m�s abajo est� ocupado o no
+            if (r + 2 >= alt - 1)  // si dos celdas más abajo está ocupado o no
                 continue;
             else if (maze[r + 2][c] != 0)  //ocupa las dos de abajo
             {
@@ -491,7 +493,7 @@ void recursion(int r, int c, int anch, int alt, int maze[N][N], char n)
             break;
 
         case 4: //Izquierda
-            if (c - 2 <= 0)  // si dos celdas a la izquierda est� ocupado o no
+            if (c - 2 <= 0)  // si dos celdas a la izquierda está ocupado o no
                 continue;
             else if (maze[r][c - 2] != 0)  //ocupa las dos de la izquierda
             {

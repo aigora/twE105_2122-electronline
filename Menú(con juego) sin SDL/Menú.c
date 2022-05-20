@@ -5,13 +5,20 @@
 #include <string.h>
 #include "expliC.h"
 #include "juego.h"
+#define ANSI_COLOR_BLUE "\x1b[34m"   //Definimos el color azul
 
+
+//Definición de funciones
 void expobj(void);
+void creadores(void);
+
+
 int main()
 {
 
-    setlocale(LC_ALL,"spanish");
+    setlocale(LC_ALL,"spanish");  //Definimos como idioma el español.
 
+    //Declaración de variables
     int op,dificultad,fondo, colum=17, fila=17,obj;   //Laberinto 13 x 13 predeterminado
     int objetos=0,n;
     char opcion[11],exp[]="explicacion",cont[]="controles";
@@ -33,11 +40,11 @@ int main()
         printf("\n");
         printf("-Presiona 2 para elegir el tamaño del laberinto.\n");
         printf("\n");
-        printf("-Presiona 3 para elegir un fondo para el laberinto y el menú.\n");
+        printf("-Presiona 3 para ver las puntuaciones.\n");
         printf("\n");
-        printf("-Presiona 4 para ver las puntuaciones.\n");
+        printf("-Presiona 4 para acceder a la explicación y los controles.\n");
         printf("\n");
-        printf("-Presiona 5 para acceder a la explicación y los controles.\n");
+        printf("-Presiona 5 para ver los creadores del juego.\n");
         printf("\n");
         printf("-Presiona 6 para salir del menú.\n");
         printf("\n");
@@ -49,59 +56,44 @@ int main()
 
         switch (op)
         {
+
         case 1:
 
             juego_lab(colum,fila);
-
             printf("\x1b[2J");
             break;
 
 
         case 2:
 
-            printf("Introduzca la altura del laberinto. Predeterminado: 17.\n");
+            printf("Introduzca la altura del laberinto (número impar y mayor que 9). Predeterminado: 17.\n");
             scanf("%i", &colum);
-            printf("Introduzca la anchura del laberinto. Predeterminado: 17.\n");
+            if (colum<=9 || colum%2==0)
+            {
+                printf("Introduzca un número mayor o impar:\n");
+                do
+                {
+                    scanf("%i", &colum);
+                }
+                while(colum<=9 || colum%2==0);
+            }
+            printf("Introduzca la anchura del laberinto (número impar y mayor que 9). Predeterminado: 17.\n");
             scanf("%i", &fila);
+            if (fila<=9 || fila%2==0)
+            {
+                printf("Introduzca un número mayor o impar:\n");
+                do
+                {
+                    scanf("%i", &fila);
+                }
+                while(fila<=9 || fila%2==0);
+            }
 
             printf("\x1b[2J");
             break;
 
 
         case 3:
-
-            do
-            {
-                printf("Presione 1 para un fondo negro.\n");
-                printf("Presione 2 para un fondo blanco.\n");
-                printf("Presione 3 para un fondo rojo.\n");
-                printf("Presione 4 para un fondo azul.\n");
-                scanf("%d",&fondo);
-            }
-            while(fondo < 1 || fondo > 4);
-
-            switch(fondo)
-            {
-            case 1:
-                system("color 0f");
-                break;
-            case 2:
-                system("color f0");
-                break;
-            case 3:
-                system("color 40");
-                break;
-            case 4:
-                system("color b0");
-                break;
-            default:
-                break;
-            }
-            printf("\x1b[2J");
-            break;
-
-
-        case 4:
 
             // Abrimos fichero para lectura
 
@@ -118,16 +110,16 @@ int main()
                 n = fscanf(pf,"%d,%d,%d",&mins,&seg,&puntuacion);
                 fclose(pf);
                 // Mostramos en pantalla lo leído
-                printf("***Resultados del intento realizado***\n");
-                printf("%d minuto(s) y %d segundos --------> %d puntos",mins,seg,puntuacion);
-                Sleep(5000);
+                printf("***Resultados del último intento realizado***\n");
+                printf("%d minuto(s) y %d segundos --------> %d puntos\n",mins,seg,puntuacion);
+                sleep(5);
             }
 
             break;
 
 
 
-        case 5:
+        case 4:
 
             printf("Escriba 'controles' para ver los controles del juego o 'explicacion' para la explicación del juego:\n");
             scanf("%20s",opcion);
@@ -140,7 +132,7 @@ int main()
             {
             case 1:
                 expobj();
-                sleep(20);
+                sleep(10);   //Espera 10 segundos
                 printf("\x1b[2J");
                 break;
             case 2:
@@ -149,6 +141,12 @@ int main()
             default:
                 break;
             }
+            break;
+
+        case 5:
+            creadores();
+            sleep(7);
+            printf("\x1b[2J");
             break;
 
 
@@ -166,6 +164,8 @@ int main()
 
     return 0;
 }
+
+
 void expobj(void)
 {
     printf("Actualmente, el juego dispone de dos tipos de objetos y una salida:\n");
@@ -173,4 +173,12 @@ void expobj(void)
     printf("#: Salida.\n");
     printf("B: Bloqueador. Al pasar sobre este objeto, el bloque en cuestión se convertirá en un muro, no pudiendo volver hacia atrás.\n");
     printf("T: Teletransportador. Al pasar sobre este objeto, el jugador será teletransportado a otro teletransporte repartido por el mapa.\n");
+}
+
+void creadores(void)
+{
+    printf(ANSI_COLOR_BLUE "-Juan Muñoz del Bustillo (https://github.com/Juanmdemiguel)\n");
+    printf(ANSI_COLOR_BLUE "-Diego Rodríguez González (https://github.com/DiegoRodriguezGonzalez)\n");
+    printf(ANSI_COLOR_BLUE "-Mario Luna López (https://github.com/Mariuser24)\n");
+    printf(ANSI_COLOR_BLUE "-Daniel Frenzel Zarza (https://github.com/Mariuser24)\n");
 }
