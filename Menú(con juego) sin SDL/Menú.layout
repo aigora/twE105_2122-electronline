@@ -2,9 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Menú.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="expliC.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3643" topLine="136" />
+			<Cursor1 position="50" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="expliC.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -12,19 +12,19 @@
 			<Cursor1 position="1393" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="expliC.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="juego.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="50" topLine="0" />
+			<Cursor1 position="537" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="juego.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="11258" topLine="395" />
+			<Cursor1 position="12642" topLine="371" />
 		</Cursor>
 	</File>
-	<File name="juego.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Menú.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="537" topLine="9" />
+			<Cursor1 position="4195" topLine="130" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
