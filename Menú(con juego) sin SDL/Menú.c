@@ -177,7 +177,7 @@ void expobj(void)
 
 void creadores(void)
 {
-    printf(ANSI_COLOR_BLUE "-Juan Muñoz del Bustillo (https://github.com/Juanmdemiguel)\n");
+    printf(ANSI_COLOR_BLUE "-Juan Muñoz de Bustillo (https://github.com/Juanmdemiguel)\n");
     printf(ANSI_COLOR_BLUE "-Diego Rodríguez González (https://github.com/DiegoRodriguezGonzalez)\n");
     printf(ANSI_COLOR_BLUE "-Mario Luna López (https://github.com/Mariuser24)\n");
     printf(ANSI_COLOR_BLUE "-Daniel Frenzel Zarza (https://github.com/Mariuser24)\n");
