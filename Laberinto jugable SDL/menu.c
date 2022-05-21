@@ -37,6 +37,9 @@ SDL_Surface*integrantes2=SDL_LoadBMP("integrantes3.1.bmp");
 SDL_Surface*tutorial1=SDL_LoadBMP("tutorial3.0.bmp");
 SDL_Surface*tutorial2=SDL_LoadBMP("tutorial3.1.bmp");
 
+SDL_Surface*controles1=SDL_LoadBMP("controles1.bmp");
+SDL_Surface*controles2=SDL_LoadBMP("controles2.bmp");
+
 
 SDL_Surface*currentimage=NULL;
 
@@ -71,77 +74,6 @@ while(1)
 switch(stage)
 {
 
-
-#include <SDL2/SDL.h>
-#include <stdio.h>
-#include<stdbool.h>
-#include <string.h>
-#include <math.h>
-
-
-int main( int argc, char* args[] )
-{
-
-const int SCREEN_WIDTH = 1200;
-const int SCREEN_HEIGHT = 675;
-int mouse_x, mouse_y;
-int buttons;
-int stage=1;
-SDL_Event ev;
-
-
-//Se define la ventana
-SDL_Window* window = NULL;
-SDL_Surface* screenSurface = NULL;
-SDL_Surface*menu1=SDL_LoadBMP("MENU2.0.bmp");
-SDL_Surface*menu2=SDL_LoadBMP("MENU2.1.bmp");
-SDL_Surface*menu3=SDL_LoadBMP("MENU2.2.bmp");
-SDL_Surface*menu4=SDL_LoadBMP("MENU2.3.bmp");
-SDL_Surface*dificultad1=SDL_LoadBMP("DIFICULTAD2.0.bmp");
-SDL_Surface*dificultad5=SDL_LoadBMP("DIFICULTAD2.4.bmp");
-SDL_Surface*comojugar1=SDL_LoadBMP("comojugar3.0.bmp");
-SDL_Surface*comojugar2=SDL_LoadBMP("comojugar3.1.bmp");
-SDL_Surface*comojugar3=SDL_LoadBMP("comojugar3.2.bmp");
-SDL_Surface*comojugar4=SDL_LoadBMP("comojugar3.3.bmp");
-SDL_Surface*integrantes1=SDL_LoadBMP("integrantes3.0.bmp");
-SDL_Surface*integrantes2=SDL_LoadBMP("integrantes3.1.bmp");
-SDL_Surface*lol=SDL_LoadBMP("TrollFace2.bmp");
-SDL_Surface*tutorial1=SDL_LoadBMP("tutorial3.0.bmp");
-SDL_Surface*tutorial2=SDL_LoadBMP("tutorial3.1.bmp");
-SDL_Surface*controles1=SDL_LoadBMP("controles1.bmp");
-SDL_Surface*controles2=SDL_LoadBMP("controles2.bmp");
-
-
-SDL_Surface*currentimage=NULL;
-
-
-
- SDL_Init( SDL_INIT_VIDEO);
-
- window = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
- screenSurface = SDL_GetWindowSurface( window );
-
-
- bool quit = false;
-SDL_Event e;
-
-  if( SDL_PollEvent( &e ) != 0 )
-{
-
-   switch( e.type )
-{
-    case SDL_QUIT:
-    quit = true;
-    break;
-
-    default:
-        break;
-}
-}
-while(1)
-{
-switch(stage)
-{
 case 1:
     {
     while(stage==1)
@@ -375,15 +307,12 @@ case 6:
         }
     }
 }
-}
 
 
-return 0;
-}
-}
+
     } while(!quit);
-
 }
+
 
 
 
