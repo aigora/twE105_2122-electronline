@@ -435,6 +435,9 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
 
     SDL_Surface *muroG = SDL_LoadBMP("GenWall.bmp");
     SDL_Surface *muroB = SDL_LoadBMP("BasicWall.bmp");
+    SDL_Surface *muroD = SDL_LoadBMP("DogWall.bmp");
+    SDL_Surface *muroX = SDL_LoadBMP("XatuWall.bmp");
+    SDL_Surface *muroF = SDL_LoadBMP("FWall.bmp");
 
     SDL_Surface *Inicio = SDL_LoadBMP("Inicio.bmp");
     SDL_Surface *Salida = SDL_LoadBMP("End.bmp");
@@ -553,8 +556,14 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
             SDL_BlitSurface(muroB,0,screenSurface,&pos);
             break;
          case 7:
+             SDL_BlitSurface(muroD,0,screenSurface,&pos);
+             break;
          case 8:
+             SDL_BlitSurface(muroF,0,screenSurface,&pos);
+             break;
          case 9:
+             SDL_BlitSurface(muroX,0,screenSurface,&pos);
+             break;
          case 10:
                 SDL_BlitSurface(muroG,0,screenSurface,&pos);
             break;
