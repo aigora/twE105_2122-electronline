@@ -95,15 +95,15 @@ case 1:
                 {
                 if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
                 {
-                    currentimage=menu2;
+                    currentimage=menu3;
                 }
                 else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
                 {
-                    currentimage=menu3;
+                    currentimage=menu5;
                 }
                 else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
                 {
-                    currentimage=menu4;
+                    currentimage=menu7;
                 }
                 else
                 {
