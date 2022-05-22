@@ -126,16 +126,13 @@ void InitGame(int *stage)
 
                 while (SDL_PollEvent(&event))
                 {
-                    if(coordy==20)
-                    {
-                        printf("El poder de la luna nos ha hecho libres, podemos vagar por el vacío\n");
-                    }
                     if (event.type == SDL_QUIT)
                         quit=1;
 
                     if(salir(coordx,coordy,sal_i,sal_j)==1){
                         *stage = 1;
                         SDL_DestroyWindow(ventana);
+                        return;
                     }
 
                     if(tp1_i==coordx && tp1_j==coordy && teletransportar==1)
