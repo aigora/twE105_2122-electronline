@@ -12,6 +12,8 @@ const int SCREEN_HEIGHT = 675;
 int mouse_x, mouse_y;
 int buttons;
 int stage=1;
+int pararaudio=1;
+int pararaudio_menu=1;
 SDL_Event ev;
 
 //Se define la ventana
@@ -47,9 +49,16 @@ SDL_Surface*controles2=SDL_LoadBMP("controles2.bmp");
 
 SDL_Surface*currentimage=NULL;
 
-
+    SDL_AudioSpec wavSpec;
+    Uint32 wavLength;
+    Uint8 *wavBuffer;
+    SDL_LoadWAV("Musica_menu.wav", &wavSpec, &wavBuffer, &wavLength);
 
  SDL_Init( SDL_INIT_VIDEO);
+    SDL_Init(SDL_INIT_AUDIO);
+    SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
+    int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength);
+    SDL_PauseAudioDevice(deviceId,0);
 
  window = SDL_CreateWindow( "Menu", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
  screenSurface = SDL_GetWindowSurface( window );
@@ -82,8 +91,10 @@ case 1:
     {
     while(stage==1)
     {
+        pararaudio=1;
         currentimage=menu1;
-           buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        SDL_PauseAudioDevice(deviceId,0);
         while(SDL_PollEvent( &ev ) != 0)
         {
 
@@ -127,6 +138,9 @@ case 1:
                else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
                {
                    stage=8;
+                   SDL_PauseAudioDevice(deviceId,1);
+                   pararaudio=0;
+                   pararaudio_menu=0;
                }
             }
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
@@ -140,6 +154,7 @@ case 2:
 
                while(stage==2)
         {
+            SDL_PauseAudioDevice(deviceId,1);
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
             while(SDL_PollEvent( &ev ) != 0)
             {
@@ -147,7 +162,7 @@ case 2:
                {
                 return 0;
                }
-            InitGame(&stage);
+            InitGame(&stage,pararaudio);
             }
         }
     }
@@ -438,7 +453,7 @@ case 9:
                {
                 return 0;
                }
-            InitGame(&stage);
+            InitGame(&stage,pararaudio);
             }
         }
     }

@@ -1,6 +1,6 @@
 #include "Game.h"
 
-void InitGame(int *stage)
+void InitGame(int *stage,int pararaudio)
 {
     //Declaración de variables
     const int SCREEN_WIDTH = 1080;
@@ -13,6 +13,10 @@ void InitGame(int *stage)
     unsigned int tiempo;
     FILE *tiempoempleado;   //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
 
+    SDL_AudioSpec wavSpec;
+    Uint32 wavLength;
+    Uint8 *wavBuffer;
+    SDL_LoadWAV("Musica2.wav", &wavSpec, &wavBuffer, &wavLength);
 
     SDL_Window* ventana = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     SDL_Surface* screenSurface = NULL;
@@ -56,7 +60,8 @@ void InitGame(int *stage)
     int coordx=1,coordy=1;
     int teletransportar=1;
 
-
+    SDL_Init(SDL_INIT_AUDIO);
+    SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
     //Inicio de SDL
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
@@ -90,7 +95,6 @@ void InitGame(int *stage)
 
     screenSurface = SDL_GetWindowSurface( ventana );
 
-
     InitMaze(ventana, screenSurface, rend, maze,coordx,coordy,&sal_i,&sal_j,&Tk1_i,&Tk1_j,&Tk2_i,&Tk2_j,&Tk3_i,&Tk3_j,&Tk4_i,&Tk4_j,&TP1_i,&TP1_j,&TP2_i,&TP2_j);
     SDL_Texture* texmaze = SDL_CreateTextureFromSurface(rend, screenSurface);
 
@@ -108,9 +112,17 @@ void InitGame(int *stage)
     tp2_i=TP2_i;
     tp2_j=TP2_j;
 
-
+                int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength);
             while (!quit)
             {
+                    if(pararaudio==0)
+                    {
+                     SDL_PauseAudioDevice(deviceId,1);
+                    }
+                    else
+                    {
+                    SDL_PauseAudioDevice(deviceId,0);
+                    }
             SDL_Event event;
 
                 if(((t1_i==coordx)&&(t1_j==coordy))||((t2_i==coordx)&&(t2_j==coordy))||((t3_i==coordx)&&(t3_j==coordy)))
@@ -130,8 +142,18 @@ void InitGame(int *stage)
                         quit=1;
 
                     if(salir(coordx,coordy,sal_i,sal_j)==1){
+                            if(pararaudio==1)
+                            {
                         *stage = 1;
+                        SDL_PauseAudioDevice(deviceId,1);
                         SDL_DestroyWindow(ventana);
+                            }
+                            else
+                            {
+                        *stage = 8;
+                        SDL_PauseAudioDevice(deviceId,1);
+                        SDL_DestroyWindow(ventana);
+                            }
                         return;
                     }
 
