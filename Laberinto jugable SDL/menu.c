@@ -18,10 +18,14 @@ SDL_Event ev;
 SDL_Window* window = NULL;
 SDL_Surface* screenSurface = NULL;
 
-SDL_Surface*menu1=SDL_LoadBMP("MENU2.0.bmp");
-SDL_Surface*menu2=SDL_LoadBMP("MENU2.1.bmp");
-SDL_Surface*menu3=SDL_LoadBMP("MENU2.2.bmp");
-SDL_Surface*menu4=SDL_LoadBMP("MENU2.3.bmp");
+SDL_Surface*menu1=SDL_LoadBMP("MENU2.0.1.bmp");
+SDL_Surface*menu2=SDL_LoadBMP("MENU2.0.2.bmp");
+SDL_Surface*menu3=SDL_LoadBMP("MENU2.0.3.bmp");
+SDL_Surface*menu4=SDL_LoadBMP("MENU2.0.4.bmp");
+SDL_Surface*menu5=SDL_LoadBMP("MENU2.0.5.bmp");
+SDL_Surface*menu6=SDL_LoadBMP("MENU2.0.6.bmp");
+SDL_Surface*menu7=SDL_LoadBMP("MENU2.0.7.bmp");
+SDL_Surface*menu8=SDL_LoadBMP("MENU2.0.8.bmp");
 
 SDL_Surface*dificultad1=SDL_LoadBMP("DIFICULTAD2.0.bmp");
 SDL_Surface*dificultad5=SDL_LoadBMP("DIFICULTAD2.4.bmp");
@@ -91,15 +95,15 @@ case 1:
                 {
                 if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
                 {
-                    currentimage=menu2;
+                    currentimage=menu3;
                 }
                 else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
                 {
-                    currentimage=menu3;
+                    currentimage=menu5;
                 }
                 else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
                 {
-                    currentimage=menu4;
+                    currentimage=menu7;
                 }
                 else
                 {
@@ -119,6 +123,10 @@ case 1:
                else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)//Integrantes
                {
                    stage=4;
+               }
+               else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
+               {
+                   stage=8;
                }
             }
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
@@ -306,6 +314,301 @@ case 6:
         SDL_UpdateWindowSurface( window );
         }
     }
+case 7:
+    {
+        currentimage=menu2;
+        while(stage==7)
+        {
+            buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+           if(ev.type==SDL_QUIT)
+          {
+                return 0;
+          }
+          else if(ev.type==SDL_MOUSEMOTION)
+          {
+              if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
+               {
+                   currentimage=menu4;
+               }
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
+               {
+                   currentimage=menu6;
+               }
+               else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
+               {
+                   currentimage=menu8;
+               }
+               else
+               {
+                   currentimage=menu2;
+               }
+          }
+          else if(ev.type==SDL_MOUSEBUTTONDOWN)
+          {
+              if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)
+               {
+                   stage=8;
+               }
+               else if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
+               {
+                   stage=2;
+               }
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
+               {
+                   stage=3;
+               }
+               else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
+               {
+                   stage=4;
+               }
+          }
+        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+        }
+    }
+        case 8:
+    {
+    while(stage==8)
+    {
+        currentimage=menu2;
+           buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+
+            if(ev.type==SDL_QUIT)
+            {
+                return 0;
+            }
+            else if(ev.type==SDL_MOUSEMOTION)
+                {
+                if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
+                {
+                    currentimage=menu4;
+                }
+                else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
+                {
+                    currentimage=menu6;
+                }
+                else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
+                {
+                    currentimage=menu8;
+                }
+                else
+                {
+                    currentimage=menu2;
+                }
+                }
+            else if (ev.type==SDL_MOUSEBUTTONDOWN)
+            {
+               if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)//Jugar
+               {
+                   stage=9;
+               }
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)//Como jugar
+               {
+                   stage=10;
+               }
+               else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)//Integrantes
+               {
+                   stage=11;
+               }
+               else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
+               {
+                   stage=1;
+               }
+            }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+    }
+    }
+    }
+    break;
+
+case 9:
+    {
+               while(stage==9)
+        {
+            buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+            while(SDL_PollEvent( &ev ) != 0)
+            {
+               if(ev.type==SDL_QUIT)
+               {
+                return 0;
+               }
+            InitGame(&stage);
+            }
+        }
+    }
+break;
+case 10:
+    {
+
+     while(stage==10)
+     {
+         currentimage=comojugar1;
+        buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+            if(ev.type==SDL_QUIT)
+            {
+                return 0;
+            }
+           else if(ev.type==SDL_MOUSEMOTION)
+           {
+               if(mouse_x < 1003 && mouse_y >567  && mouse_x >938 && mouse_y < 602)
+               {
+                   currentimage=comojugar4;
+               }
+               else if(mouse_x < 713 && mouse_y >193  && mouse_x > 457&& mouse_y < 260)
+               {
+                   currentimage=comojugar2;
+               }
+               else if(mouse_x < 735 && mouse_y >363  && mouse_x > 441&& mouse_y < 426)
+               {
+                   currentimage=comojugar3;
+               }
+               else
+               {
+                   currentimage=comojugar1;
+               }
+           }
+           else if(ev.type==SDL_MOUSEBUTTONDOWN)
+            {
+               if(mouse_x < 1003 && mouse_y >567  && mouse_x >938 && mouse_y < 602)
+               {
+                   stage=8;
+               }
+               else if(mouse_x < 713 && mouse_y >193  && mouse_x > 457&& mouse_y < 260)
+               {
+                   stage=12;
+               }
+               else if(mouse_x < 735 && mouse_y >363  && mouse_x > 441&& mouse_y < 426)
+               {
+                   stage=13;
+               }
+            }
+            SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+        }
+     }
+    }
+    break;
+
+case 11:
+    {
+ currentimage=integrantes1;
+       while(stage==11)
+       {
+        buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+          if(ev.type==SDL_QUIT)
+          {
+                return 0;
+          }
+          else if(ev.type==SDL_MOUSEMOTION)
+          {
+               if(mouse_x < 1004 && mouse_y >571  && mouse_x > 940&& mouse_y < 605)
+               {
+                   currentimage=integrantes2;
+               }
+               else
+               {
+                   currentimage=integrantes1;
+               }
+          }
+          else if(ev.type==SDL_MOUSEBUTTONDOWN)
+          {
+              if(mouse_x < 1004 && mouse_y >571  && mouse_x > 940&& mouse_y < 605)
+               {
+                   stage=8;
+               }
+          }
+
+        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+       }
+
+    }
+    break;
+case 12:
+    {
+         currentimage=tutorial1;
+        while(stage==12)
+        {
+            buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+           if(ev.type==SDL_QUIT)
+          {
+                return 0;
+          }
+          else if(ev.type==SDL_MOUSEMOTION)
+          {
+              if(mouse_x < 1005 && mouse_y >568  && mouse_x > 945&& mouse_y < 605)
+               {
+                   currentimage=tutorial2;
+               }
+               else
+               {
+                   currentimage=tutorial1;
+               }
+          }
+          else if(ev.type==SDL_MOUSEBUTTONDOWN)
+          {
+              if(mouse_x < 1005 && mouse_y >568  && mouse_x > 945&& mouse_y < 605)
+               {
+                   stage=10;
+               }
+          }
+        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+        }
+    }
+    break;
+case 13:
+    {
+        currentimage=controles1;
+        while(stage==13)
+        {
+            buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+           if(ev.type==SDL_QUIT)
+          {
+                return 0;
+          }
+          else if(ev.type==SDL_MOUSEMOTION)
+          {
+              if(mouse_x < 1007 && mouse_y >564  && mouse_x > 941&& mouse_y < 600)
+               {
+                   currentimage=controles2;
+               }
+               else
+               {
+                   currentimage=controles1;
+               }
+          }
+          else if(ev.type==SDL_MOUSEBUTTONDOWN)
+          {
+              if(mouse_x < 1007 && mouse_y >564  && mouse_x > 941&& mouse_y < 600)
+               {
+                   stage=10;
+               }
+          }
+        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+        }
+    }
+    break;
+
+
 }
 
 
