@@ -18,10 +18,14 @@ SDL_Event ev;
 SDL_Window* window = NULL;
 SDL_Surface* screenSurface = NULL;
 
-SDL_Surface*menu1=SDL_LoadBMP("MENU2.0.bmp");
-SDL_Surface*menu2=SDL_LoadBMP("MENU2.1.bmp");
-SDL_Surface*menu3=SDL_LoadBMP("MENU2.2.bmp");
-SDL_Surface*menu4=SDL_LoadBMP("MENU2.3.bmp");
+SDL_Surface*menu1=SDL_LoadBMP("MENU2.0.1.bmp");
+SDL_Surface*menu2=SDL_LoadBMP("MENU2.0.2.bmp");
+SDL_Surface*menu3=SDL_LoadBMP("MENU2.0.3.bmp");
+SDL_Surface*menu4=SDL_LoadBMP("MENU2.0.4.bmp");
+SDL_Surface*menu5=SDL_LoadBMP("MENU2.0.5.bmp");
+SDL_Surface*menu6=SDL_LoadBMP("MENU2.0.6.bmp");
+SDL_Surface*menu7=SDL_LoadBMP("MENU2.0.7.bmp");
+SDL_Surface*menu8=SDL_LoadBMP("MENU2.0.8.bmp");
 
 SDL_Surface*dificultad1=SDL_LoadBMP("DIFICULTAD2.0.bmp");
 SDL_Surface*dificultad5=SDL_LoadBMP("DIFICULTAD2.4.bmp");
@@ -119,6 +123,10 @@ case 1:
                else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)//Integrantes
                {
                    stage=4;
+               }
+               else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
+               {
+                   stage=7;
                }
             }
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
@@ -306,6 +314,63 @@ case 6:
         SDL_UpdateWindowSurface( window );
         }
     }
+case 7:
+    {
+        currentimage=menu2;
+        while(stage==7)
+        {
+            buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+           if(ev.type==SDL_QUIT)
+          {
+                return 0;
+          }
+          else if(ev.type==SDL_MOUSEMOTION)
+          {
+              if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
+               {
+                   currentimage=menu4;
+               }
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
+               {
+                   currentimage=menu6;
+               }
+               else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
+               {
+                   currentimage=menu8;
+               }
+               else
+               {
+                   currentimage=menu2;
+               }
+          }
+          else if(ev.type==SDL_MOUSEBUTTONDOWN)
+          {
+              if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)
+               {
+                   stage=1;
+               }
+               else if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
+               {
+                   stage=2;
+               }
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)
+               {
+                   stage=3;
+               }
+               else if(mouse_x < 800 && mouse_y >510  && mouse_x > 400&& mouse_y < 580)
+               {
+                   stage=4;
+               }
+          }
+        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+        }
+    }
+
+
 }
 
 
