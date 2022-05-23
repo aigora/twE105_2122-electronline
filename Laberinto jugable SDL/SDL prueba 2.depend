@@ -5939,13 +5939,13 @@
 	<SDL_timer.h>
 	"assets.h"
 
-1652489533 ated upstream
+1653044934 ated upstream
 
 1652516230 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\códigos sueltos (sdl y no sdl)\sdl\laberinto 1 sdl\anim.c
 
 1652453454 source:c:\users\mario\documents\github\twe105_2122-electronline\códigos sueltos (sdl y no sdl)\sdl\laberinto 1 sdl\anim.c
 
-1652453454 shed changes
+1653044934 shed changes
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
@@ -6226,6 +6226,277 @@
 	"assets.h"
 	<SDL2/SDL.h>
 	<stdio.h>
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hidapi.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
 
 1652516230 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\códigos sueltos (sdl y no sdl)\sdl\laberinto 1 sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
 
@@ -8063,7 +8334,7 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653176067 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
+1653070443 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -8448,15 +8719,15 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653174532 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\game.h
+1652865150 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
 
-1653176650 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
+1653085570 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
 	"Game.h"
 
-1653154735 source:c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
+1653224218 source:c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
 	"Game.h"
 
 1653154734 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\game.h
@@ -8465,233 +8736,115 @@
 	<SDL_timer.h>
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
-	"SDL_main.h"
-	"SDL_stdinc.h"
-	"SDL_assert.h"
-	"SDL_atomic.h"
-	"SDL_audio.h"
-	"SDL_clipboard.h"
-	"SDL_cpuinfo.h"
-	"SDL_endian.h"
-	"SDL_error.h"
-	"SDL_events.h"
-	"SDL_filesystem.h"
-	"SDL_gamecontroller.h"
-	"SDL_haptic.h"
-	"SDL_hidapi.h"
-	"SDL_hints.h"
-	"SDL_joystick.h"
-	"SDL_loadso.h"
-	"SDL_log.h"
-	"SDL_messagebox.h"
-	"SDL_metal.h"
-	"SDL_mutex.h"
-	"SDL_power.h"
-	"SDL_render.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_shape.h"
-	"SDL_system.h"
-	"SDL_thread.h"
-	"SDL_timer.h"
-	"SDL_version.h"
-	"SDL_video.h"
-	"SDL_locale.h"
-	"SDL_misc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653238517 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
+	<SDL.h>
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	"Game.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
-	"SDL_config.h"
-	<sys/types.h>
-	<stdio.h>
-	<stdlib.h>
-	<stddef.h>
-	<stdarg.h>
-	<stdlib.h>
-	<malloc.h>
-	<stddef.h>
-	<stdarg.h>
-	<memory.h>
-	<string.h>
-	<strings.h>
-	<wchar.h>
-	<inttypes.h>
-	<stdint.h>
-	<ctype.h>
-	<math.h>
-	<float.h>
-	<alloca.h>
-	<malloc.h>
-	<malloc.h>
-	<malloc.h>
-	<stdlib.h>
-	<sal.h>
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
-	"AvailabilityMacros.h"
-	"TargetConditionals.h"
-	<winapifamily.h>
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<winsdkver.h>
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
-	"SDL_config.h"
-	"begin_code.h"
-	<signal.h>
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
-	"SDL_stdinc.h"
-	"SDL_platform.h"
-	"begin_code.h"
-	<sys/cpuinline.h>
-	<mbarrier.h>
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_endian.h"
-	"SDL_mutex.h"
-	"SDL_thread.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<endian.h>
-	<endian.h>
-	<sys/endian.h>
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_atomic.h"
-	"SDL_mutex.h"
-	<process.h>
-	<process.h>
-	<stdlib.h>
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<intrin.h>
-	<arm_neon.h>
-	<altivec.h>
-	<arm_neon.h>
-	<armintr.h>
-	<arm_neon.h>
-	<arm64intr.h>
-	<arm64_neon.h>
-	<mm3dnow.h>
-	<immintrin.h>
-	<mmintrin.h>
-	<xmmintrin.h>
-	<emmintrin.h>
-	<pmmintrin.h>
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_keyboard.h"
-	"SDL_mouse.h"
-	"SDL_joystick.h"
-	"SDL_gamecontroller.h"
-	"SDL_quit.h"
-	"SDL_gesture.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
-	"SDL_stdinc.h"
-	"SDL_endian.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_pixels.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_blendmode.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_keycode.h"
-	"SDL_video.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
@@ -8701,155 +8854,125 @@
 	"SDL_stdinc.h"
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+	"SDL_scancode.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
-	"SDL_stdinc.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
-	"SDL_stdinc.h"
-	"SDL_rect.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
-	"SDL_stdinc.h"
-	"SDL_keyboard.h"
-	"SDL_render.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
+
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
 
 1653154735 c:\users\danie\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
 
-1653176067 source:c:\users\juans\onedrive\escritorio\prueba\menu.c
+1653044934 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+
+1653236462 c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\game.h
 	<SDL.h>
 	<stdio.h>
-	<stdbool.h>
-	<string.h>
+	<SDL_timer.h>
+
+1653238398 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
 	"Game.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl.h
+1653216478 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\mov2.c
+	"Game.h"
+
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\game.h
+	<SDL.h>
+	<stdio.h>
+	<SDL_timer.h>
+
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -8886,12 +9009,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -8920,28 +9043,28 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\begin_code.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\close_code.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -8949,7 +9072,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -8959,12 +9082,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -8973,13 +9096,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -8990,18 +9113,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -9021,7 +9144,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -9035,7 +9158,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9043,13 +9166,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -9057,7 +9180,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9066,11 +9189,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -9078,27 +9201,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -9107,17 +9230,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -9125,70 +9248,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9197,7 +9320,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -9205,44 +9328,43 @@
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1641852692 c:\users\juans\onedrive\escritorio\prueba\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+1653044940 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1653241386 c:\users\juans\onedrive\escritorio\prueba\game.h
-	<SDL.h>
-	<stdio.h>
-	<SDL_timer.h>
-
-1653241993 source:c:\users\juans\onedrive\escritorio\prueba\mov2.c
-	"Game.h"
-
-1653251066 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\menu.c
+1653171967 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto jugable sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
 	<string.h>
 	"Game.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl.h
+1653238182 source:c:\users\mario\desktop\laberinto jugable sdl\menu.c
+	<SDL.h>
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	"Game.h"
+
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -9279,12 +9401,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -9313,28 +9435,28 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\begin_code.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\close_code.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -9342,7 +9464,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -9352,12 +9474,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -9366,13 +9488,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -9383,18 +9505,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -9414,7 +9536,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -9428,7 +9550,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9436,13 +9558,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -9450,7 +9572,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9459,11 +9581,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -9471,27 +9593,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -9500,17 +9622,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -9518,70 +9640,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -9590,7 +9712,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -9598,819 +9720,33 @@
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+1653044934 c:\users\mario\desktop\laberinto jugable sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1653251130 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\game.h
+1653236462 c:\users\mario\desktop\laberinto jugable sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
 
-1653251462 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\mov2.c
-	"Game.h"
-
-1653260400 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
-	<SDL.h>
-	<stdio.h>
-	<stdbool.h>
-	<string.h>
-	"Game.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
-	"SDL_main.h"
-	"SDL_stdinc.h"
-	"SDL_assert.h"
-	"SDL_atomic.h"
-	"SDL_audio.h"
-	"SDL_clipboard.h"
-	"SDL_cpuinfo.h"
-	"SDL_endian.h"
-	"SDL_error.h"
-	"SDL_events.h"
-	"SDL_filesystem.h"
-	"SDL_gamecontroller.h"
-	"SDL_haptic.h"
-	"SDL_hidapi.h"
-	"SDL_hints.h"
-	"SDL_joystick.h"
-	"SDL_loadso.h"
-	"SDL_log.h"
-	"SDL_messagebox.h"
-	"SDL_metal.h"
-	"SDL_mutex.h"
-	"SDL_power.h"
-	"SDL_render.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_shape.h"
-	"SDL_system.h"
-	"SDL_thread.h"
-	"SDL_timer.h"
-	"SDL_version.h"
-	"SDL_video.h"
-	"SDL_locale.h"
-	"SDL_misc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
-	"SDL_config.h"
-	<sys/types.h>
-	<stdio.h>
-	<stdlib.h>
-	<stddef.h>
-	<stdarg.h>
-	<stdlib.h>
-	<malloc.h>
-	<stddef.h>
-	<stdarg.h>
-	<memory.h>
-	<string.h>
-	<strings.h>
-	<wchar.h>
-	<inttypes.h>
-	<stdint.h>
-	<ctype.h>
-	<math.h>
-	<float.h>
-	<alloca.h>
-	<malloc.h>
-	<malloc.h>
-	<malloc.h>
-	<stdlib.h>
-	<sal.h>
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
-	"SDL_platform.h"
-	<winsdkver.h>
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
-	"AvailabilityMacros.h"
-	"TargetConditionals.h"
-	<winapifamily.h>
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
-	"SDL_config.h"
-	"begin_code.h"
-	<signal.h>
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
-	"SDL_stdinc.h"
-	"SDL_platform.h"
-	"begin_code.h"
-	<sys/cpuinline.h>
-	<mbarrier.h>
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_endian.h"
-	"SDL_mutex.h"
-	"SDL_thread.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<endian.h>
-	<endian.h>
-	<sys/endian.h>
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_atomic.h"
-	"SDL_mutex.h"
-	<process.h>
-	<process.h>
-	<stdlib.h>
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<intrin.h>
-	<arm_neon.h>
-	<altivec.h>
-	<arm_neon.h>
-	<armintr.h>
-	<arm_neon.h>
-	<arm64intr.h>
-	<arm64_neon.h>
-	<mm3dnow.h>
-	<immintrin.h>
-	<mmintrin.h>
-	<xmmintrin.h>
-	<emmintrin.h>
-	<pmmintrin.h>
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_keyboard.h"
-	"SDL_mouse.h"
-	"SDL_joystick.h"
-	"SDL_gamecontroller.h"
-	"SDL_quit.h"
-	"SDL_gesture.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
-	"SDL_stdinc.h"
-	"SDL_endian.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_pixels.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_blendmode.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_keycode.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
-	"SDL_stdinc.h"
-	"SDL_scancode.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
-	"SDL_stdinc.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
-	"SDL_stdinc.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
-	"SDL_stdinc.h"
-	"SDL_rect.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
-	"SDL_stdinc.h"
-	"SDL_keyboard.h"
-	"SDL_render.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910407 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653260926 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
-	<SDL.h>
-	<stdio.h>
-	<SDL_timer.h>
-
-1653261567 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
-	"Game.h"
-
-1653296847 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
-	<SDL.h>
-	<stdio.h>
-	<stdbool.h>
-	<string.h>
-	"Game.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
-	"SDL_main.h"
-	"SDL_stdinc.h"
-	"SDL_assert.h"
-	"SDL_atomic.h"
-	"SDL_audio.h"
-	"SDL_clipboard.h"
-	"SDL_cpuinfo.h"
-	"SDL_endian.h"
-	"SDL_error.h"
-	"SDL_events.h"
-	"SDL_filesystem.h"
-	"SDL_gamecontroller.h"
-	"SDL_haptic.h"
-	"SDL_hidapi.h"
-	"SDL_hints.h"
-	"SDL_joystick.h"
-	"SDL_loadso.h"
-	"SDL_log.h"
-	"SDL_messagebox.h"
-	"SDL_metal.h"
-	"SDL_mutex.h"
-	"SDL_power.h"
-	"SDL_render.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_shape.h"
-	"SDL_system.h"
-	"SDL_thread.h"
-	"SDL_timer.h"
-	"SDL_version.h"
-	"SDL_video.h"
-	"SDL_locale.h"
-	"SDL_misc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_main.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
-	"SDL_config.h"
-	<sys/types.h>
-	<stdio.h>
-	<stdlib.h>
-	<stddef.h>
-	<stdarg.h>
-	<stdlib.h>
-	<malloc.h>
-	<stddef.h>
-	<stdarg.h>
-	<memory.h>
-	<string.h>
-	<strings.h>
-	<wchar.h>
-	<inttypes.h>
-	<stdint.h>
-	<ctype.h>
-	<math.h>
-	<float.h>
-	<alloca.h>
-	<malloc.h>
-	<malloc.h>
-	<malloc.h>
-	<stdlib.h>
-	<sal.h>
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_config.h
-	"SDL_platform.h"
-	<winsdkver.h>
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
-	"AvailabilityMacros.h"
-	"TargetConditionals.h"
-	<winapifamily.h>
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\begin_code.h
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\close_code.h
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
-	"SDL_config.h"
-	"begin_code.h"
-	<signal.h>
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
-	"SDL_stdinc.h"
-	"SDL_platform.h"
-	"begin_code.h"
-	<sys/cpuinline.h>
-	<mbarrier.h>
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_endian.h"
-	"SDL_mutex.h"
-	"SDL_thread.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_error.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<endian.h>
-	<endian.h>
-	<sys/endian.h>
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_atomic.h"
-	"SDL_mutex.h"
-	<process.h>
-	<process.h>
-	<stdlib.h>
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
-	"SDL_stdinc.h"
-	<intrin.h>
-	<intrin.h>
-	<arm_neon.h>
-	<altivec.h>
-	<arm_neon.h>
-	<armintr.h>
-	<arm_neon.h>
-	<arm64intr.h>
-	<arm64_neon.h>
-	<mm3dnow.h>
-	<immintrin.h>
-	<mmintrin.h>
-	<xmmintrin.h>
-	<emmintrin.h>
-	<pmmintrin.h>
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_events.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_keyboard.h"
-	"SDL_mouse.h"
-	"SDL_joystick.h"
-	"SDL_gamecontroller.h"
-	"SDL_quit.h"
-	"SDL_gesture.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_video.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
-	"SDL_stdinc.h"
-	"SDL_endian.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_pixels.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_blendmode.h"
-	"SDL_rwops.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_keycode.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
-	"SDL_stdinc.h"
-	"SDL_scancode.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
-	"SDL_stdinc.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_rwops.h"
-	"SDL_sensor.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"SDL_touch.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"SDL_joystick.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_log.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
-	"SDL_stdinc.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_power.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_render.h
-	"SDL_stdinc.h"
-	"SDL_rect.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
-	"SDL_stdinc.h"
-	"SDL_pixels.h"
-	"SDL_rect.h"
-	"SDL_surface.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_system.h
-	"SDL_stdinc.h"
-	"SDL_keyboard.h"
-	"SDL_render.h"
-	"SDL_video.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_version.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
-	"SDL_stdinc.h"
-	"begin_code.h"
-	"close_code.h"
-
-1653296846 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
-	<SDL.h>
-	<stdio.h>
-	<SDL_timer.h>
-
-1653296847 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653238188 source:c:\users\mario\desktop\laberinto jugable sdl\mov2.c
 	"Game.h"
 
