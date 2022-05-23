@@ -9628,7 +9628,7 @@
 1653251462 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\mov2.c
 	"Game.h"
 
-1653260400 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653261773 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -10018,6 +10018,6 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653261567 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653261745 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 

@@ -1,8 +1,8 @@
 ### LABERINTO ELÉCTRICO
 
-Conjunto de varios laberintos con diversos **objetos** con los que interactuar, así como teletransportes
-o carteles con consejos para el jugador. Además, cada laberinto tendrá su propia dificultad, que podrá
-ser elegida al comenzar la partida.
+Laberinto completamente aleatorio con **objetos** con los que interactuar, así como teletransportes
+o bloqueos. Además, el jugador tendrá la posibilidad de habilitar o deshabilitar música dentro del menú
+y del laberinto.
 
 #### Integrantes del equipo
 
@@ -20,8 +20,6 @@ ser elegida al comenzar la partida.
 
 - Aprender a generar parte de un código **aleatoriamente**.
 
-- Dar al jugador varias opciones a elegir (dificultad, objetos, etc.).
-
 - Interactuar con el entorno del laberinto para dar mayor libertad al jugador. 
 
 - Aprender a utilizar nuevas _librerías_ para mejorar nuestro conocimiento sobre c++
@@ -30,4 +28,4 @@ ser elegida al comenzar la partida.
 - Introducir un **temporizador** que indique el tiempo empleado por el jugador para completar cada laberinto,
   así como una tabla que muestre la puntuación dependiendo del tiempo empleado para salir del laberinto.
 
--Implementar un sistema de puntos a expensas del tiempo empleado en salir del laberinto.
+- Implementar un sistema de puntos a expensas del tiempo empleado en salir del laberinto.
