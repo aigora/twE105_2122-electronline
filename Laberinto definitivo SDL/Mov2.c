@@ -5,7 +5,7 @@ void InitGame(int *stage,int pararaudio)
 {
     //Declaración de variables
     const int SCREEN_WIDTH = 1080;
-    const int SCREEN_HEIGHT = 640;
+    const int SCREEN_HEIGHT = 720;
 
     int maze[N][N];
     Token Teleport[2];
@@ -55,7 +55,7 @@ void InitGame(int *stage,int pararaudio)
     SDL_FreeSurface(Pers);
 
     SDL_Rect dest = {0, 0, 32*80, 32*60}; //Laberinto
-    SDL_Rect personaje = {32+46, 32+80, 70, 70}; //Explorador
+    SDL_Rect personaje = {32+46, 32+65, 70, 70}; //Explorador
 
     _Bool quit = 0;
     _Bool izq=0;
@@ -188,7 +188,7 @@ void InitGame(int *stage,int pararaudio)
                         coordx=Teleport[1].x;
                         coordy=Teleport[1].y;
                         x_pos=x_pos + 76*(Teleport[0].x-Teleport[1].x);
-                        y_pos=y_pos + 96*(Teleport[0].y-Teleport[1].y);
+                        y_pos=y_pos + 85*(Teleport[0].y-Teleport[1].y);
                         teletransportar=0;
                     }
                     if((coordx!=Teleport[0].x && coordy!=Teleport[0].y)&&(coordx!=Teleport[1].x && coordy!=Teleport[1].y))
@@ -200,7 +200,7 @@ void InitGame(int *stage,int pararaudio)
                         coordx=Teleport[0].x;
                         coordy=Teleport[0].y;
                         x_pos=x_pos+76*(Teleport[1].x-Teleport[0].x);
-                        y_pos=y_pos+96*(Teleport[1].y-Teleport[0].y);
+                        y_pos=y_pos+85*(Teleport[1].y-Teleport[0].y);
                         teletransportar=0;
                     }
                     if((coordx!=Teleport[0].x && coordy!=Teleport[0].y)&&(coordx!=Teleport[1].x && coordy!=Teleport[1].y))
@@ -248,7 +248,7 @@ void InitGame(int *stage,int pararaudio)
                             {
                                 if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 )
                                 {
-                                    y_pos=y_pos+96;
+                                    y_pos=y_pos+85;
                                     coordy--;
                                     dcha = 0, izq = 0, arriba = 1, abajo = 0;
                                 }
@@ -262,7 +262,7 @@ void InitGame(int *stage,int pararaudio)
                             {
                                 if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4  && coordy+1 !=20)
                                 {
-                                    y_pos=y_pos-96;
+                                    y_pos=y_pos-85;
                                     coordy++;
                                     dcha = 0, izq = 0, arriba = 0, abajo = 1;
                                 }
@@ -281,7 +281,7 @@ void InitGame(int *stage,int pararaudio)
                             {
                                 if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4 || coordy+1==20)
                                 {
-                                    y_pos=y_pos-96;
+                                    y_pos=y_pos-85;
                                     coordy++;
                                     dcha = 0, izq = 0, arriba = 0, abajo = 1;
                                 }
@@ -295,7 +295,7 @@ void InitGame(int *stage,int pararaudio)
                             {
                                  if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 || coordy+1==20)
                                 {
-                                    y_pos=y_pos+96;
+                                    y_pos=y_pos+85;
                                     coordy--;
                                     dcha = 0, izq = 0, arriba = 1, abajo = 0;
                                 }
@@ -405,8 +405,9 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
      int l = 0;
       int s = 0;
 
-    int alt = 20;
-    int anch = 20;
+    int finx, finy;
+    int alt = 21;
+    int anch = 21;
     int i,j, xo, yo;
     int randw;
 
@@ -532,7 +533,6 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                     }
                 }
 
-
                 pos.x = 32*Final->x;
                 pos.y = 32*Final->y;
                 SDL_BlitSurface(Salida,0,screenSurface,&pos);
@@ -602,7 +602,7 @@ for(k=0;k<4;k++)
 
     }
  }
-
+printf("|%i , %i|", r, c);
 }
 
 
