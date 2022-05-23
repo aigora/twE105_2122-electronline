@@ -41,6 +41,10 @@
 		<Unit filename="Mov2.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Tokens.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Tokens.h" />
 		<Unit filename="menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
