@@ -13,8 +13,12 @@ void InitGame(int *stage,int pararaudio)
     Token Luna[2];
     Token Final;
 
-    float x_pos= 1;
-    float y_pos = 1;
+   int xo = 1 + rand()%20;
+   int yo = 1 + rand()%20;
+
+ float x_pos  = 405, y_pos = 224 ;
+ x_pos -= 76*(xo - 1);
+ y_pos -= 85*(yo - 1);
 
     int intento=1;       //Número de veces que se repite el juego (después lo haremos un contador cuando lo enlazemos al menú)
     int minutos=0,segundos=0,puntuacion;
@@ -55,7 +59,7 @@ void InitGame(int *stage,int pararaudio)
     SDL_FreeSurface(Pers);
 
     SDL_Rect dest = {0, 0, 32*80, 32*60}; //Laberinto
-    SDL_Rect personaje = {32+46, 32+65, 70, 70}; //Explorador
+    SDL_Rect personaje = {960/2, 640/2, 70, 70}; //Explorador
 
     _Bool quit = 0;
     _Bool izq=0;
@@ -64,7 +68,7 @@ void InitGame(int *stage,int pararaudio)
     _Bool abajo=0;
 
     int inversion=0;
-    int coordx=1,coordy=1;
+    int coordx=xo,coordy=yo;
     int teletransportar=1;
 
     //Se inicia la música
@@ -103,7 +107,7 @@ void InitGame(int *stage,int pararaudio)
 
     screenSurface = SDL_GetWindowSurface( ventana );
 
-    InitMaze(ventana, screenSurface, rend, maze,coordx,coordy, Luna, Sol, Teleport, &Final);
+    InitMaze(ventana, screenSurface, rend, maze,coordx,coordy, Luna, Sol, Teleport, &Final, xo, yo);
     SDL_Texture* texmaze = SDL_CreateTextureFromSurface(rend, screenSurface);
 
             int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength);
@@ -218,7 +222,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
-                                if(maze[coordx -1][coordy]==0 || maze[coordx - 1][coordy] == 2 || maze[coordx -1][coordy]==3 || maze[coordx - 1][coordy] == 4)
+                                if(maze[coordx -1][coordy]==0 || maze[coordx - 1][coordy] == 2 || maze[coordx -1][coordy]==3 || maze[coordx - 1][coordy] == 4|| maze[coordx - 1][coordy] == 9)
                                 {
                                     x_pos=x_pos+76;
                                     coordx--;
@@ -232,7 +236,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {
-                                if(maze[coordx + 1][coordy]==0 || maze[coordx + 1][coordy] == 2 || maze[coordx + 1][coordy]==3 || maze[coordx + 1][coordy] == 4 )
+                                if(maze[coordx + 1][coordy]==0 || maze[coordx + 1][coordy] == 2 || maze[coordx + 1][coordy]==3 || maze[coordx + 1][coordy] == 4 || maze[coordx + 1][coordy] == 9 )
                                 {
                                     x_pos=x_pos-76;
                                     coordx++;
@@ -246,7 +250,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                             {
-                                if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 )
+                                if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 || maze[coordx][coordy - 1] == 9 )
                                 {
                                     y_pos=y_pos+85;
                                     coordy--;
@@ -260,7 +264,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
                             {
-                                if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4  && coordy+1 !=20)
+                                if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4 || maze[coordx][coordy + 1] == 9 && coordy+1 !=20)
                                 {
                                     y_pos=y_pos-85;
                                     coordy++;
@@ -279,7 +283,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {
-                                if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4 || coordy+1==20)
+                                if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4 || maze[coordx][coordy + 1] == 9 || coordy+1==20)
                                 {
                                     y_pos=y_pos-85;
                                     coordy++;
@@ -293,7 +297,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
-                                 if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 || coordy+1==20)
+                                 if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 || maze[coordx][coordy - 1] == 9 || coordy+1==20)
                                 {
                                     y_pos=y_pos+85;
                                     coordy--;
@@ -307,7 +311,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
                             {
-                                 if(maze[coordx + 1][coordy]==0 || maze[coordx + 1][coordy] == 2 || maze[coordx + 1][coordy]==3 || maze[coordx + 1][coordy] == 4)
+                                 if(maze[coordx + 1][coordy]==0 || maze[coordx + 1][coordy] == 2 || maze[coordx + 1][coordy]==3 || maze[coordx + 1][coordy] == 4 || maze[coordx + 1][coordy] == 9)
                                 {
                                     x_pos=x_pos-76;
                                     coordx++;
@@ -321,7 +325,7 @@ void InitGame(int *stage,int pararaudio)
 
                             if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                             {
-                               if(maze[coordx -1][coordy]==0 || maze[coordx - 1][coordy] == 2 || maze[coordx -1][coordy]==3 || maze[coordx - 1][coordy] == 4)
+                               if(maze[coordx -1][coordy]==0 || maze[coordx - 1][coordy] == 2 || maze[coordx -1][coordy]==3 || maze[coordx - 1][coordy] == 4 || maze[coordx - 1][coordy] == 9)
                                 {
                                     x_pos=x_pos+76;
                                     coordx--;
@@ -398,7 +402,7 @@ void InitGame(int *stage,int pararaudio)
 
 
 
-void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,Token Luna[2], Token Sol[2], Token Teleport[2], Token *Final)
+void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,Token Luna[2], Token Sol[2], Token Teleport[2], Token *Final, int xo, int yo)
 {
 
     int t = 0;
@@ -408,10 +412,11 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     int finx, finy;
     int alt = 21;
     int anch = 21;
-    int i,j, xo, yo;
+    int i,j;
     int randw;
+    int srandx, srandy, numwalls = 0;
 
-    //srand(time(NULL));
+    srand(time(NULL));
 
     //Llenamos una matriz de 1. Esta matriz se utilizará posteriormente para hacer el laberinto
     for (i = 0; i < alt; i++)
@@ -419,13 +424,14 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
         for(j = 0; j < anch; j++)
             maze[i][j] = 1;
     }
-    xo = 1;
-    yo = 1;
+
 //Posición inicial
-    maze[xo][yo] = 0;
+
 //Hacemos el laberinto
     recursion(xo, yo, anch, alt, maze);
     InitTokens(maze);
+    maze[xo][yo] = 9;
+
     SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
 
     SDL_Surface *muroG = SDL_LoadBMP("GenWall.bmp");
@@ -515,24 +521,36 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                 SDL_BlitSurface(Teleportador1,0,screenSurface,&pos);
                 t++;
             }
+            if (maze[i][j] == 9)
+            {
+                pos.x = 32*i;
+                pos.y = 32*j;
+                SDL_BlitSurface(Inicio,0,screenSurface,&pos);
+            }
         }
     }
 
-    //La entrada siempre va a estar en la casilla 1,1
-                pos.x = 32;
-                pos.y = 32;
-                SDL_BlitSurface(Inicio,0,screenSurface,&pos);
 
-//La Salida estará en la última casilla
-                for (i = 0; i < alt; i++){
-                    for (j = 0; j < anch; j++){
-                        if(maze[i][j] == 0){
-                            Final->x = i;
-                            Final->y = j;
-                        }
-                    }
-                }
 
+
+                do{
+                srandx = 1 + rand()%20;
+                srandy = 1 + rand()%20;
+                    numwalls = 0;
+                if(maze[srandx - 1][srandy] == 1)
+                    numwalls ++;
+                      if(maze[srandx + 1][srandy] == 1)
+                    numwalls ++;
+                            if(maze[srandx][srandy - 1] == 1)
+                        numwalls ++;
+                            if(maze[srandx][srandy + 1] == 1)
+                        numwalls ++;
+                } while (numwalls != 3 || maze[srandx][srandy] == 1);
+
+
+printf("%i %i", srandx, srandy);
+                            Final->x = srandx;
+                            Final->y = srandy;
                 pos.x = 32*Final->x;
                 pos.y = 32*Final->y;
                 SDL_BlitSurface(Salida,0,screenSurface,&pos);
@@ -602,7 +620,6 @@ for(k=0;k<4;k++)
 
     }
  }
-printf("|%i , %i|", r, c);
 }
 
 
