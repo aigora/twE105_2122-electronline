@@ -10421,7 +10421,7 @@
 	"Game.h"
 	"Tokens.h"
 
-1653301840 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653408555 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -10811,7 +10811,7 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653339540 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653408555 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
