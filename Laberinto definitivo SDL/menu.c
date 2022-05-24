@@ -14,8 +14,11 @@ int buttons;
 int stage=1;
 int pararaudio=1;
 int pararaudio_menu=1;
+int intentos=0;
 SDL_Event ev;
 
+int fminutos,fsegundos,fpuntuacion;
+FILE *puntuacion_fichero;
 
 //Para las puntuaciones
 FILE *pf;
@@ -166,7 +169,7 @@ case 1:
 
 case 2:
     {
-
+puntuacion_fichero=fopen("Puntuacion.txt","r");
                while(stage==2)
         {
             SDL_PauseAudioDevice(deviceId,1);
@@ -647,6 +650,14 @@ case 13:
 
 case 14:
     {
+        while(fscanf(puntuacion_fichero,"%d,%d,%d",&fminutos,&fpuntuacion,&fsegundos)!=EOF)
+        {
+            intentos++;
+            printf("Intento %d\n",intentos);
+            printf("Puntuacion: %d\n",fpuntuacion);
+            printf("Minutos: %d\n",fminutos);
+            printf("Segundos: %d\n",fsegundos);
+        }
         currentimage=imfinal;
         SDL_Rect posicion={63,0,0,0};  //Ponemos la imagen de la salida en mitad de la pantalla.
         SDL_BlitSurface( currentimage, NULL, screenSurface, &posicion );   //Se muestra la imagen de la salida durante 7 segundos.
@@ -708,7 +719,7 @@ case 15:
 
     } while(!quit);
 }
-
+fclose(puntuacion_fichero);
 return 0;
 }
 

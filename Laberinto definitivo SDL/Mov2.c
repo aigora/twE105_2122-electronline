@@ -548,7 +548,7 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                 } while (numwalls != 3 || maze[srandx][srandy] == 1);
 
 
-printf("%i %i", srandx, srandy);
+//printf("%i %i", srandx, srandy);
                             Final->x = srandx;
                             Final->y = srandy;
                 pos.x = 32*Final->x;
