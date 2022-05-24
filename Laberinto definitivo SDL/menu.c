@@ -59,12 +59,19 @@ SDL_Surface*currentimage=NULL;
     Uint8 *wavBuffer;
     SDL_LoadWAV("Musica_menu.wav", &wavSpec, &wavBuffer, &wavLength);
 
+    SDL_AudioSpec wavSpec2;
+    Uint32 wavLength2;
+    Uint8 *wavBuffer2;
+    SDL_LoadWAV("Musica_final.wav", &wavSpec2, &wavBuffer2, &wavLength2);
+
 SDL_Init( SDL_INIT_VIDEO);
     SDL_Init(SDL_INIT_AUDIO);
     SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
     int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength);
     SDL_PauseAudioDevice(deviceId,0);
-
+    SDL_AudioDeviceID deviceId2 = SDL_OpenAudioDevice(NULL, 0, &wavSpec2, NULL, 0);
+    int success2 = SDL_QueueAudio(deviceId2, wavBuffer2, wavLength2);
+    SDL_PauseAudioDevice(deviceId2,1);
 
 
  window = SDL_CreateWindow( "Menu", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
@@ -102,6 +109,7 @@ case 1:
         currentimage=menu1;
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
         SDL_PauseAudioDevice(deviceId,0);
+        SDL_PauseAudioDevice(deviceId2,1);
         while(SDL_PollEvent( &ev ) != 0)
         {
 
@@ -643,8 +651,33 @@ case 14:
         SDL_Rect posicion={63,0,0,0};  //Ponemos la imagen de la salida en mitad de la pantalla.
         SDL_BlitSurface( currentimage, NULL, screenSurface, &posicion );   //Se muestra la imagen de la salida durante 7 segundos.
         SDL_UpdateWindowSurface( window );
-        SDL_Delay( 7000 );
-        stage=1;   //Se vuelve al menú.
+        while(SDL_PollEvent( &ev ) != 0)
+        {
+        if(pararaudio==1)
+        {
+        SDL_PauseAudioDevice(deviceId2,0);
+        SDL_PauseAudioDevice(deviceId,1);
+        if(ev.type== SDL_MOUSEBUTTONDOWN)
+        {
+        if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
+        {
+                 stage=1;   //Se vuelve al menú.
+        }
+        }
+        }
+        if(pararaudio==0)
+        {
+        SDL_PauseAudioDevice(deviceId2,1);
+        SDL_PauseAudioDevice(deviceId,1);
+                if(ev.type== SDL_MOUSEBUTTONDOWN)
+        {
+        if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
+        {
+                  stage=8;   //Se vuelve al menú con el audio pausado.
+        }
+        }
+        }
+        }
     }
     break;
 
