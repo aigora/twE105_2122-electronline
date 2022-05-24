@@ -48,8 +48,8 @@ SDL_Surface*comojugar4=SDL_LoadBMP("comojugar3.3.bmp");
 SDL_Surface*integrantes1=SDL_LoadBMP("integrantes3.0.bmp");
 SDL_Surface*integrantes2=SDL_LoadBMP("integrantes3.1.bmp");
 
-SDL_Surface*tutorial1=SDL_LoadBMP("tutorial3.0.bmp");
-SDL_Surface*tutorial2=SDL_LoadBMP("tutorial3.1.bmp");
+SDL_Surface*tutorial1=SDL_LoadBMP("Tutorial4.0.bmp");
+SDL_Surface*tutorial2=SDL_LoadBMP("Tutorial4.1.bmp");
 
 SDL_Surface*controles1=SDL_LoadBMP("controles1.bmp");
 SDL_Surface*controles2=SDL_LoadBMP("controles2.bmp");
