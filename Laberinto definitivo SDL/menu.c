@@ -117,7 +117,7 @@ case 1:
             {
                 return 0;
             }
-            else if(ev.type==SDL_MOUSEMOTION)
+            else if(ev.type==SDL_MOUSEMOTION)//Cambia la imagen en pantalla en función de donde esté el ratón
                 {
                 if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
                 {
@@ -136,7 +136,7 @@ case 1:
                     currentimage=menu1;
                 }
                 }
-            else if (ev.type==SDL_MOUSEBUTTONDOWN)
+            else if (ev.type==SDL_MOUSEBUTTONDOWN)//En caso de pulsar el ratón en ciertas coordenadas se cambia la imagen de la pantalla
             {
                if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)//Jugar
                {
@@ -166,7 +166,7 @@ case 1:
     }
     }
 
-case 2:
+case 2://Jugar
     {
 puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tipo read para ver lo que se ha guardado tras el write
                while(stage==2)
@@ -185,7 +185,7 @@ puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tip
         }
     }
 
-case 3:
+case 3://Como Jugar
     {
 
      while(stage==3)
@@ -239,7 +239,7 @@ case 3:
      }
     }
 
-case 4:
+case 4://Integrantes
     {
  currentimage=integrantes1;
        while(stage==4)
@@ -278,7 +278,7 @@ case 4:
 
     }
 
-case 5:
+case 5://Tutorial
     {
          currentimage=tutorial1;
         while(stage==5)
@@ -314,7 +314,7 @@ case 5:
         }
     }
 
-case 6:
+case 6://Controles
     {
         currentimage=controles1;
         while(stage==6)
@@ -350,7 +350,7 @@ case 6:
         }
     }
 
-case 7:
+case 7://Volumen
     {
         currentimage=menu2;
         while(stage==7)
@@ -406,7 +406,7 @@ case 7:
         }
     }
 
-case 8:
+case 8://Menú sin volumen
     {
     while(stage==8)
     {
@@ -464,7 +464,7 @@ case 8:
     }
     break;
 
-case 9:
+case 9://Juego sin volumen
     {
                while(stage==9)
         {
@@ -481,7 +481,7 @@ case 9:
     }
     break;
 
-case 10:
+case 10://Como jugar sin volumen
     {
 
      while(stage==10)
@@ -535,7 +535,7 @@ case 10:
     }
     break;
 
-case 11:
+case 11://Integrantes sin volumen
     {
  currentimage=integrantes1;
        while(stage==11)
@@ -574,7 +574,7 @@ case 11:
     }
     break;
 
-case 12:
+case 12://Tutorial sin volumen
     {
          currentimage=tutorial1;
         while(stage==12)
@@ -611,7 +611,7 @@ case 12:
     }
     break;
 
-case 13:
+case 13://Controles sin volumen
     {
         currentimage=controles1;
         while(stage==13)
