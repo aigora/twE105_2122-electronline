@@ -6,7 +6,7 @@
 #include "expliC.h"
 #include "juego.h"
 #define ANSI_COLOR_BLUE "\x1b[34m"   //Definimos el color azul
-
+#define ANSI_COLOR_RESET "\x1b[0m"
 
 //Definición de funciones
 void expobj(void);
@@ -49,7 +49,7 @@ int main()
         printf("-Presiona 6 para salir del menú.\n");
         printf("\n");
         scanf("%d",&op);
-        printf("\x1b[2J"); //borra toda la información de la ventana.
+        system("cls"); //borra toda la información de la ventana.
 
 
 
@@ -60,7 +60,7 @@ int main()
         case 1:
 
             juego_lab(colum,fila);
-            printf("\x1b[2J");
+            system("cls");
             break;
 
 
@@ -89,7 +89,7 @@ int main()
                 while(fila<=9 || fila%2==0);
             }
 
-            printf("\x1b[2J");
+            system("cls");
             break;
 
 
@@ -133,10 +133,10 @@ int main()
             case 1:
                 expobj();
                 sleep(10);   //Espera 10 segundos
-                printf("\x1b[2J");
+                system("cls");
                 break;
             case 2:
-                printf("\x1b[2J");
+                system("cls");
                 break;
             default:
                 break;
@@ -146,7 +146,7 @@ int main()
         case 5:
             creadores();
             sleep(7);
-            printf("\x1b[2J");
+            system("cls");
             break;
 
 
@@ -180,5 +180,5 @@ void creadores(void)
     printf(ANSI_COLOR_BLUE "-Juan Muñoz de Bustillo (https://github.com/Juanmdemiguel)\n");
     printf(ANSI_COLOR_BLUE "-Diego Rodríguez González (https://github.com/DiegoRodriguezGonzalez)\n");
     printf(ANSI_COLOR_BLUE "-Mario Luna López (https://github.com/Mariuser24)\n");
-    printf(ANSI_COLOR_BLUE "-Daniel Frenzel Zarza (https://github.com/Mariuser24)\n");
+    printf(ANSI_COLOR_BLUE "-Daniel Frenzel Zarza (https://github.com/Mariuser24)\n" ANSI_COLOR_RESET);
 }
