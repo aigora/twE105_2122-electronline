@@ -10421,7 +10421,7 @@
 	"Game.h"
 	"Tokens.h"
 
-1653468811 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653487209 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -10806,18 +10806,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653469236 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
+1653489978 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
 
-1653469177 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653489951 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
-1653307298 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
+1653487209 c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
 
-1653469177 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
+1653487209 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
 1653300978 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
