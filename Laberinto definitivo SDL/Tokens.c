@@ -3,6 +3,7 @@
 //Función para los objetos
 void InitTokens(int maze[N][N])
 {
+    int numwalls;
     int i, r1, r2;
       for (i = 0; i < 2; i ++){
             do{
@@ -35,8 +36,22 @@ void InitTokens(int maze[N][N])
               }while(maze[r1][r2] == 1 || maze[r1][r2] == 2 || maze[r1][r2] == 3 || (r1 == 1 && r2 == 1));
         maze[r1][r2] = 4; //4 para los tps
 
-
+          do{
+               r1 = 1 + rand()%19;
+               r2 = 1 + rand()%19;
+                    numwalls = 0;
+                if(maze[r1- 1][2] == 1)
+                    numwalls ++;
+                      if(maze[r1+ 1][r2] == 1)
+                    numwalls ++;
+                            if(maze[r1][r2 - 1] == 1)
+                        numwalls ++;
+                            if(maze[r1][r2 + 1] == 1)
+                        numwalls ++;
+                } while (numwalls != 3 || maze[r1][r2] == 1|| maze[r1][r2] == 2 || maze[r1][r2] == 3 || maze[r1][r2] == 4);
+    maze[r1][r2] = 5;
 }
+
 
 
 void TLuna(int coordx, int coordy, Tokenn Luna[2], int *inversion)
