@@ -12,13 +12,13 @@ const int SCREEN_HEIGHT = 675;
 int mouse_x, mouse_y;
 int buttons;
 int stage=1;
-int pararaudio=1;
-int pararaudio_menu=1;
-int intentos=0;
+int pararaudio=1;//Variable booleana para parar el audio del laberinto o activarlo
+int pararaudio_menu=1;//Variable booleana para parar el audio del menu
+int intentos=0;//Creamos una variable para los intentos
 SDL_Event ev;
 
 int fminutos,fsegundos,fpuntuacion;
-FILE *puntuacion_fichero;
+FILE *puntuacion_fichero; //Declaramos una variable de tipo fichero para la puntuacion
 
 //Para las puntuaciones
 FILE *pf;
@@ -57,24 +57,24 @@ SDL_Surface*controles2=SDL_LoadBMP("controles2.bmp");
 
 SDL_Surface*currentimage=NULL;
 
-    SDL_AudioSpec wavSpec;
-    Uint32 wavLength;
-    Uint8 *wavBuffer;
-    SDL_LoadWAV("Musica_menu.wav", &wavSpec, &wavBuffer, &wavLength);
-
-    SDL_AudioSpec wavSpec2;
-    Uint32 wavLength2;
-    Uint8 *wavBuffer2;
-    SDL_LoadWAV("Musica_final.wav", &wavSpec2, &wavBuffer2, &wavLength2);
-
+    SDL_AudioSpec wavSpec;  //Cargamos una variable para guardar un archivo .wav
+    Uint32 wavLength;       //Cargamos la longitud de onda adecuada
+    Uint8 *wavBuffer;       //Cargamos un buffer
+    SDL_LoadWAV("Musica_menu.wav", &wavSpec, &wavBuffer, &wavLength);//Musica del menu
+ //Cargamos el achivo deseado con las direcciones de memoria de la variable, el buffer y la longitud de onda.
+    SDL_AudioSpec wavSpec2;     //Cargamos una variable para guardar un archivo .wav
+    Uint32 wavLength2;      //Cargamos la longitud de onda adecuada
+    Uint8 *wavBuffer2;      //Cargamos un buffer
+    SDL_LoadWAV("Musica_final.wav", &wavSpec2, &wavBuffer2, &wavLength2);//Musica del final
+ //Cargamos el achivo deseado con las direcciones de memoria de la variable, el buffer y la longitud de onda.
 SDL_Init( SDL_INIT_VIDEO);
-    SDL_Init(SDL_INIT_AUDIO);
-    SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
-    int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength);
-    SDL_PauseAudioDevice(deviceId,0);
-    SDL_AudioDeviceID deviceId2 = SDL_OpenAudioDevice(NULL, 0, &wavSpec2, NULL, 0);
-    int success2 = SDL_QueueAudio(deviceId2, wavBuffer2, wavLength2);
-    SDL_PauseAudioDevice(deviceId2,1);
+    SDL_Init(SDL_INIT_AUDIO);//Iniciamos el audio
+    SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);//Activamos la funcion DeviceID
+    int success = SDL_QueueAudio(deviceId, wavBuffer, wavLength); //Declaramos un int para ver si funciona la musica.
+    SDL_PauseAudioDevice(deviceId,0);//Reproducimos el audio del menú
+    SDL_AudioDeviceID deviceId2 = SDL_OpenAudioDevice(NULL, 0, &wavSpec2, NULL, 0);//Activamos la funcion DeviceID
+    int success2 = SDL_QueueAudio(deviceId2, wavBuffer2, wavLength2);//Declaramos un int para ver si funciona la musica.
+    SDL_PauseAudioDevice(deviceId2,1);//Paramos el audio del final
 
 
  window = SDL_CreateWindow( "Menu", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
@@ -108,11 +108,11 @@ case 1:
     {
     while(stage==1)
     {
-        pararaudio=1;
+        pararaudio=1; //Al iniciar el menu el audio del laberinto se para
         currentimage=menu1;
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-        SDL_PauseAudioDevice(deviceId,0);
-        SDL_PauseAudioDevice(deviceId2,1);
+        SDL_PauseAudioDevice(deviceId,0); //Se inicia la musica del menu
+        SDL_PauseAudioDevice(deviceId2,1);//Se para la musica del final
         while(SDL_PollEvent( &ev ) != 0)
         {
 
@@ -155,10 +155,12 @@ case 1:
                }
                else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
                {
-                   stage=8;
+                   //Se pulsa el boton de parar audio
+                   stage=8;//El estage pasa a 8
                    SDL_PauseAudioDevice(deviceId,1);
                    pararaudio=0;
                    pararaudio_menu=0;
+//Se paran el audio del menú y del final Luego en la llamada de la funcion InitGame se toma un bool para parar la musica del laberinto
                }
             }
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
@@ -169,10 +171,10 @@ case 1:
 
 case 2:
     {
-puntuacion_fichero=fopen("Puntuacion.txt","r");
+puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tipo read para ver lo que se ha guardado tras el write
                while(stage==2)
         {
-            SDL_PauseAudioDevice(deviceId,1);
+            SDL_PauseAudioDevice(deviceId,1);//La musica del menu se pausa
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
             while(SDL_PollEvent( &ev ) != 0)
             {
@@ -181,6 +183,7 @@ puntuacion_fichero=fopen("Puntuacion.txt","r");
                 return 0;
                }
             InitGame(&stage,pararaudio);
+            //Hacemos una llamada a la funcion InitGame para que se active el audio del laberinto tras darle la el booleano pararaudio
             }
         }
     }
@@ -650,38 +653,41 @@ case 13:
 
 case 14:
     {
+        //Barremos el fichero con un while para obtener los datos de tiempo y puntuacion
         while(fscanf(puntuacion_fichero,"%d,%d,%d",&fminutos,&fpuntuacion,&fsegundos)!=EOF)
         {
-            intentos++;
-            printf("Intento %d\n",intentos);
-            printf("Puntuacion: %d\n",fpuntuacion);
-            printf("Minutos: %d\n",fminutos);
-            printf("Segundos: %d\n",fsegundos);
+            intentos++;//Sumamos 1 a una variable de intentos
+            printf("Intento %d\n",intentos);//Imprimimos por pantalla los intentos
+            printf("Puntuacion: %d\n",fpuntuacion);//Imprimimos la puntuacion de ficheros
+            printf("Minutos: %d\n",fminutos);//Imprimimos los minutos empleados
+            printf("Segundos: %d\n",fsegundos);//Imprimimos los segundos empleados
         }
         currentimage=imfinal;
         SDL_Rect posicion={63,0,0,0};  //Ponemos la imagen de la salida en mitad de la pantalla.
         SDL_BlitSurface( currentimage, NULL, screenSurface, &posicion );   //Se muestra la imagen de la salida durante 7 segundos.
         SDL_UpdateWindowSurface( window );
-        while(SDL_PollEvent( &ev ) != 0)
+        while(SDL_PollEvent( &ev ) != 0)//Creamos un receptor de eventos
         {
-        if(pararaudio==1)
+        if(pararaudio==1)//Si el audio en general funciona se volverá al stage 1 con la opcion de pararla
         {
-        SDL_PauseAudioDevice(deviceId2,0);
-        SDL_PauseAudioDevice(deviceId,1);
-        if(ev.type== SDL_MOUSEBUTTONDOWN)
+        SDL_PauseAudioDevice(deviceId2,0);//Se comienza la musica del final
+        SDL_PauseAudioDevice(deviceId,1);//Se pausa la musica del menu
+        if(ev.type== SDL_MOUSEBUTTONDOWN)//Se emplean eventos de pulsar el ratón
         {
+            //Si se pulsa con el raton el cualquier punto de la pantalla se activa stage 1
         if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
         {
                  stage=1;   //Se vuelve al menú.
         }
         }
         }
-        if(pararaudio==0)
+        if(pararaudio==0)// Si el audio está detenido se volverá al stage 8 con posibilidad de reactivarlo
         {
-        SDL_PauseAudioDevice(deviceId2,1);
-        SDL_PauseAudioDevice(deviceId,1);
-                if(ev.type== SDL_MOUSEBUTTONDOWN)
+        SDL_PauseAudioDevice(deviceId2,1);//Se paran la musica del menu
+        SDL_PauseAudioDevice(deviceId,1);//Se para la musica del final
+                if(ev.type== SDL_MOUSEBUTTONDOWN)//Se emplean eventos de pulsar el ratón
         {
+            //Si se pulsa con el raton el cualquier punto de la pantalla se activa stage 8
         if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
         {
                   stage=8;   //Se vuelve al menú con el audio pausado.
@@ -719,7 +725,7 @@ case 15:
 
     } while(!quit);
 }
-fclose(puntuacion_fichero);
+fclose(puntuacion_fichero);//Cerramos el fichero de los datos
 return 0;
 }
 

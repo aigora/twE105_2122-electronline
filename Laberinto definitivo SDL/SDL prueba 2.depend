@@ -10825,11 +10825,11 @@
 1653341116 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653341116 source:c:\users\mario\desktop\laberinto definitivo sdl\mov2.c
+1653472504 source:c:\users\mario\desktop\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
-1653341116 c:\users\mario\desktop\laberinto definitivo sdl\game.h
+1653470370 c:\users\mario\desktop\laberinto definitivo sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
@@ -11212,12 +11212,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653300978 c:\users\mario\desktop\laberinto definitivo sdl\tokens.h
+1653477275 c:\users\mario\desktop\laberinto definitivo sdl\tokens.h
 
-1653341116 source:c:\users\mario\desktop\laberinto definitivo sdl\tokens.c
+1653471054 source:c:\users\mario\desktop\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653342000 source:c:\users\mario\desktop\laberinto definitivo sdl\menu.c
+1653428478 source:c:\users\mario\desktop\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>

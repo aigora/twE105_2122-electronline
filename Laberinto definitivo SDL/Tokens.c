@@ -37,8 +37,8 @@ void InitTokens(int maze[N][N])
         maze[r1][r2] = 4; //4 para los tps
 
           do{
-               r1 = 1 + rand()%19;
-               r2 = 1 + rand()%19;
+               r1 = 1 + rand()%18;
+               r2 = 1 + rand()%18;
                     numwalls = 0;
                 if(maze[r1- 1][2] == 1)
                     numwalls ++;
