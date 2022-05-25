@@ -1,7 +1,6 @@
 #include <SDL.h>
 #include <stdio.h>
 #include<stdbool.h>
-#include <string.h>
 #include"Game.h"
 
 int main( int argc, char* args[] )
@@ -97,8 +96,6 @@ SDL_Event e;
         break;
 }
 }
-while(1)
-{
     do{
 
 switch(stage)
@@ -157,9 +154,9 @@ case 1:
                {
                    //Se pulsa el boton de parar audio
                    stage=8;//El estage pasa a 8
-                   SDL_PauseAudioDevice(deviceId,1);
-                   pararaudio=0;
-                   pararaudio_menu=0;
+                   SDL_PauseAudioDevice(deviceId,1);//Pausamos el audio del menú
+                   pararaudio=0;//Mandamos pararaudio 0 para parar la musica del laberinto
+                   pararaudio_menu=0;//Ponemos en 0 la variable de audio del menú
 //Se paran el audio del menú y del final Luego en la llamada de la funcion InitGame se toma un bool para parar la musica del laberinto
                }
             }
@@ -182,7 +179,7 @@ puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tip
                {
                 return 0;
                }
-            InitGame(&stage,pararaudio);
+            InitGame(&stage,pararaudio);//Iniciamos el juego
             //Hacemos una llamada a la funcion InitGame para que se active el audio del laberinto tras darle la el booleano pararaudio
             }
         }
@@ -654,7 +651,7 @@ case 13:
 case 14:
     {
         //Barremos el fichero con un while para obtener los datos de tiempo y puntuacion
-        while(fscanf(puntuacion_fichero,"%d,%d,%d",&fminutos,&fpuntuacion,&fsegundos)!=EOF)
+        while(fscanf(puntuacion_fichero,"%d,%d,%d",&fminutos,&fsegundos,&fpuntuacion)!=EOF)
         {
             intentos++;//Sumamos 1 a una variable de intentos
             printf("Intento %d\n",intentos);//Imprimimos por pantalla los intentos
@@ -697,34 +694,9 @@ case 14:
         }
     }
     break;
-
-    /**     //Mostrar puntuaciones
-case 15:
-    {
-            pf = fopen("Puntuacion.txt", "r");
-            if (pf == NULL)
-            {
-                // Si el resultado es NULL mensaje de error
-                printf("Error al abrir el fichero.\n");
-                return -1;
-            }
-            else
-            {
-                // Leemos los datos
-                fscanf(pf,"%d,%d,%d",&mins,&seg,&puntuacion);
-                fclose(pf);
-                // Mostramos en pantalla lo leído
-                printf("***Resultados del último intento realizado***\n");
-                printf("%d minuto(s) y %d segundos --------> %d puntos\n",mins,seg,puntuacion);
-            }
-    }
-    break;
-*/
-
 }
 
     } while(!quit);
-}
 fclose(puntuacion_fichero);//Cerramos el fichero de los datos
 return 0;
 }

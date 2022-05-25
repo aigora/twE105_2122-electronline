@@ -1,5 +1,4 @@
 #define N 100
-
 typedef struct{   //Se define otra vez la misma estructura pero con otro nombre ya que estamos en otra librería .h
     int x;
     int y;

@@ -10027,11 +10027,10 @@
 1653300284 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653395923 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653510491 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
-	<string.h>
 	"Game.h"
 
 1653296847 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
@@ -10412,12 +10411,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653341116 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
+1653490611 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
 
-1653395435 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653509059 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
@@ -10820,16 +10819,17 @@
 1653495949 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653300978 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
+1653509289 c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
 
-1653341116 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
+1653509289 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
+	"Game.h"
 
-1653472504 source:c:\users\mario\desktop\laberinto definitivo sdl\mov2.c
+1653508581 source:c:\users\mario\desktop\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
-1653470370 c:\users\mario\desktop\laberinto definitivo sdl\game.h
+1653490611 c:\users\mario\desktop\laberinto definitivo sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
@@ -11214,21 +11214,20 @@
 
 1653477275 c:\users\mario\desktop\laberinto definitivo sdl\tokens.h
 
-1653471054 source:c:\users\mario\desktop\laberinto definitivo sdl\tokens.c
+1653508622 source:c:\users\mario\desktop\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653428478 source:c:\users\mario\desktop\laberinto definitivo sdl\menu.c
+1653508581 source:c:\users\mario\desktop\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
-	<string.h>
 	"Game.h"
 
-1653395435 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\mov2.c
+1653509059 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\mov2.c
 	"Game.h"
 	"Tokens.h"
 
-1653341116 c:\users\mario\desktop\laberinto definitivo sdl - copia\game.h
+1653490611 c:\users\mario\desktop\laberinto definitivo sdl - copia\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
@@ -11611,12 +11610,31 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653300978 c:\users\mario\desktop\laberinto definitivo sdl - copia\tokens.h
+1653509289 c:\users\mario\desktop\laberinto definitivo sdl - copia\tokens.h
 
-1653341116 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\tokens.c
+1653509289 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\tokens.c
 	"Tokens.h"
+	"Game.h"
 
 1653495657 source:c:\users\juans\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\generator.c
+	"Game.h"
+	"Tokens.h"
+
+1653505947 source:c:\users\mario\desktop\laberinto definitivo sdl\generator.c
+	"Game.h"
+	"Tokens.h"
+
+1653505947 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\generator.c
+	"Game.h"
+	"Tokens.h"
+
+1653508581 source:c:\users\mario\desktop\laberinto definitivo sdl - copia\menu.c
+	<SDL.h>
+	<stdio.h>
+	<stdbool.h>
+	"Game.h"
+
+1653505947 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\generator.c
 	"Game.h"
 	"Tokens.h"
 

@@ -144,14 +144,14 @@ do{
             //Creamos una variable entera que detecta que el audio funcione
 
             while (!quit)
-            {
+            {//Mientras no se quite el laberinto
                 if(pararaudio==0)//Si se para el audio el audio del laberinto se pausa
                     {
-                        SDL_PauseAudioDevice(deviceId,1);
+                        SDL_PauseAudioDevice(deviceId,1);//Audio pausado
                     }
                     else//Si no so se pausa
                     {
-                        SDL_PauseAudioDevice(deviceId,0);
+                        SDL_PauseAudioDevice(deviceId,0);//Audio activado
                     }
             SDL_Event event;
 
@@ -173,8 +173,6 @@ do{
                     if(salir(coordx,coordy, Final, robar))//Si se pasa por la salida y robar esta activada se acaba el laberinto
                     {
 
-                        ////////////////////////////////////////////////////////
-
                         //Se acaba el juego, resultados:
                         //En el menú pondremos una sección el resultado del intento donde abrimos el fichero y lo mostramos en forma de lectura.
 
@@ -191,7 +189,7 @@ do{
                         if (tiempoempleado == NULL)     // Si el resultado es NULL se muestra un mensaje de error
                             {
                                 printf("Error al abrir el fichero.\n");
-                                return -1;
+                                return ;
                             }
 
                         //Comienza la escritura (minutos, segundos y puntuación equivalente).
@@ -217,8 +215,6 @@ do{
                                 SDL_DestroyWindow(ventana);//Se destruye la ventana
                             }
 
-
-                            //*stage=15;  //Se muestran las puntuaciones(desde el menú).
                             *stage=14;  //Imagen de fin del laberinto.
                             return;     //Para poder volver a iniciar el laberinto.
 
@@ -384,8 +380,9 @@ do{
                 Uint32 sprite = (ticks/50) % 6; //Los dividimos por el numero de sprites de nuestra animación
                 SDL_Rect srcrect = {sprite*32, 0, 32, 32};
 
-                //Laberinto pot pantalla
+                //Laberinto por pantalla
 
+                //Dependiendo de si se ha robado el objeto se activará un laberinto u otro
                 if (robar == 0){
                      SDL_RenderClear(rend);
                     SDL_RenderCopy(rend,texmaze, NULL, &dest);
@@ -401,7 +398,7 @@ do{
 
                 SDL_RenderCopy(rend, texid, &srcrect, &personaje);
                 SDL_RenderPresent(rend);
-
+//Segun la animacion del personaje se activa una animación u otra
                 if (dcha && !izq)
                 {
                     SDL_RenderCopy(rend, texd, &srcrect, &personaje);
@@ -433,13 +430,13 @@ do{
 
 
             //Se destruye todo y se sale de SDL
-            SDL_DestroyTexture(texd);
+            SDL_DestroyTexture(texd);//Destruimos todo y salimos del laberinto.
             SDL_DestroyRenderer(rend);
             SDL_DestroyWindow(ventana);
             SDL_Quit();
         }
     }
-    return 0;
+    return ;
 }
 
 
