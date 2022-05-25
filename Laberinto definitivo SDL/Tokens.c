@@ -5,6 +5,7 @@ void InitTokens(int maze[N][N])
 {
     int numwalls;
     int i, r1, r2;
+
       for (i = 0; i < 2; i ++){
             do{
         r1 =  1 + rand() % 20; //numeros aleatorios del 1 al 20

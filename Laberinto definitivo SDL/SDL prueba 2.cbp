@@ -38,6 +38,9 @@
 			<Add directory="x86_64-w64-mingw32/bin" />
 		</Linker>
 		<Unit filename="Game.h" />
+		<Unit filename="Generator.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Mov2.c">
 			<Option compilerVar="CC" />
 		</Unit>
