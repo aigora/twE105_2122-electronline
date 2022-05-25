@@ -2,7 +2,6 @@
 #include "Tokens.h"
 
 
-
 void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend, int maze[N][N],int coordx,int coordy,Token Luna[2], Token Sol[2], Token Teleport[2], Token *Final, int alt, int anch, Token *Idolo)
 {
 
@@ -17,11 +16,6 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     int srandx, srandy, numwalls = 0;
 
     srand(time(NULL));
-
-    //Llenamos una matriz de 1. Esta matriz se utilizará posteriormente para hacer el laberinto
-
-//Hacemos el laberinto
-
 
     SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
 
@@ -148,8 +142,6 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
                         numwalls ++;
                 } while (numwalls != 3 || maze[srandx][srandy] == 1);
 
-
-//printf("%i %i", srandx, srandy);
 
                             Final->x = srandx;
                             Final->y = srandy;
@@ -287,9 +279,6 @@ void InitMaze2(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* ren
         }
     }
 
-
-
-
                 do{
                 srandx = 1 + rand()%20;
                 srandy = 1 + rand()%20;
@@ -304,8 +293,6 @@ void InitMaze2(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* ren
                         numwalls ++;
                 } while (numwalls != 3 || maze[srandx][srandy] == 1);
 
-
-//printf("%i %i", srandx, srandy);
 
                             Final->x = srandx;
                             Final->y = srandy;

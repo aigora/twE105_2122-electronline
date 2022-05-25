@@ -11,7 +11,7 @@ void InitTokens(int maze[N][N])
         r1 =  1 + rand() % 20; //numeros aleatorios del 1 al 20
         r2 =  1 + rand() % 20;
               } while(maze[r1][r2] == 1 || (r1 == 1 && r2 == 1));
-        maze[r1][r1] = 2; //2 para las lunas
+        maze[r1][r2] = 2; //2 para las lunas
     }
 
 
