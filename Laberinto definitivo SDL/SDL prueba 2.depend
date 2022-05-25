@@ -10027,7 +10027,7 @@
 1653300284 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
 
-1653350752 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653395923 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
@@ -10417,7 +10417,7 @@
 	<stdio.h>
 	<SDL_timer.h>
 
-1653341116 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653395435 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
