@@ -45,3 +45,25 @@
 	"expliC.h"
 	"juego.h"
 
+1652453454 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto en c\explic.c
+	"expliC.h"
+
+1652453454 c:\users\mario\documents\github\twe105_2122-electronline\laberinto en c\explic.h
+
+1653090637 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto en c\juego.c
+	"juego.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1652453454 c:\users\mario\documents\github\twe105_2122-electronline\laberinto en c\juego.h
+
+1653490611 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto en c\menú.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"expliC.h"
+	"juego.h"
+

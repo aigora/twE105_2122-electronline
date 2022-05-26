@@ -126,6 +126,8 @@ void InitMaze(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* rend
     }
 
 
+
+
                 do{
                 srandx = 1 + rand()%20;
                 srandy = 1 + rand()%20;
@@ -164,8 +166,11 @@ void InitMaze2(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* ren
 
     srand(time(NULL));
 
+    //Llenamos una matriz de 1. Esta matriz se utilizará posteriormente para hacer el laberinto
 
-    //HACEMOS EL LABERINTO
+//Hacemos el laberinto
+
+
     SDL_Surface *camino = SDL_LoadBMP("Path.bmp"); //Cargamos tanto el sprite del camino como el del muro.
 
     SDL_Surface *muroG = SDL_LoadBMP("GenWall.bmp");
@@ -184,6 +189,7 @@ void InitMaze2(SDL_Window* window, SDL_Surface* screenSurface, SDL_Renderer* ren
     SDL_Surface *Teleportador1 = SDL_LoadBMP("TP.bmp");
 
     SDL_Rect pos;
+
 
 
     //Recorremos la matriz. Cada vez que encuentra un 1 pomdrá un sprite muro, y en un 0 un sprite camino

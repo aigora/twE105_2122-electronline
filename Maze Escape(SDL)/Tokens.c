@@ -1,7 +1,5 @@
 #include "Tokens.h"
 #include "Game.h"
-
-
 //Función para los objetos
 void InitTokens(int maze[N][N])
 {
@@ -56,22 +54,20 @@ void InitTokens(int maze[N][N])
 }
 
 
-//Funcionamiento de la luna
+
 void TLuna(int coordx, int coordy, Tokenn Luna[2], int *inversion)
 {
     if(((Luna[0].x==coordx)&&(Luna[0].y==coordy))||((Luna[1].x==coordx)&&(Luna[1].y==coordy)))
                     *inversion=1;
 }
 
-//Funcionamiento del sol
+
 void TSol(int coordx, int coordy, Tokenn Sol[2], int *inversion)
 {
       if(((Sol[0].x==coordx)&&(Sol[0].y==coordy))||((Sol[1].x==coordx)&&(Sol[1].y==coordy)))
                     *inversion=0;
 
 }
-
-//Funcionamiento del teletransportador
 void TP(int coordx, int coordy, Tokenn Teleport[2], int *teletransportar, int *x_pos, int *y_pos)
 {
    if(((Teleport[0].x==coordx)&&(Teleport[0].y==coordy))||((Teleport[1].x==coordx)&&(Teleport[1].y==coordy)))

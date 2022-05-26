@@ -105,11 +105,11 @@ case 1:
     {
     while(stage==1)
     {
-        pararaudio=1; //Al iniciar el menú el audio del laberinto se para
+        pararaudio=1; //Al iniciar el menu el audio del laberinto se para
         currentimage=menu1;
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-        SDL_PauseAudioDevice(deviceId,0); //Se inicia la música del menú
-        SDL_PauseAudioDevice(deviceId2,1);//Se para la música del final
+        SDL_PauseAudioDevice(deviceId,0); //Se inicia la musica del menu
+        SDL_PauseAudioDevice(deviceId2,1);//Se para la musica del final
         while(SDL_PollEvent( &ev ) != 0)
         {
 
@@ -117,7 +117,7 @@ case 1:
             {
                 return 0;
             }
-            else if(ev.type==SDL_MOUSEMOTION)//Cambia la imagen en pantalla en función de donde esté el ratón
+            else if(ev.type==SDL_MOUSEMOTION)
                 {
                 if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)
                 {
@@ -136,13 +136,13 @@ case 1:
                     currentimage=menu1;
                 }
                 }
-            else if (ev.type==SDL_MOUSEBUTTONDOWN)//En caso de pulsar el ratón en ciertas coordenadas se cambia la imagen de la pantalla
+            else if (ev.type==SDL_MOUSEBUTTONDOWN)
             {
                if(mouse_x < 700 && mouse_y >270  && mouse_x > 500&& mouse_y < 350)//Jugar
                {
                    stage=2;
                }
-               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)//Cómo jugar
+               else if(mouse_x < 800 && mouse_y >390 && mouse_x > 400&& mouse_y < 460)//Como jugar
                {
                    stage=3;
                }
@@ -152,30 +152,27 @@ case 1:
                }
                else if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)//Volumen
                {
-                   //Se pulsa el botón de parar audio
+                   //Se pulsa el boton de parar audio
                    stage=8;//El estage pasa a 8
                    SDL_PauseAudioDevice(deviceId,1);//Pausamos el audio del menú
-                   pararaudio=0;//Mandamos pararaudio 0 para parar la música del laberinto
+                   pararaudio=0;//Mandamos pararaudio 0 para parar la musica del laberinto
                    pararaudio_menu=0;//Ponemos en 0 la variable de audio del menú
-                    //Se paran el audio del menú y del final. Luego en la llamada de la función InitGame se toma un bool para parar la música del laberinto
+//Se paran el audio del menú y del final Luego en la llamada de la funcion InitGame se toma un bool para parar la musica del laberinto
                }
             }
-            SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
-            SDL_UpdateWindowSurface( window );
-        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+    }
     }
     }
 
-
-case 2://Jugar
+case 2:
     {
-        puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tipo read para ver lo que se ha guardado tras el write
-
-        while(stage==2)
+puntuacion_fichero=fopen("Puntuacion.txt","r");//Tratamos el fichero como un tipo read para ver lo que se ha guardado tras el write
+               while(stage==2)
         {
-            SDL_PauseAudioDevice(deviceId,1);//La música del menú se pausa
+            SDL_PauseAudioDevice(deviceId,1);//La musica del menu se pausa
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
             while(SDL_PollEvent( &ev ) != 0)
             {
                if(ev.type==SDL_QUIT)
@@ -183,20 +180,18 @@ case 2://Jugar
                 return 0;
                }
             InitGame(&stage,pararaudio);//Iniciamos el juego
-            //Hacemos una llamada a la función InitGame para que se active el audio del laberinto tras darle la el booleano pararaudio
+            //Hacemos una llamada a la funcion InitGame para que se active el audio del laberinto tras darle la el booleano pararaudio
             }
         }
     }
 
-
-case 3://Cómo Jugar
+case 3:
     {
 
      while(stage==3)
      {
-        currentimage=comojugar1;
+         currentimage=comojugar1;
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
         while(SDL_PollEvent( &ev ) != 0)
         {
             if(ev.type==SDL_QUIT)
@@ -239,20 +234,17 @@ case 3://Cómo Jugar
                }
             }
             SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
-            SDL_UpdateWindowSurface( window );
+        SDL_UpdateWindowSurface( window );
         }
      }
     }
 
-
-case 4://Integrantes
+case 4:
     {
-        currentimage=integrantes1;
-
+ currentimage=integrantes1;
        while(stage==4)
        {
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
         while(SDL_PollEvent( &ev ) != 0)
         {
           if(ev.type==SDL_QUIT)
@@ -270,7 +262,6 @@ case 4://Integrantes
                    currentimage=integrantes1;
                }
           }
-
           else if(ev.type==SDL_MOUSEBUTTONDOWN)
           {
               if(mouse_x < 1004 && mouse_y >571  && mouse_x > 940&& mouse_y < 605)
@@ -287,11 +278,9 @@ case 4://Integrantes
 
     }
 
-
-case 5://Tutorial
+case 5:
     {
          currentimage=tutorial1;
-
         while(stage==5)
         {
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
@@ -312,7 +301,6 @@ case 5://Tutorial
                    currentimage=tutorial1;
                }
           }
-
           else if(ev.type==SDL_MOUSEBUTTONDOWN)
           {
               if(mouse_x < 1005 && mouse_y >568  && mouse_x > 945&& mouse_y < 605)
@@ -326,11 +314,9 @@ case 5://Tutorial
         }
     }
 
-
-case 6://Controles
+case 6:
     {
         currentimage=controles1;
-
         while(stage==6)
         {
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
@@ -351,7 +337,6 @@ case 6://Controles
                    currentimage=controles1;
                }
           }
-
           else if(ev.type==SDL_MOUSEBUTTONDOWN)
           {
               if(mouse_x < 1007 && mouse_y >564  && mouse_x > 941&& mouse_y < 600)
@@ -365,11 +350,9 @@ case 6://Controles
         }
     }
 
-
-case 7://Volumen
+case 7:
     {
         currentimage=menu2;
-
         while(stage==7)
         {
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
@@ -398,7 +381,6 @@ case 7://Volumen
                    currentimage=menu2;
                }
           }
-
           else if(ev.type==SDL_MOUSEBUTTONDOWN)
           {
               if(mouse_x < 917 && mouse_y >565  && mouse_x > 848 && mouse_y < 635)
@@ -424,14 +406,12 @@ case 7://Volumen
         }
     }
 
-
-case 8://Menú sin volumen
+case 8:
     {
     while(stage==8)
     {
         currentimage=menu2;
-        buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
+           buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
         while(SDL_PollEvent( &ev ) != 0)
         {
 
@@ -477,20 +457,18 @@ case 8://Menú sin volumen
                    stage=1;
                }
             }
-            SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
-            SDL_UpdateWindowSurface( window );
-        }
+        SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
+        SDL_UpdateWindowSurface( window );
+    }
     }
     }
     break;
 
-
-case 9://Juego sin volumen
+case 9:
     {
-        while(stage==9)
+               while(stage==9)
         {
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
             while(SDL_PollEvent( &ev ) != 0)
             {
                if(ev.type==SDL_QUIT)
@@ -503,15 +481,13 @@ case 9://Juego sin volumen
     }
     break;
 
-
-case 10://Cómo jugar sin volumen
+case 10:
     {
 
      while(stage==10)
      {
-        currentimage=comojugar1;
+         currentimage=comojugar1;
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
-
         while(SDL_PollEvent( &ev ) != 0)
         {
             if(ev.type==SDL_QUIT)
@@ -552,19 +528,16 @@ case 10://Cómo jugar sin volumen
                    stage=13;
                }
             }
-
             SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
-            SDL_UpdateWindowSurface( window );
+        SDL_UpdateWindowSurface( window );
         }
      }
     }
     break;
 
-
-case 11://Integrantes sin volumen
+case 11:
     {
-        currentimage=integrantes1;
-
+ currentimage=integrantes1;
        while(stage==11)
        {
         buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
@@ -594,18 +567,16 @@ case 11://Integrantes sin volumen
           }
 
         }
-
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
         SDL_UpdateWindowSurface( window );
        }
+
     }
     break;
 
-
-case 12://Tutorial sin volumen
+case 12:
     {
-        currentimage=tutorial1;
-
+         currentimage=tutorial1;
         while(stage==12)
         {
             buttons = SDL_GetMouseState(&mouse_x, &mouse_y);
@@ -634,15 +605,13 @@ case 12://Tutorial sin volumen
                }
           }
         }
-
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
         SDL_UpdateWindowSurface( window );
         }
     }
     break;
 
-
-case 13://Controles sin volumen
+case 13:
     {
         currentimage=controles1;
         while(stage==13)
@@ -673,13 +642,11 @@ case 13://Controles sin volumen
                }
           }
         }
-
         SDL_BlitSurface( currentimage, NULL, screenSurface, NULL );
         SDL_UpdateWindowSurface( window );
         }
     }
     break;
-
 
 case 14:
     {
@@ -692,52 +659,45 @@ case 14:
             printf("Minutos: %d\n",fminutos);//Imprimimos los minutos empleados
             printf("Segundos: %d\n",fsegundos);//Imprimimos los segundos empleados
         }
-
         currentimage=imfinal;
         SDL_Rect posicion={63,0,0,0};  //Ponemos la imagen de la salida en mitad de la pantalla.
         SDL_BlitSurface( currentimage, NULL, screenSurface, &posicion );   //Se muestra la imagen de la salida durante 7 segundos.
         SDL_UpdateWindowSurface( window );
-
         while(SDL_PollEvent( &ev ) != 0)//Creamos un receptor de eventos
         {
-            if(pararaudio==1)//Si el audio en general funciona se volverá al stage 1 con la opción de pararla
-            {
-                SDL_PauseAudioDevice(deviceId2,0);//Se comienza la música del final
-                SDL_PauseAudioDevice(deviceId,1);//Se pausa la música del menú
-
+        if(pararaudio==1)//Si el audio en general funciona se volverá al stage 1 con la opcion de pararla
+        {
+        SDL_PauseAudioDevice(deviceId2,0);//Se comienza la musica del final
+        SDL_PauseAudioDevice(deviceId,1);//Se pausa la musica del menu
+        if(ev.type== SDL_MOUSEBUTTONDOWN)//Se emplean eventos de pulsar el ratón
+        {
+            //Si se pulsa con el raton el cualquier punto de la pantalla se activa stage 1
+        if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
+        {
+                 stage=1;   //Se vuelve al menú.
+        }
+        }
+        }
+        if(pararaudio==0)// Si el audio está detenido se volverá al stage 8 con posibilidad de reactivarlo
+        {
+        SDL_PauseAudioDevice(deviceId2,1);//Se paran la musica del menu
+        SDL_PauseAudioDevice(deviceId,1);//Se para la musica del final
                 if(ev.type== SDL_MOUSEBUTTONDOWN)//Se emplean eventos de pulsar el ratón
-                {
-                    //Si se pulsa con el ratón el cualquier punto de la pantalla se activa stage 1
-                    if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
-                    {
-                        stage=1;   //Se vuelve al menú.
-                    }
-                }
-            }
-
-            if(pararaudio==0)// Si el audio está detenido se volverá al stage 8 con posibilidad de reactivarlo
-            {
-                SDL_PauseAudioDevice(deviceId2,1);//Se para la música del menu
-                SDL_PauseAudioDevice(deviceId,1);//Se para la música del final
-
-                if(ev.type== SDL_MOUSEBUTTONDOWN)//Se emplean eventos de pulsar el ratón
-                {
-                    //Si se pulsa con el ratón el cualquier punto de la pantalla se activa stage 8
-                    if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
-                    {
-                        stage=8;   //Se vuelve al menú con el audio pausado.
-                    }
-                }
-            }
+        {
+            //Si se pulsa con el raton el cualquier punto de la pantalla se activa stage 8
+        if(mouse_x < 1200 && mouse_y >1  && mouse_x > 1&& mouse_y < 675)
+        {
+                  stage=8;   //Se vuelve al menú con el audio pausado.
+        }
+        }
+        }
         }
     }
     break;
 }
 
     } while(!quit);
-
 fclose(puntuacion_fichero);//Cerramos el fichero de los datos
-
 return 0;
 }
 
