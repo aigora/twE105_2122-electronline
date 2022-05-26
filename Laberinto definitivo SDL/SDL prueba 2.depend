@@ -9628,11 +9628,10 @@
 1653251462 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\prueba\mov2.c
 	"Game.h"
 
-1653261773 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
+1653558535 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
 	<stdio.h>
 	<stdbool.h>
-	<string.h>
 	"Game.h"
 
 1650910406 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\x86_64-w64-mingw32\include\sdl2\sdl.h
@@ -10013,19 +10012,20 @@
 	"begin_code.h"
 	"close_code.h"
 
-1653300458 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
+1653556115 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\game.h
 	<SDL.h>
 	<stdio.h>
 	<SDL_timer.h>
 
-1653300502 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
+1653557747 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\mov2.c
 	"Game.h"
 	"Tokens.h"
 
-1653300528 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
+1653556115 c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.h
 
-1653300284 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
+1653557819 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\tokens.c
 	"Tokens.h"
+	"Game.h"
 
 1653510491 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\menu.c
 	<SDL.h>
@@ -11635,6 +11635,10 @@
 	"Game.h"
 
 1653505947 source:c:\users\mario\documents\github\twe105_2122-electronline\laberinto definitivo sdl\generator.c
+	"Game.h"
+	"Tokens.h"
+
+1653557951 source:c:\users\diego\onedrive\documentos\github\twe105_2122-electronline\laberinto definitivo sdl\generator.c
 	"Game.h"
 	"Tokens.h"
 

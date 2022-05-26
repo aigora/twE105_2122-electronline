@@ -6,11 +6,10 @@ void InitGame(int *stage,int pararaudio)//Devuelve el stage del menu y la boolea
     //Declaración de variables
     const int SCREEN_WIDTH = 1080;
     const int SCREEN_HEIGHT = 720;
- int i, j;
+    int i, j;
     int alt = 21;
     int anch = 21;
     int xo, yo;
-
 
     int maze[N][N];
     Token Teleport[2];
@@ -19,26 +18,36 @@ void InitGame(int *stage,int pararaudio)//Devuelve el stage del menu y la boolea
     Token Final;
     Token Idolo;
 
+    _Bool quit = 0;
+    _Bool izq=0;
+    _Bool dcha=0;
+    _Bool arriba=0;
+    _Bool abajo=0;
+
+    int intento=1;     //Número de veces que se repite el juego
+    int minutos=0,segundos=0,puntuacion;
+    unsigned int tiempo;
+
+    FILE *tiempoempleado; //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
+
+
+
   for (i = 0; i < alt; i++)
     {
         for(j = 0; j < anch; j++)
             maze[i][j] = 1;
     }
 
-do{
-    xo = 1 + rand()%19;//Coordenadas aleatorias de 1 a 20 de generacion inicial x
-   yo = 1 + rand()%19;//Coordenadas aleatorias de 1 a 20 de generacion inicial y
-} while(xo % 2 != 1 || yo % 2 != 1);
+    do
+    {
+        xo = 1 + rand()%19;//Coordenadas aleatorias de 1 a 20 de generación inicial x
+        yo = 1 + rand()%19;//Coordenadas aleatorias de 1 a 20 de generación inicial y
+    } while(xo % 2 != 1 || yo % 2 != 1);
 
- float x_pos  = 405, y_pos = 224 ;//Posiciones iniciales del personaje
- x_pos -= 76*(xo - 1);//Se inicializa la coordendad x del personaje segun la generacion aleatoria dada
- y_pos -= 85*(yo - 1);//Se inicializa la coordendad y del personaje segun la generacion aleatoria dada
+    float x_pos  = 405, y_pos = 224 ;//Posiciones iniciales del personaje
+    x_pos -= 76*(xo - 1);//Se inicializa la coordenada x del personaje segn la generacin aleatoria dada
+    y_pos -= 85*(yo - 1);//Se inicializa la coordenada y del personaje según la generación aleatoria dada
 
-    int intento=1;       //Número de veces que se repite el juego (después lo haremos un contador cuando lo enlazemos al menú)
-    int minutos=0,segundos=0,puntuacion;
-    unsigned int tiempo;
-
-    FILE *tiempoempleado;   //Fichero para las puntuaciones (tiempo que tarda el jugador en completar el laberinto)
 
     SDL_AudioSpec wavSpec;  //Variable para almacenar un .wav
     Uint32 wavLength;       //Longitud de onda
@@ -46,15 +55,16 @@ do{
     SDL_LoadWAV("Musica2.wav", &wavSpec, &wavBuffer, &wavLength);
     //Ponemos la musica deseada en la funcion y le damos las direcciones de memoria de la variable wav, el bufffer y la longitud de onda
 
-
+    //Creación de la ventana
     SDL_Window* ventana = SDL_CreateWindow( "Movimiento", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     SDL_Surface* screenSurface = NULL;
-      SDL_Surface* screenSurface2 = NULL;
+    SDL_Surface* screenSurface2 = NULL;
 
     Uint32 render_flags = SDL_RENDERER_ACCELERATED;
     SDL_Renderer* rend = SDL_CreateRenderer(ventana, -1, render_flags);
     SDL_Surface *Pers;
 
+    //Cargamos las imágenes del movimiento
     Pers = SDL_LoadBMP("MovRight.bmp");
     SDL_Texture*texd = SDL_CreateTextureFromSurface(rend, Pers);
     SDL_FreeSurface(Pers);
@@ -78,11 +88,6 @@ do{
     SDL_Rect dest = {0, 0, 32*80, 32*60}; //Laberinto
     SDL_Rect personaje = {960/2, 640/2, 70, 70}; //Explorador
 
-    _Bool quit = 0;
-    _Bool izq=0;
-    _Bool dcha=0;
-    _Bool arriba=0;
-    _Bool abajo=0;
 
     int robar = 0;//Booleano de salir desactivado
 
@@ -159,7 +164,8 @@ do{
             TLuna(coordx, coordy, Luna, &inversion);
             //Funcionamiento Sol
               TSol(coordx, coordy, Sol, &inversion);
-//ROBAR
+
+                //ROBAR EL TÓTEM
                 if(((Idolo.x==coordx)&&(Idolo.y==coordy)))//Si se toca el idolo se activa la opcion de salir
                 {
                     robar=1;//booleano de salir activado
@@ -174,7 +180,7 @@ do{
                     {
 
                         //Se acaba el juego, resultados:
-                        //En el menú pondremos una sección el resultado del intento donde abrimos el fichero y lo mostramos en forma de lectura.
+                        ////////////////////////////////////////////////////
 
                         tiempo/=1000;         //Pasamos el tiempo a segundos y a minutos
                         minutos=tiempo/60;
@@ -309,64 +315,70 @@ do{
                                 }
                             }
                         }
-                        //Movimiento invertido
+
+                        //MOVIMIENTO INVERTIDO
                         if(inversion==1)//Si se cambian los controles
-                        {//Llamamos a la funcion salida
+                        {
+                            //Llamamos a la función salida
                             salir(coordx,coordy, Final, robar);
-//Si de presiona la tecla derecha
+
+                            //Si se presiona la tecla derecha
                             if(event.key.keysym.scancode==SDL_SCANCODE_RIGHT)
                             {//Hacia abajo
                                 if(maze[coordx][coordy+1]==0 || maze[coordx][coordy+1] == 2 || maze[coordx][coordy+1]==3 || maze[coordx][coordy+1] == 4 || maze[coordx][coordy + 1] == 9 || maze[coordx][coordy + 1] == 5|| coordy+1==21)
                                 {//Si la casilla adyacente hacia abajo es un token o camino
-                                    y_pos=y_pos-85;//varia la posicion
+                                    y_pos=y_pos-85;//varía la posicion
                                     coordy++;//Cambian las coordenadas
                                     dcha = 0, izq = 0, arriba = 0, abajo = 1;//Se activa la variable abajo
                                 }
                                 if(maze[coordx][coordy+1]==1 && coordy+1!=20)
                                 {//Si la casilla adyacente es un muro
-                                    y_pos=y_pos;//Posicion fija
+                                    y_pos=y_pos;//Posición fija
                                 }
                             }
-//Si de presiona la tecla izquierda
+
+                            //Si se presiona la tecla izquierda
                             if(event.key.keysym.scancode==SDL_SCANCODE_LEFT)
                             {
                                  if(maze[coordx][coordy-1]==0 || maze[coordx][coordy-1] == 2 || maze[coordx][coordy-1]==3 || maze[coordx][coordy-1] == 4 || maze[coordx][coordy - 1] == 9 || maze[coordx][coordy - 1] == 5|| coordy+1==21)
                                 {//Si la casilla adyacente hacia arriba es un token o camino
-                                    y_pos=y_pos+85;//Varia la posicion
-                                    coordy--;//Varian las coordenadas
-                                    dcha = 0, izq = 0, arriba = 1, abajo = 0;//variable arrriva activada
+                                    y_pos=y_pos+85;//Varía la posicion
+                                    coordy--;//Varían las coordenadas
+                                    dcha = 0, izq = 0, arriba = 1, abajo = 0;//variable arrriba activada
                                 }
                                 if(maze[coordx][coordy-1]==1 && coordy+1!=20 )
                                 {//Si la casilla adyacente es un muro
                                     y_pos=y_pos;//Coordenadas fijas
                                 }
                             }
-//Si se presiona la tecla abajo
+
+                            //Si se presiona la tecla abajo
                             if(event.key.keysym.scancode==SDL_SCANCODE_DOWN)
                             {//Si la casilla adyacente hacia la derecha es un token o camino
                                  if(maze[coordx + 1][coordy]==0 || maze[coordx + 1][coordy] == 2 || maze[coordx + 1][coordy]==3 || maze[coordx + 1][coordy] == 4 || maze[coordx + 1][coordy] == 9 || maze[coordx + 1][coordy] == 5)
                                 {//Si la casilla adyacente es un token o camino
-                                    x_pos=x_pos-76;//Varia la posicion del personaje
-                                    coordx++;//Varian las coordenadas
+                                    x_pos=x_pos-76;//Varía la posicion del personaje
+                                    coordx++;//Varían las coordenadas
                                     dcha = 1, izq = 0, arriba = 0, abajo = 0;//Variable derecha activada
                                 }
                                 if(maze[coordx+1][coordy]==1)
                                 {//Si la casilla adyacente es un muro
-                                    x_pos=x_pos;//Posicion fija
+                                    x_pos=x_pos;//Posición fija
                                 }
                             }
-//Si se presiona la tecla arriba
+
+                            //Si se presiona la tecla arriba
                             if(event.key.keysym.scancode==SDL_SCANCODE_UP)
                             {
                                if(maze[coordx -1][coordy]==0 || maze[coordx - 1][coordy] == 2 || maze[coordx -1][coordy]==3 || maze[coordx - 1][coordy] == 4 || maze[coordx - 1][coordy] == 9 || maze[coordx - 1][coordy] == 5)
                                 {//Si la casilla adyacente hacia la izquierda es un token o camino
-                                    x_pos=x_pos+76;//Varia la posicion
-                                    coordx--;//Varian las coordenadas
+                                    x_pos=x_pos+76;//Varía la posicion
+                                    coordx--;//Varían las coordenadas
                                     dcha = 0, izq = 1, arriba = 0, abajo = 0;//Variable izquierda activada
                                 }
                                 if(maze[coordx-1][coordy]==1)
                                 {//Si la casilla adyacente es un muro
-                                    x_pos=x_pos;//Posicion fija
+                                    x_pos=x_pos;//Posición fija
                                 }
                             }
                         }
@@ -398,7 +410,8 @@ do{
 
                 SDL_RenderCopy(rend, texid, &srcrect, &personaje);
                 SDL_RenderPresent(rend);
-//Segun la animacion del personaje se activa una animación u otra
+
+                //Según la animación del personaje se activa una animación u otra
                 if (dcha && !izq)
                 {
                     SDL_RenderCopy(rend, texd, &srcrect, &personaje);
@@ -452,13 +465,13 @@ if((coordx==Final.x)&&(coordy==Final.y)&&(robar == 1))
     return 1;
 }
 else
-{//En caso de que falte algun requisito el laberinto continua
+{//En caso de que falte algún requisito el laberinto continúa
     return 0;
 }
 }
 
 
-
+//Función para las puntuaciones
 int puntuaciones(int minutos, int segundos)
 {
     int puntuacion;
