@@ -477,15 +477,19 @@ int puntuaciones(int minutos, int segundos)
     if (minutos==0 && segundos>0 && segundos<20)
             puntuacion=30;
         else if (minutos==0 && segundos>=20 && segundos<40)
-            puntuacion=25;
+            puntuacion=35;
         else if (minutos==0 && segundos>=40 && segundos<60)
-            puntuacion=20;
+            puntuacion=30;
         else if (minutos==1 && segundos>=0 && segundos<20)
-            puntuacion=15;
+            puntuacion=25;
         else if (minutos==1 && segundos>=20 && segundos<40)
-            puntuacion=10;
+            puntuacion=20;
         else if (minutos==1 && segundos>=40 && segundos<60)
-            puntuacion=5;
+            puntuacion=15;
+        else if (minutos==2 && segundos>=20 && segundos<40)
+            puntuacion = 10;
+        else if (minutos==2 && segundos>=40 && segundos<60)
+            puntuacion = 5;
         else
                 puntuacion=0;
     return puntuacion;
